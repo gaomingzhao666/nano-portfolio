@@ -7,6 +7,15 @@ export default defineNuxtConfig({
   // third part of modules
   modules: [
     '@nuxtjs/eslint-module',
-    '@nuxt/test-utils/module'
+    '@nuxt/test-utils/module',
+    'nuxt-mongoose',
+    '@pinia/nuxt',
+    '@nuxt/ui'
   ],
+  
+  // mongoose: {
+  //   uri: 'process.env.MONGODB_URI',
+  //   options: {},
+  //   modelsDir: 'models',
+  // }
 })

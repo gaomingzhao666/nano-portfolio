@@ -1,6 +1,6 @@
 <template>
-  <div>
-    index page
+  <div class="text-center mt-3 font-bold">
+    hello nuxt!
   </div>
 </template>
 
@@ -8,6 +8,4 @@
 
 </script>
 
-<style>
-
-</style>
+<style></style>
