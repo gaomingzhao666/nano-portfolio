@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@morev/vue-transitions": "^3.0.1",
     "@nuxt/ui": "^2.14.2",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.10.3",
@@ -24,6 +25,7 @@
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/test-utils": "^3.11.0",
     "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/i18n": "^8.1.1",
     "@vue/test-utils": "^2.4.4",
     "eslint": "^8.57.0",
     "happy-dom": "^13.6.2",

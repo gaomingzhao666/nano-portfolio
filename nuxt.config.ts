@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+import type { NuxtConfig } from 'nuxt/schema'
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   // server-side rendering
@@ -10,12 +12,15 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     'nuxt-mongoose',
     '@pinia/nuxt',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@morev/vue-transitions/nuxt',
+    '@nuxtjs/i18n',
   ],
-  
-  // mongoose: {
-  //   uri: 'process.env.MONGODB_URI',
-  //   options: {},
-  //   modelsDir: 'models',
-  // }
+
+  mongoose: {
+    uri: 'process.env.MONGODB_URI',
+    options: {},
+    modelsDir: 'models',
+  },
+  // vueTransitions: {},
 })
