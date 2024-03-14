@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 import type { NuxtConfig } from 'nuxt/schema'
 
 export default defineNuxtConfig({
@@ -15,12 +14,24 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@morev/vue-transitions/nuxt',
     '@nuxtjs/i18n',
+    'nuxt-svgo',
   ],
 
-  mongoose: {
-    uri: 'process.env.MONGODB_URI',
-    options: {},
-    modelsDir: 'models',
+  svgo: {
+    componentPrefix: 'ico',
+    plugins: [
+      {
+        removeViewBox: {
+          active: false,
+        },
+      },
+    ],
   },
+
+  // mongoose: {
+  //   uri: 'process.env.MONGODB_URI',
+  //   options: {},
+  //   modelsDir: 'models',
+  // },
   // vueTransitions: {},
 })

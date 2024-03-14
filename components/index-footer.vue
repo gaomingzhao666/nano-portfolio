@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <index-header />
-  </div>
+  <div></div>
 </template>
 
 <script lang="ts" setup></script>

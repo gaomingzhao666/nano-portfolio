@@ -1,19 +1,20 @@
 // use volar for vue files, use prettier for ts & js files, use eslint for code conduct lint
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"files.associations": {
-		"*.css": "tailwindcss"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.quickSuggestions": {
-		"strings": true
-	},
-	"editor.formatOnSave": true,
-	"prettier.tabWidth": 2,
-	"prettier.useTabs": false
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnSave": true,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.endOfLine": "auto"
 }

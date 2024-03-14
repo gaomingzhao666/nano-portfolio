@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-const res: object = browserVersion()
+// const res: object = browserVersion()
 
-console.log(res)
+// console.log(res)
 </script>

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <index-header />
+    nano's icon
+    <ico-nano class="text-6xl" />
   </div>
 </template>
 
