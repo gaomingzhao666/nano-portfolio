@@ -1,11 +1,17 @@
 <template>
-  <nav>
+  <nav class="flex m-3 h-full">
     <UVerticalNavigation
       :links="links"
-      class="w-64 m-3"
+      class="h-full"
       :ui="{
         padding: 'p-5',
+        width: 'w-64',
+        rounded: 'rounded-lg',
       }"
+    />
+    <UDivider
+      orientation="vertical"
+      class="m-3 h-full"
     />
   </nav>
 </template>
@@ -31,6 +37,11 @@ const links = [
     label: 'Command Palette',
     icon: 'i-heroicons-command-line',
     to: '/components/command-palette'
-  }
+  },
+   {
+    label: 'explore',
+    icon: 'i-heroicons-home',
+    to: '/getting-started/installation'
+  },
 ]
 </script>

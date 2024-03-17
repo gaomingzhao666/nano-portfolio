@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import type { NuxtConfig } from 'nuxt/schema'
+import type { NuxtConfig } from "nuxt/schema";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -7,18 +7,22 @@ export default defineNuxtConfig({
   ssr: true,
   // third part of modules
   modules: [
-    '@nuxtjs/eslint-module',
-    '@nuxt/test-utils/module',
-    'nuxt-mongoose',
-    '@pinia/nuxt',
-    '@nuxt/ui',
-    '@morev/vue-transitions/nuxt',
-    '@nuxtjs/i18n',
-    'nuxt-svgo',
+    "@nuxtjs/eslint-module",
+    "@nuxt/test-utils/module",
+    "nuxt-mongoose",
+    "@pinia/nuxt",
+    "@nuxt/ui",
+    "@morev/vue-transitions/nuxt",
+    "@nuxtjs/i18n",
+    "nuxt-svgo",
   ],
+  typescript: {
+    typeCheck: true,
+    strict: true,
+  },
 
   svgo: {
-    componentPrefix: 'ico',
+    componentPrefix: "ico",
     plugins: [
       {
         removeViewBox: {
@@ -34,4 +38,4 @@ export default defineNuxtConfig({
   //   modelsDir: 'models',
   // },
   // vueTransitions: {},
-})
+});
