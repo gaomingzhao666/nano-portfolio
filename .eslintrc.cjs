@@ -1,5 +1,5 @@
-// use official nuxt3 eslint configuration
+// // use official nuxt3 eslint configuration
 module.exports = {
-  root: true,
-  extends: ["@nuxt/eslint-config"],
-};
+	root: true,
+	extends: ['@nuxt/eslint-config'],
+}
