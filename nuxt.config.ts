@@ -8,7 +8,6 @@ export default defineNuxtConfig({
 	},
 
 	modules: [
-		'@nuxtjs/eslint-module',
 		'@nuxt/test-utils/module',
 		'nuxt-mongoose',
 		'@pinia/nuxt',
@@ -17,7 +16,6 @@ export default defineNuxtConfig({
 		'@nuxtjs/i18n',
 		'nuxt-svgo',
 	],
-	eslint: {},
 	svgo: {
 		componentPrefix: 'ico',
 		plugins: [

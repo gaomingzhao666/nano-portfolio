@@ -17,17 +17,15 @@
 		"@pinia/nuxt": "^0.5.1",
 		"nuxt": "^3.10.3",
 		"nuxt-mongoose": "^1.0.5",
+		"octokit": "^3.1.2",
 		"pinia": "^2.1.7",
 		"vue": "^3.4.21",
 		"vue-router": "^4.3.0"
 	},
 	"devDependencies": {
-		"@nuxt/eslint-config": "^0.2.0",
 		"@nuxt/test-utils": "^3.11.0",
-		"@nuxtjs/eslint-module": "^4.1.0",
 		"@nuxtjs/i18n": "^8.1.1",
 		"@vue/test-utils": "^2.4.4",
-		"eslint": "^8.57.0",
 		"happy-dom": "^13.6.2",
 		"nuxt-svgo": "^4.0.0",
 		"playwright-core": "^1.42.1",
