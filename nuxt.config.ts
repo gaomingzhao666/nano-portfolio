@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 		strict: true,
 	},
 
+	// plugin configuration
 	modules: [
 		'@nuxt/test-utils/module',
 		'nuxt-mongoose',
