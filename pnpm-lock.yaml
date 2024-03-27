@@ -40,6 +40,9 @@ devDependencies:
   '@nuxtjs/i18n':
     specifier: ^8.1.1
     version: 8.1.1(rollup@4.12.1)(vue@3.4.21)
+  '@octokit/types':
+    specifier: ^12.6.0
+    version: 12.6.0
   '@vue/test-utils':
     specifier: ^2.4.4
     version: 2.4.4(vue@3.4.21)
@@ -1934,7 +1937,6 @@ packages:
 
   /@octokit/openapi-types@20.0.0:
     resolution: {integrity: sha512-EtqRBEjp1dL/15V7WiX5LJMIxxkdiGJnabzYx5Apx4FkQIFgAfKumXeYAqqJCj1s+BMX4cPFIFC4OLCR6stlnA==}
-    dev: false
 
   /@octokit/plugin-paginate-graphql@4.0.1(@octokit/core@5.1.0):
     resolution: {integrity: sha512-R8ZQNmrIKKpHWC6V2gum4x9LG2qF1RxRjo27gjQcG3j+vf2tLsEfE7I/wRWEPzYMaenr1M+qDAtNcwZve1ce1A==}
@@ -2011,7 +2013,6 @@ packages:
     resolution: {integrity: sha512-1rhSOfRa6H9w4YwK0yrf5faDaDTb+yLyBUKOCV4xtCDB5VmIPqd/v9yr9o6SAzOAlRxMiRiCic6JVM1/kunVkw==}
     dependencies:
       '@octokit/openapi-types': 20.0.0
-    dev: false
 
   /@octokit/webhooks-methods@4.1.0:
     resolution: {integrity: sha512-zoQyKw8h9STNPqtm28UGOYFE7O6D4Il8VJwhAtMHFt2C4L0VQT1qGKLeefUOqHNs1mNRYSadVv7x0z8U2yyeWQ==}
