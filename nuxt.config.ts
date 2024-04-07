@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 	},
 
 	mongoose: {
-		uri: 'mongodb://localhost/nano-portfolio',
+		uri: 'mongodb://localhost:27017/nano-portfolio',
 		options: {},
 		// modelsDir: 'models',
 		// devtools: true,

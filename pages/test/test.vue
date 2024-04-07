@@ -1,57 +1,31 @@
 <script setup lang="ts">
-const route = useRoute()
+// setTimeout(async () => {
+// 	const res = await useFetch('/api/register')
+// 	console.log('there is res content')
+// 	console.log(res)
+// }, 10000)
 
-const links = [
-  {
-    label: 'Profile',
-    avatar: {
-      src: 'https://avatars.githubusercontent.com/u/739984?v=4',
-    },
-    badge: 100,
-  },
-  {
-    label: 'Installation',
-    icon: 'i-heroicons-home',
-    to: '/getting-started/installation',
-  },
-  {
-    label: 'Horizontal Navigation',
-    icon: 'i-heroicons-chart-bar',
-    to: `${
-      route.path.startsWith('/dev') ? '/dev' : ''
-    }/components/horizontal-navigation`,
-  },
-  {
-    label: 'Command Palette',
-    icon: 'i-heroicons-command-line',
-    to: '/components/command-palette',
-  },
-  {
-    label: 'Command Palette',
-    icon: 'i-heroicons-command-line',
-    to: '/components/command-palette',
-  },
-  {
-    label: 'Command Palette',
-    icon: 'i-heroicons-command-line',
-    to: '/components/command-palette',
-  },
-  {
-    label: 'Command Palette',
-    icon: 'i-heroicons-command-line',
-    to: '/components/command-palette',
-  },
-  {
-    label: 'Command Palette',
-    icon: 'i-heroicons-command-line',
-    to: '/components/command-palette',
-  },
-]
+const registerTest = async () => {
+	try {
+		const res = await useFetch('/api/register')
+		console.log(res)
+	} catch (err) {
+		console.log(err)
+	}
+}
 </script>
 
 <template>
-  <UHorizontalNavigation
-    :links="links"
-    class="border-b border-gray-200 dark:border-gray-800"
-  />
+	<div>
+		<h1>TEST</h1>
+		<UButton
+			icon="i-material-symbols:login"
+			color="white"
+			variant="solid"
+			size="md"
+			@click="registerTest"
+		>
+			test json
+		</UButton>
+	</div>
 </template>
