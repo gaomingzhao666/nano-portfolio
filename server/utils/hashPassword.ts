@@ -1,5 +1,4 @@
 import crypto from 'node:crypto'
-import { createHmac } from 'node:crypto'
 
 export const hashPassword = (password: string): string => {
 	const salt: string = crypto.randomBytes(16).toString('hex')
