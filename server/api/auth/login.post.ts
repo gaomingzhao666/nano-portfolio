@@ -1,9 +1,7 @@
-import crypto from 'node:crypto'
 import jwt from 'jsonwebtoken'
 
 import accountInfo from '~/server/models/accountInfo'
 import { hashPassword } from '~/server/utils/hashPassword'
-import { NuxtConfig } from 'nuxt/schema'
 
 export default defineEventHandler(async (event) => {
 	try {
@@ -12,25 +10,28 @@ export default defineEventHandler(async (event) => {
 		// Find the user in database by username
 		const user = await accountInfo.findOne({ username })
 		if (!user) {
-			throw <Error>createError({
-				statusCode: 401,
-				statusMessage: 'Username already exists',
-			})
+			setResponseStatus(event, 401)
+			return <loginPost>{
+				status: false,
+				data: {
+					message: 'User not existed',
+				},
+			}
 		}
 
 		// Compare the password
 		const isValid: boolean =
 			hashPassword(password) === hashPassword(user.password) ? true : false
 		if (!isValid) {
-			throw <Error>createError({
+			throw createError({
 				statusCode: 401,
 				statusMessage: 'Invalid or incorrect password',
 			})
 		}
 
 		// Generate a JWT token
-		const token = jwt.sign(
-			user,
+		const token: string | void = jwt.sign(
+			user.userId,
 			'secretByNano',
 			{
 				expiresIn: '7d',
@@ -40,14 +41,16 @@ export default defineEventHandler(async (event) => {
 			}
 		)
 
-		return {
-			accountInfo: user,
-			token,
+		setResponseStatus(event, 200)
+		return <loginPost>{
+			status: true,
+			data: {
+				accountInfo: user,
+				message: `Login Successfully, welcome ${username}!`,
+				token: token,
+			},
 		}
 	} catch (error) {
-		throw <Error>createError({
-			statusCode: 500,
-			statusMessage: 'Error in login module',
-		})
+		console.log('Error in login module')
 	}
 })

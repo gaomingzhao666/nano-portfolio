@@ -1,6 +1,3 @@
-import crypto from 'node:crypto'
-import jwt from 'jsonwebtoken'
-
 import accountInfo from '~/server/models/accountInfo'
 import { hashPassword } from '~/server/utils/hashPassword'
 
@@ -11,10 +8,13 @@ export default defineEventHandler(async (event) => {
 		// Check if user already exists
 		const userExist = await accountInfo.findOne({ username })
 		if (userExist) {
-			throw createError({
-				statusCode: 400,
-				statusMessage: 'User already exists',
-			})
+			setResponseStatus(event, 400)
+			return <registerPost>{
+				status: false,
+				data: {
+					message: 'User already exists.',
+				},
+			}
 		}
 
 		// Hash the password
@@ -26,18 +26,19 @@ export default defineEventHandler(async (event) => {
 		const newUser = new accountInfo({
 			userId: userId,
 			username: username,
-			password: password,
+			password: hashedPassword,
 			createTime: Date.now(),
 		})
 		newUser.save()
 
-		return {
-			message: `Register Successfully, welcome ${username}!`,
+		setResponseStatus(event, 200)
+		return <registerPost>{
+			status: true,
+			data: {
+				message: `Register Successfully, welcome ${username}!`,
+			},
 		}
 	} catch (error) {
-		throw createError({
-			statusCode: 500,
-			statusMessage: 'Error in register module',
-		})
+		console.log('Error in register module')
 	}
 })
