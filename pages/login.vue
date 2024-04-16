@@ -41,7 +41,7 @@ const onSubmit = async () => {
 <template>
 	<h1 class="text-3xl font-medium mb-4 text-center mt-44 my-8">Log in</h1>
 	<UCard class="max-w-sm mx-auto">
-		<UButton
+		<!-- <UButton
 			block
 			class="mb-4"
 			variant="outline"
@@ -51,8 +51,8 @@ const onSubmit = async () => {
 		>
 			<UIcon name="i-logos-google-icon" class="h-6 w-6 m-1" /> Log in with
 			Google
-		</UButton>
-		<UDivider class="my-4" label="OR" />
+		</UButton> -->
+		<UDivider class="my-5" label="Type Information" />
 		<UAlert
 			v-if="errorMessage"
 			:title="errorMessage"
@@ -77,7 +77,7 @@ const onSubmit = async () => {
 			<UButton class="w-full text-center block h-10" type="submit">
 				Submit
 			</UButton>
-			<p class="text-sm mt-4">
+			<p class="text-sm mt-5">
 				Don't have an account?
 				<NuxtLink to="/register" class="text-primary"> Register </NuxtLink>
 			</p>
