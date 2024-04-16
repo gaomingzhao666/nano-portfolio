@@ -53,5 +53,6 @@ export default defineEventHandler(async (event) => {
 		}
 	} catch (error) {
 		console.log('Error in login module')
+		console.log(error)
 	}
 })

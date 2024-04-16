@@ -39,5 +39,6 @@ export default defineEventHandler(async (event) => {
 		}
 	} catch (error) {
 		console.log('Error in register module')
+		console.log(error)
 	}
 })
