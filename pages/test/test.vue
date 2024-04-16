@@ -6,12 +6,20 @@
 // }, 10000)
 
 const registerTest = async () => {
-	try {
-		const res = await useFetch('/api/register')
+	setTimeout(async () => {
+		const res = await $fetch('/api/auth/register', {
+			method: 'post',
+			body: {
+				username: 'gmzYaa',
+				password: 'gmz11',
+			},
+		})
 		console.log(res)
-	} catch (err) {
-		console.log(err)
-	}
+	}, 3000)
+}
+const testToken = async () => {
+	const { data } = await useFetch('/api/test/apiTest?aaaaaaaa=222222')
+	console.log('log api test !')
 }
 </script>
 

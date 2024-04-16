@@ -31,8 +31,6 @@ export default defineNuxtConfig({
 	mongoose: {
 		uri: 'mongodb://localhost:27017/nano-portfolio',
 		options: {},
-		// modelsDir: 'models',
-		// devtools: true,
 	},
 	// vueTransitions: {},
 })
