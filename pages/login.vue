@@ -1,48 +1,3 @@
-<script setup lang="ts">
-import type { FormError } from '#ui/types'
-
-const userInfo = reactive({
-	username: '',
-	password: '',
-})
-
-const validate = (userInfo: any): FormError[] => {
-	const errors = []
-	if (!userInfo.username)
-		errors.push({ path: 'username', message: 'Username Required' })
-	if (!userInfo.password)
-		errors.push({ path: 'password', message: 'Password Required' })
-	return errors
-}
-
-const toast = useToast()
-let errorMessage: Ref<string> = ref('')
-
-const onSubmit = async () => {
-	try {
-		const { status, data } = await $fetch<loginPost>('/api/auth/login', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				username: userInfo.username,
-				password: userInfo.password,
-			}),
-		})
-
-		if (status) {
-			toast.add({ title: data.message })
-		} else {
-			errorMessage.value = data.message
-		}
-	} catch (err) {
-		console.log('try catch err in onSubmit login.vue')
-		console.log(err)
-	}
-}
-</script>
-
 <template>
 	<h1 class="text-3xl font-medium mb-4 text-center mt-44 my-8">Log in</h1>
 	<UCard class="max-w-sm mx-auto">
@@ -89,3 +44,48 @@ const onSubmit = async () => {
 		</UForm>
 	</UCard>
 </template>
+
+<script setup lang="ts">
+import type { FormError } from '#ui/types'
+
+const userInfo = reactive({
+	username: '',
+	password: '',
+})
+
+const validate = (userInfo: any): FormError[] => {
+	const errors = []
+	if (!userInfo.username)
+		errors.push({ path: 'username', message: 'Username Required' })
+	if (!userInfo.password)
+		errors.push({ path: 'password', message: 'Password Required' })
+	return errors
+}
+
+const toast = useToast()
+let errorMessage: Ref<string> = ref('')
+
+const onSubmit = async () => {
+	try {
+		const { status, data } = await $fetch<loginPost>('/api/auth/login', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				username: userInfo.username,
+				password: userInfo.password,
+			}),
+		})
+
+		if (status) {
+			toast.add({ title: data.message })
+		} else {
+			errorMessage.value = data.message
+		}
+	} catch (err) {
+		console.log('try catch err in onSubmit login.vue')
+		console.log(err)
+	}
+}
+</script>
