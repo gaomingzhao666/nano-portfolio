@@ -10,7 +10,6 @@ export default defineEventHandler(async (event) => {
 		// Find the user in database by username
 		const user = await accountInfo.findOne({ username })
 		if (!user) {
-			setResponseStatus(event, 401)
 			return <loginPost>{
 				status: false,
 				data: {
@@ -23,10 +22,12 @@ export default defineEventHandler(async (event) => {
 		const isValid: boolean =
 			hashPassword(password) === hashPassword(user.password) ? true : false
 		if (!isValid) {
-			throw createError({
-				statusCode: 401,
-				statusMessage: 'Invalid or incorrect password',
-			})
+			return <loginPost>{
+				status: false,
+				data: {
+					message: 'Invalid or incorrect password',
+				},
+			}
 		}
 
 		// Generate a JWT token

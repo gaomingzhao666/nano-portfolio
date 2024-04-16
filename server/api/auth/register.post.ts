@@ -8,7 +8,6 @@ export default defineEventHandler(async (event) => {
 		// Check if user already exists
 		const userExist = await accountInfo.findOne({ username })
 		if (userExist) {
-			setResponseStatus(event, 400)
 			return <registerPost>{
 				status: false,
 				data: {

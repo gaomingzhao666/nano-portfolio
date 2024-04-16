@@ -19,21 +19,26 @@ const toast = useToast()
 let errorMessage: Ref<string> = ref('')
 
 const onSubmit = async () => {
-	const { status, data } = await $fetch<registerPost>('/api/auth/register', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({
-			username: userInfo.username,
-			password: userInfo.password,
-		}),
-	})
+	try {
+		const { status, data } = await $fetch<registerPost>('/api/auth/register', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				username: userInfo.username,
+				password: userInfo.password,
+			}),
+		})
 
-	if (status) {
-		toast.add({ title: data.message })
-	} else {
-		errorMessage.value = data.message
+		if (status) {
+			toast.add({ title: data.message })
+		} else {
+			errorMessage.value = data.message
+		}
+	} catch (err) {
+		console.log('try catch err in onSubmit register.vue')
+		console.log(err)
 	}
 }
 </script>
