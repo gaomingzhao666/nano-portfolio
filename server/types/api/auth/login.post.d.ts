@@ -5,5 +5,5 @@ declare interface loginPost extends index {
 interface dataType {
 	accountInfo: accountInfo
 	message: string
-	token: string | undefined
+	token: string
 }
