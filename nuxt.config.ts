@@ -6,8 +6,10 @@ export default defineNuxtConfig({
 		typeCheck: true,
 		strict: true,
 	},
+	imports: {
+		autoImport: true,
+	},
 
-	// plugin configuration
 	modules: [
 		'@nuxt/test-utils/module',
 		'nuxt-mongoose',
