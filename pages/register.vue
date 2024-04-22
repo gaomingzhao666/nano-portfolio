@@ -59,10 +59,10 @@ const onSubmit = async () => {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({
+			body: {
 				username: userInfo.username,
 				password: userInfo.password,
-			}),
+			},
 		})
 
 		if (status) {

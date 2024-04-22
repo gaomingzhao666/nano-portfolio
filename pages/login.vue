@@ -72,13 +72,14 @@ const onSubmit = async () => {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({
+			body: {
 				username: userInfo.username,
 				password: userInfo.password,
-			}),
+			},
 		})
 
 		if (status) {
+			if (data.token) localStorage.setItem('token', data.token)
 			toast.add({ title: data.message })
 		} else {
 			errorMessage.value = data.message
