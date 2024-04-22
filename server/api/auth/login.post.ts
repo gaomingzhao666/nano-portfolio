@@ -1,11 +1,15 @@
 import jwt from 'jsonwebtoken'
-
 import accountInfo from '~/server/models/accountInfo'
 import { hashPassword } from '~/server/utils/hashPassword'
 
+interface bodyType {
+	username: string
+	password: string
+}
+
 export default defineEventHandler(async (event) => {
 	try {
-		const { username, password } = await readBody(event)
+		const { username, password }: bodyType = await readBody(event)
 
 		// Find the user in database by username
 		const user = await accountInfo.findOne({ username })

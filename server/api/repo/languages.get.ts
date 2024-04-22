@@ -1,20 +1,24 @@
 import { Octokit } from 'octokit'
 import { githubToken, githubName } from '~/server/utils/githubInfo'
 
+interface queryType {
+	repo: string
+}
+
 export default defineEventHandler(async (event) => {
 	try {
-		const { repo } = await readBody(event)
+		const query: queryType = await getQuery(event)
 
-		const getRepoContributors = async () => {
+		const getGithubRepoLanguages = async () => {
 			const octokit = new Octokit({
 				auth: githubToken,
 			})
 
 			const data = await octokit.request(
-				'GET /repos/{owner}/{repo}/contributors',
+				'GET /repos/{owner}/{repo}/languages',
 				{
 					owner: githubName,
-					repo: repo,
+					repo: query.repo,
 					headers: {
 						'X-GitHub-Api-Version': '2022-11-28',
 					},
@@ -23,15 +27,15 @@ export default defineEventHandler(async (event) => {
 			return data
 		}
 
-		const repoContributors = await getRepoContributors()
+		const githubRepoLanguages = await getGithubRepoLanguages()
 
 		setResponseStatus(event, 200)
-		return <repoContributorsGet>{
+		return <repoLanguagesGet>{
 			status: true,
-			data: repoContributors,
+			data: githubRepoLanguages,
 		}
 	} catch (error) {
-		console.log('Error in repoContributors module')
+		console.log('Error in githubRepoLanguages module')
 		console.log(error)
 	}
 })

@@ -17,7 +17,6 @@ export default defineEventHandler(async (event) => {
 		}
 
 		const githubRepoInfo = await getGithubRepoInfo()
-
 		setResponseStatus(event, 200)
 		return <repoInfoGet>{
 			status: true,

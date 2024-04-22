@@ -1,9 +1,14 @@
 import accountInfo from '~/server/models/accountInfo'
 import { hashPassword } from '~/server/utils/hashPassword'
 
+interface bodyType {
+	username: string
+	password: string
+}
+
 export default defineEventHandler(async (event) => {
 	try {
-		const { username, password } = await readBody(event)
+		const { username, password }: bodyType = await readBody(event)
 
 		// Check if user already exists
 		const userExist = await accountInfo.findOne({ username })
