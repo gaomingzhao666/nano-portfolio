@@ -17,11 +17,19 @@ export default defineEventHandler(async (event) => {
 		}
 
 		const githubRepoInfo = await getGithubRepoInfo()
-		setResponseStatus(event, 200)
-		return <repoInfoGet>{
-			status: true,
-			data: githubRepoInfo,
-		}
+		if (githubRepoInfo.status === 200) {
+			setResponseStatus(event, 200)
+			return <repoInfoGet>{
+				status: true,
+				data: githubRepoInfo,
+			}
+		} else
+			return <errorType>{
+				status: false,
+				data: {
+					message: 'Github api encountered problem',
+				},
+			}
 	} catch (error) {
 		console.log('Error in repoInfo module')
 		console.log(error)

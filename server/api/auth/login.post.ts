@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
 		// Find the user in database by username
 		const user = await accountInfo.findOne({ username })
 		if (!user) {
-			return <loginPost>{
+			return <errorType>{
 				status: false,
 				data: {
 					message: 'User not existed',
@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
 		const isValid: boolean =
 			hashPassword(password) === hashPassword(user.password) ? true : false
 		if (!isValid) {
-			return <loginPost>{
+			return <errorType>{
 				status: false,
 				data: {
 					message: 'Invalid or incorrect password',

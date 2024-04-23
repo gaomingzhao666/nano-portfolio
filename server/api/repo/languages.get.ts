@@ -29,11 +29,19 @@ export default defineEventHandler(async (event) => {
 
 		const githubRepoLanguages = await getGithubRepoLanguages()
 
-		setResponseStatus(event, 200)
-		return <repoLanguagesGet>{
-			status: true,
-			data: githubRepoLanguages,
-		}
+		if (githubRepoLanguages.status === 200) {
+			setResponseStatus(event, 200)
+			return <repoLanguagesGet>{
+				status: true,
+				data: githubRepoLanguages,
+			}
+		} else
+			return <errorType>{
+				status: false,
+				data: {
+					message: 'Github api encountered problem',
+				},
+			}
 	} catch (error) {
 		console.log('Error in githubRepoLanguages module')
 		console.log(error)

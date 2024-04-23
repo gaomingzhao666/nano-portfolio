@@ -29,11 +29,19 @@ export default defineEventHandler(async (event) => {
 
 		const repoContributors = await getRepoContributors()
 
-		setResponseStatus(event, 200)
-		return <repoContributorsGet>{
-			status: true,
-			data: repoContributors,
-		}
+		if (repoContributors.status === 200) {
+			setResponseStatus(event, 200)
+			return <repoContributorsGet>{
+				status: true,
+				data: repoContributors,
+			}
+		} else
+			return <errorType>{
+				status: false,
+				data: {
+					message: 'Github api encountered problem',
+				},
+			}
 	} catch (error) {
 		console.log('Error in repoContributors module')
 		console.log(error)

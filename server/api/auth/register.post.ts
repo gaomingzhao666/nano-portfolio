@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
 		// Check if user already exists
 		const userExist = await accountInfo.findOne({ username })
 		if (userExist) {
-			return <registerPost>{
+			return <errorType>{
 				status: false,
 				data: {
 					message: 'User already exists.',
