@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
 		const { username, password }: bodyType = await readBody(event)
 
 		// Find the user in database by username
-		const user = await accountInfo.findOne({ username })
+		const user = await accountInfo.findOne({ username: username })
 		if (!user) {
 			return <errorType>{
 				status: false,
@@ -35,17 +35,18 @@ export default defineEventHandler(async (event) => {
 
 		// Generate a JWT token
 		const token: string | void = jwt.sign(
-			user.userId,
+			{
+				id: user.userId,
+			},
 			'secretByNano',
 			{
-				expiresIn: '7d',
-			},
-			(err, token) => {
-				console.log(token)
+				// 7 days
+				expiresIn: 60 * 60 * 24 * 7,
 			}
 		)
 
 		setResponseStatus(event, 200)
+		setCookie(event, 'token', token)
 		return <loginPost>{
 			status: true,
 			data: {

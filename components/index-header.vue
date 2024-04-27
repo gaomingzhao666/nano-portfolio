@@ -18,7 +18,7 @@
 			class="w-1/3"
 		/>
 
-		<NuxtLink to="/login">
+		<NuxtLink to="/login" v-if="!isLogin">
 			<UButton
 				icon="i-material-symbols:login"
 				color="white"
@@ -28,8 +28,24 @@
 				Login
 			</UButton>
 		</NuxtLink>
+
+		<UButton color="primary" variant="ghost" v-else>{{
+			data?.data.username
+		}}</UButton>
 	</header>
 	<UDivider />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+let isLogin: boolean
+const token = useCookie('token')
+
+if (token) isLogin = true
+
+const { data, pending, error } = useFetch<getInfoGet>('/api/user/getInfo', {
+	method: 'get',
+	query: {
+		token: token,
+	},
+})
+</script>

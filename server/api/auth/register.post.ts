@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
 		const { username, password }: bodyType = await readBody(event)
 
 		// Check if user already exists
-		const userExist = await accountInfo.findOne({ username })
+		const userExist = await accountInfo.findOne({ username: username })
 		if (userExist) {
 			return <errorType>{
 				status: false,

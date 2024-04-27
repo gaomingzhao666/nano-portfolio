@@ -53,7 +53,10 @@ const userInfo = reactive({
 	password: '',
 })
 
-const validate = (userInfo: any): FormError[] => {
+const validate = (userInfo: {
+	username: string
+	password: string
+}): FormError[] => {
 	const errors = []
 	if (!userInfo.username)
 		errors.push({ path: 'username', message: 'Username Required' })
@@ -78,9 +81,10 @@ const onSubmit = async () => {
 			},
 		})
 
-		if (status) {
-			if (data.token) localStorage.setItem('token', data.token)
-			toast.add({ title: data.message })
+		if (status && data.token) {
+			localStorage.setItem('token', data.token)
+			toast.add({ title: data.message, color: 'green' })
+			navigateTo('/')
 		} else {
 			errorMessage.value = data.message
 		}

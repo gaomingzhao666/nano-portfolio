@@ -66,7 +66,8 @@ const onSubmit = async () => {
 		})
 
 		if (status) {
-			toast.add({ title: data.message })
+			toast.add({ title: data.message, color: 'green' })
+			navigateTo('/login')
 		} else {
 			errorMessage.value = data.message
 		}

@@ -1,7 +1,7 @@
 <template>
-	<main class="flex justify-around">
+	<main class="grid grid-cols-4 gap-4" v-if="!pending">
 		<div
-			class="max-w-sm rounded-2xl shadow m-3 hover:shadow-lg transition"
+			class="rounded-2xl shadow m-3 hover:shadow-lg transition"
 			v-for="(item, index) in data?.data.data"
 			:key="index"
 		>
@@ -13,34 +13,33 @@
 			<div class="px-3 pb-3">
 				<div class="flex justify-between m-3">
 					<p>{{ item.name }}</p>
-					<UBadge variant="soft" size="md">{{ item.language }}</UBadge>
+					<UBadge variant="soft" size="md" :label="item.language" />
 				</div>
 
 				<UBadge
-					class="m-1 my-3"
+					class="m-1 space-y-3"
 					:ui="{ rounded: 'rounded-full' }"
 					v-for="(childItem, index) in item.topics"
 					:key="index"
-					>{{ childItem }}</UBadge
-				>
+					:label="childItem"
+				/>
 			</div>
 		</div>
-
-		<!-- skeleton -->
 	</main>
+
+	<skeleton v-else />
 </template>
 
 <script lang="ts" setup>
 // get github repos information
 const { data, pending, error } = await useFetch<repoInfoGet>('/api/repo/info', {
 	method: 'GET',
-	// server: false,
 	// onResponse({ request, response }) {
 	// 	console.log(response.status)
 	// },
 })
 
-watchEffect(() => {
-	if (error) navigateTo('/error')
-})
+// watchEffect(() => {
+// 	if (error) navigateTo('/error')
+// })
 </script>
