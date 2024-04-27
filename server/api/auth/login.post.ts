@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 import accountInfo from '~/server/models/accountInfo'
-import { hashPassword } from '~/server/utils/hashPassword'
+import { hashPassword, comparePassword } from '~/server/utils/hashPassword'
 
 interface bodyType {
 	username: string
@@ -23,8 +23,7 @@ export default defineEventHandler(async (event) => {
 		}
 
 		// Compare the password
-		const isValid: boolean =
-			hashPassword(password) === hashPassword(user.password) ? true : false
+		const isValid: boolean = comparePassword(password, user.password)
 		if (!isValid) {
 			return <errorType>{
 				status: false,
