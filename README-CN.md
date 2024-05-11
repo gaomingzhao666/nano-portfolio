@@ -14,7 +14,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    💖 A portfolio of developers made full-stackly by Nuxt3 and the official supported libs form it 💖
+    💖 由 Nuxt3 生态全栈开发的开发者个人简介应用 💖
     <br />
     <br />
     <a href="https://github.com/CreamR/Spotify-Web-Player/blob/master/README.md">English</a>
@@ -27,28 +27,28 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open>
-  <summary>Directory</summary>
+  <summary>目录</summary>
   <ul>
-    <li><a href="#introduction-of-project">Introduction of Project</a> </li>
-    <li><a href="#build-with">Build With</a></li>
-    <li><a href="#environment-requirement">Environment Requirement</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributor">Contributor</a></li>
-    <li><a href="#license">LICENSE</a></li>
+    <li><a href="#项目介绍">项目介绍</a> </li>
+    <li><a href="#技术栈">Build With</a></li>
+    <li><a href="#环境需要">环境需要</a></li>
+    <li><a href="#用法">用法</a></li>
+    <li><a href="#贡献者">贡献者</a></li>
+    <li><a href="#开源协议">开源协议</a></li>
   </ul>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 
-## Introduction of Project
+## 项目介绍
 
 <!-- IMAGE OF PROJECT -->
 
-Nano-portfolio is a developer introduction web application integrated with Github Octokit and Nuxt3 ecosystem that including `Nuxt-UI` `Nuxt-Mongoose` `Pinia` `i18n` etc. All of the modules are officially compatible with Nuxt3, and all of the code inside of this project uses composition API and ESM.
+Nano-portfolio 是一个与 Github Octokit 和 Nuxt3 生态结合的开发者个人简介网页应用，其使用的大部分依赖被官方所支持和维护，其中包括 `Nuxt-UI` `Nuxt-Mongoose` `Pinia` `i18n` 等。所有模块均与 Nuxt 所兼容，库内所有代码均使用组合式 API 以及 ESM 进行模块导入。
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">至顶层</a>)</p>
 
-## Build With
+## 技术栈
 
 - Nuxt3 with composition API
 - Pinia
@@ -60,43 +60,43 @@ Nano-portfolio is a developer introduction web application integrated with Githu
 - Typescript with ES6+ syntax
 - Docker deployment
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">至顶层</a>)</p>
 
 <!-- GETTING STARTED -->
 
-## Environment Requirement
+## 环境需要
 
 - NodeJS LTS 20+
 <!-- - Chrome67+ / Edge79+ / Safari12+ -->
 
-## Usage
+## 用法
 
 ```sh
-$ https://github.com/gaomingzhao666/nano-portfolio.git # clone the project
+$ https://github.com/gaomingzhao666/nano-portfolio.git # 克隆此项目
 $ cd nano-portfolio
-$ pnpm install # install dependencies that this project needs
-$ pnpm dev # run
+$ pnpm install # 安装项目所需依赖
+$ pnpm dev # 运行
 ```
 
-## About CORS Problem
+## 关于 CORS 错误
 
-As an [SSR](https://vuejs.org/guide/scaling-up/ssr.html) project, we do not need to care about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), but if you prefer to set SSR mode as false in the `nuxt.config.ts` file [click here](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to install a plugin that can solve the CORS problem.
+作为 [SSR](https://vuejs.org/guide/scaling-up/ssr.html) 项目, 我们无需关心 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), 但若你在 `nuxt.config.ts` 文件中设置 SSR mode 为 false [点击此处](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) 可安装浏览器插件以此解决 CORS 错误。
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">至顶层</a>)</p>
 
-## Contributor
+## 贡献者
 
-The project developed by gaomingzhao666@Nano
+此项目由 gaomingzhao666@Nano 所开发
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">至顶层</a>)</p>
 
 <!-- LICENSE -->
 
-## LICENSE
+## 开源协议
 
 [MIT License](https://github.com/gaomingzhao666/nano-portfolio/blob/main/LICENSE)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">至顶层</a>)</p>
 
 [stars-shield]: https://img.shields.io/github/stars/gaomingzhao666/nano-portfolio?style=for-the-badge
 [stars-url]: https://github.com/gaomingzhao666/nano-portfolio/stargazers
