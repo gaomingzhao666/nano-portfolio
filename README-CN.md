@@ -17,11 +17,11 @@
     💖 由 Nuxt3 生态全栈开发的开发者个人简介应用 💖
     <br />
     <br />
-    <a href="https://github.com/CreamR/Spotify-Web-Player/blob/master/README.md">English</a>
+    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README.md">English</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/Spotify-Web-Player/blob/master/README-CN.md">简体中文</a>
+    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-CN.md">简体中文</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/Spotify-Web-Player/blob/master/README-JP.md">日本語</a>
+    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-JP.md">日本語</a>
   </p>
 </div>
 

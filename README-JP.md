@@ -17,11 +17,11 @@
     💖 Nuxt3 エコシステムを使用したフルスタック開発による開発者個人プロフィールアプリケーション 💖
     <br />
     <br />
-    <a href="https://github.com/CreamR/Spotify-Web-Player/blob/master/README.md">English</a>
+    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README.md">English</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/Spotify-Web-Player/blob/master/README-CN.md">简体中文</a>
+    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-CN.md">简体中文</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/Spotify-Web-Player/blob/master/README-JP.md">日本語</a>
+    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-JP.md">日本語</a>
   </p>
 </div>
 
@@ -76,7 +76,7 @@ Nano-portfolio は、GitHub Octokit API と Nuxt3 エコシステムを統合し
 $ https://github.com/gaomingzhao666/nano-portfolio.git # プロジェクトをクローンしてください
 $ cd nano-portfolio
 $ pnpm install # プロジェクトに必要な依存関係をインストールしてください。
-$ pnpm dev # 運行
+$ pnpm dev # 運行する
 ```
 
 ## CORS エラーに関して
