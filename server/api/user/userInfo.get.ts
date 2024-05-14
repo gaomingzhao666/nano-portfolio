@@ -19,12 +19,12 @@ export default defineEventHandler(async (event) => {
 		const userInfo: userInfo | null = await accountInfo.findOne({
 			userId: decode.id,
 		})
-		return <getInfoGet>{
+		return <userInfoGet>{
 			status: true,
 			data: userInfo,
 		}
 	} catch (error) {
-		console.log('Error in userGetInfo module')
+		console.log('Error in userInfoGet module')
 		console.log(error)
 	}
 })
