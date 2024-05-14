@@ -37,12 +37,13 @@
 </template>
 
 <script lang="ts" setup>
-let isLogin: boolean
-const token = useCookie('token')
+let isLogin: Ref<boolean> = ref(false)
+const token = await useCookie('token')
 
-if (token) isLogin = true
+if (token.value === undefined || token.value === null) isLogin = false
+else isLogin = true
 
-const { data, pending, error } = useFetch<getInfoGet>('/api/user/getInfo', {
+const { data, pending, error } = useFetch<userInfoGet>('/api/user/userInfo', {
 	method: 'get',
 	query: {
 		token: token,
