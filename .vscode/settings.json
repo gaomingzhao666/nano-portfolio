@@ -14,5 +14,5 @@
 	},
 	"eslint.enable": true,
 	"eslint.useESLintClass": true,
-	"eslint.lintTask.enable": true,
+	"eslint.lintTask.enable": true
 }
