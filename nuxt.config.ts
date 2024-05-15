@@ -21,13 +21,13 @@ export default defineNuxtConfig({
 	],
 	svgo: {
 		componentPrefix: 'ico',
-		plugins: [
-			{
-				removeViewBox: {
-					active: false,
-				},
-			},
-		],
+		// plugins: [
+		// 	{
+		// 		removeViewBox: {
+		// 			active: false,
+		// 		},
+		// 	},
+		// ],
 	},
 
 	mongoose: {
