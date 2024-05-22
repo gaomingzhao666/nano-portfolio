@@ -45,7 +45,7 @@
 <!-- IMAGE OF PROJECT -->
 
 <p align="center">
-    <img src="/screenshot/desktop/about.png">
+    <img src="/SCREENSHOT/desktop/about.png">
 </p>
 
 > 上方是 PC 设备尺寸的 about 页面截图, [点击此处](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) 可查看更多详细截图。

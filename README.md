@@ -50,7 +50,7 @@
 
 > The image shown here is a about-page for desktop-size, [click here](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) to see more detailed screenshot for this application.
 
-Nano-portfolio is a developer introduction web application integrated with Github Octokit and Nuxt3 ecosystem that including `Nuxt-UI` `Nuxt-Mongoose` `Pinia` `i18n` etc. All of the modules are officially compatible with Nuxt3, and all of the code inside of this project uses composition API and ESM.
+Nano-portfolio is a developer introduction web application integrated with Github Octokit and Nuxt3 ecosystem that includes `Nuxt-UI` ` Nuxt-Mongoose``  `Pinia` `i18n` etc. All of the modules are officially compatible with Nuxt3, and all of the code inside of this project uses composition API and ESM.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

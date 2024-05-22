@@ -46,7 +46,7 @@
 <!-- IMAGE OF PROJECT -->
 
 <p align="center">
-    <img src="/screenshot/desktop/about.png">
+    <img src="/SCREENSHOT/desktop/about.png">
 </p>
 
 > この写真はパソコンサイに基づいた about ページ, [こちらへ](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) このプロジェクトの写真をご覧ください。
