@@ -3,6 +3,8 @@
 	"devDesc": "ワブ開発者",
 	"placeholder": "検索",
 	"login": "ログイン",
+	"register": "サインアップ",
+	"navigation": "ナビゲーション",
 
 	"explore": "探索",
 	"experience": "仕事経験",
@@ -14,6 +16,12 @@
 	"degree": "学士",
 	"major": "情報科学",
 
-	"contactMe": "僕に連絡",
-	"earth": "地球"
+	"contactMe": "僕に連絡する",
+	"earth": "地球",
+
+	"typeInfo": "情報入力",
+	"username": "アカウント",
+	"password": "パスワード",
+	"submit": "完了",
+	"noAccountDesc": "新人さんはこちら"
 }

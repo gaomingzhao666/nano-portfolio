@@ -3,6 +3,8 @@
 	"devDesc": "Front-end developer",
 	"placeholder": "search projects",
 	"login": "Login",
+	"register": "Register",
+	"navigation": "Navigation",
 
 	"explore": "Explore",
 	"experience": "Experience",
@@ -15,5 +17,11 @@
 	"major": "Computer Science and Technology",
 
 	"contactMe": "Contact me",
-	"earth": "Earth"
+	"earth": "Earth",
+
+	"typeInfo": "Type Information",
+	"username": "Username",
+	"password": "Password",
+	"submit": "Submit",
+	"noAccountDesc": "Don't have an account?"
 }

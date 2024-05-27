@@ -3,6 +3,8 @@
 	"devDesc": "前端开发者",
 	"placeholder": "搜索项目",
 	"login": "登录",
+	"register": "注册",
+	"navigation": "导航",
 
 	"explore": "探索",
 	"experience": "工作经验",
@@ -15,5 +17,11 @@
 	"major": "计算机科学与技术",
 
 	"contactMe": "联系我",
-	"earth": "地球"
+	"earth": "地球",
+
+	"typeInfo": "输入信息",
+	"username": "账号",
+	"password": "密码",
+	"submit": "提交",
+	"noAccountDesc": "新伙伴到这里"
 }
