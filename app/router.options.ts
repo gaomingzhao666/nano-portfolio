@@ -1,6 +1,9 @@
 import type { RouterConfig } from '@nuxt/schema'
 
-// custom router paths
+import index from '~/router/index'
+import auth from '~/router/auth'
+
+// custom router paths for better router control
 export default <RouterConfig>{
 	// https://router.vuejs.org/api/interfaces/routeroptions.html#routes
 	routes: (_routes) => [
@@ -8,11 +11,12 @@ export default <RouterConfig>{
 			path: '/',
 			redirect: '/index',
 		},
+		...auth,
 		{
 			name: 'index',
 			path: '/index',
-			component: () =>
-				import('~/pages/index/index.vue').then((r) => r.default || r),
+			component: () => import('~/pages/index.vue').then((r) => r.default || r),
+			children: index,
 		},
 	],
 }
