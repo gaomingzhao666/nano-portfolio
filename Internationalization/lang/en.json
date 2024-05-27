@@ -1,0 +1,19 @@
+{
+	"name": "Nano",
+	"devDesc": "Front-end developer",
+	"placeholder": "search projects",
+	"login": "Login",
+
+	"explore": "Explore",
+	"experience": "Experience",
+	"about": "About",
+	"contact": "Contact",
+
+	"sayHello": "Hey, there is Nano!",
+	"devDescDetail": "I am a front-end developer whose with love to using modern technologies, I can do also in back-end section using Nodejs ecosystem. I do these things with a bachelor degree of computer science and technology.I say Chinese natively, and also can say English & Japanese.",
+	"degree": "Bachelor",
+	"major": "Computer Science and Technology",
+
+	"contactMe": "Contact me",
+	"earth": "Earth"
+}

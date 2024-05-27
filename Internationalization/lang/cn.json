@@ -1,0 +1,19 @@
+{
+	"name": "Nano",
+	"devDesc": "前端开发者",
+	"placeholder": "搜索项目",
+	"login": "登录",
+
+	"explore": "探索",
+	"experience": "工作经验",
+	"about": "关于",
+	"contact": "联系",
+
+	"sayHello": "你好, 这里是 Nano!",
+	"devDescDetail": "现如今我是一名前端开发者并热衷于使用现代 Web 技术, 除了前端技术栈以外我还可以使用NodeJS生态实现一些后端业务。 我于2024年获得计算机科学与技术学士学位。我使用普通话作为母语, 同时也是英语和日语的使用者",
+	"degree": "学士",
+	"major": "计算机科学与技术",
+
+	"contactMe": "联系我",
+	"earth": "地球"
+}
