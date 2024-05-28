@@ -64,16 +64,15 @@ Nano-portfolio is a developer introduction web application integrated with Githu
 - MongoDB with Mongoose
 - localize with i18n
 - Typescript with ES6+ syntax
-- Docker deployment
+- Dockerfile
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
-## Environment Requirement
+## Runtime Requirement
 
 - NodeJS LTS 20+
-<!-- - Chrome67+ / Edge79+ / Safari12+ -->
 
 ## Usage
 
@@ -109,4 +108,4 @@ The project developed by gaomingzhao666@Nano
 [license-shield]: https://img.shields.io/badge/license-MIT-green?style=for-the-badge
 [license-url]: https://github.com/gaomingzhao666/nano-portfolio/blob/main/LICENSE
 [release-shield]: https://img.shields.io/github/v/release/gaomingzhao666/nano-portfolio?style=for-the-badge
-[release-url]: https://github.com/gaomingzhao666/nano-portfolio/releases/tag
+[release-url]: https://github.com/gaomingzhao666/nano-portfolio/releases

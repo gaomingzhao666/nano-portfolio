@@ -65,16 +65,15 @@ Nano-portfolio は、GitHub Octokit API と Nuxt3 エコシステムを統合し
 - MongoDB with Mongoose
 - localize with i18n
 - Typescript with ES6+ syntax
-- Docker deployment
+- Dockerfile
 
 <p align="right">(<a href="#readme-top">トップに戻る</a>)</p>
 
 <!-- GETTING STARTED -->
 
-## 環境要件
+## 運行時要件
 
 - NodeJS LTS 20+
-<!-- - Chrome67+ / Edge79+ / Safari12+ -->
 
 ## 使い方
 
@@ -110,4 +109,4 @@ $ pnpm dev # 運行する
 [license-shield]: https://img.shields.io/badge/license-MIT-green?style=for-the-badge
 [license-url]: https://github.com/gaomingzhao666/nano-portfolio/blob/main/LICENSE
 [release-shield]: https://img.shields.io/github/v/release/gaomingzhao666/nano-portfolio?style=for-the-badge
-[release-url]: https://github.com/gaomingzhao666/nano-portfolio/releases/tag
+[release-url]: https://github.com/gaomingzhao666/nano-portfolio/releases
