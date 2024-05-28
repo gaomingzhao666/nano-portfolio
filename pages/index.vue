@@ -3,7 +3,7 @@
 		<UProgress size="sm" animation="carousel" v-if="isProgress" />
 		<index-header />
 		<div class="flex">
-			<nav-bar />
+			<nav-bar class="hidden md:block" />
 			<!-- in this case, index page where in index directory is default -->
 			<NuxtPage />
 		</div>

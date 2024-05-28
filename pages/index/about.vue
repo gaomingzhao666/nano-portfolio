@@ -7,12 +7,9 @@
 				icon="i-heroicons-photo"
 				size="3xl"
 			/>
-			<h1 class="text-2xl my-3">Hey, there is {{ data?.data.data.name }}!</h1>
+			<h1 class="text-2xl my-3">{{ $t('sayHello') }}</h1>
 			<p class="text-neutral-500 text-sm">
-				I am a front-end developer whose with love to using modern technologies,
-				I can do also in back-end section using Nodejs ecosystem. I do these
-				things with a bachelor degree of computer science and technology.I say
-				Chinese natively, and also can say English & Japanese.
+				{{ $t('devDescDetail') }}
 			</p>
 		</section>
 
@@ -24,11 +21,11 @@
 				</section>
 				<section class="nanoFlex">
 					<UIcon name="i-fluent-emoji-flat:military-medal" class="text-3xl" />
-					<p class="nanoFont">Bachelor</p>
+					<p class="nanoFont">{{ $t('degree') }}</p>
 				</section>
 			</section>
 			<h1 class="text-xl font-bold text-left my-5">
-				Computer Science and Technology
+				{{ $t('major') }}
 			</h1>
 			<section class="flex items-center my-3">
 				<UIcon name="i-fluent-emoji-flat:school" class="text-3xl mr-2" />

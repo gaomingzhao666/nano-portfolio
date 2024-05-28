@@ -1,4 +1,4 @@
 export const githubToken: string =
-	'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'
+	'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'
 
 export const githubName: string = 'gaomingzhao666'

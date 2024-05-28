@@ -1,14 +1,27 @@
 <template>
-	<main class="grid grid-cols-4 gap-4" v-if="!pending">
+	<main
+		class="grid 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4"
+		v-if="!pending"
+	>
 		<div
-			class="rounded-2xl shadow m-3 hover:shadow-lg transition"
-			v-for="(item, index) in data?.data.data"
+			class="group rounded-3xl shadow-md m-3 hover:shadow-lg transition-all"
+			v-for="(item, index) in data?.data"
 			:key="index"
 		>
-			<img
-				src="../../assets/images/repoImage/reposImage.svg"
-				class="rounded-2xl rounded-b-none"
-			/>
+			<!-- <img :src="item.imageUrl" class="rounded-3xl rounded-b-none" /> -->
+			<section
+				class="text-white bg-slate-700 w-full min-h-48 p-5 rounded-3xl rounded-b-none"
+			>
+				<section class="flex justify-start items-center">
+					<UIcon name="i-grommet-icons:github" class="text-3xl mr-2" />
+					<p>Github Repo</p>
+				</section>
+				<h1
+					class="text-2xl text-center my-10 transition-all group-hover:text-3xl"
+				>
+					Click to Repo
+				</h1>
+			</section>
 
 			<div class="px-3 pb-3">
 				<div class="flex justify-between m-3">
@@ -34,12 +47,8 @@
 // get github repos information
 const { data, pending, error } = await useFetch<repoInfoGet>('/api/repo/info', {
 	method: 'GET',
-	// onResponse({ request, response }) {
-	// 	console.log(response.status)
-	// },
+	onResponse({ request, response }) {
+		console.log(response.body)
+	},
 })
-
-// watchEffect(() => {
-// 	if (error) navigateTo('/error')
-// })
 </script>

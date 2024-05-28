@@ -1,29 +1,25 @@
 import { Octokit } from 'octokit'
 import { githubToken } from '~/server/utils/githubInfo'
 
-// repoImage url consist by `~/assets/images/repoImages/${repo}Image`
+// repoImage url consist by `~/assets/repoImages/${repo}Image`
 // repoImages:[string]
-const baseUrl: string = '~/assets/images/repoImages'
-const suffix: string = 'Image'
-
-const getRepoIamgeUrl = (repoInfo: any) => {
-	let repoName: [string] = ['']
-	for (let index: number = 0; index < repoInfo.data.length; index++)
-		repoName[index] = repoInfo.data[index].name
-	const repoImageUrl: [string] = ['']
-	for (let index: number = 0; index < repoName.length; index++) {
-		repoImageUrl[index] = `${baseUrl}/${repoName[index]}/${suffix}`
-	}
-	return <[string]>repoImageUrl
-}
-
+const baseUrl: string = '/assets/repoImages'
+const suffix: string = '.png'
 const getClearedRepo = (repoInfo: any) => {
-	console.log(repoInfo.data.topics)
-
 	return repoInfo.data.filter(
 		(data: any) =>
 			!(data.topics.includes('config') || data.topics.includes('backup'))
 	)
+}
+const getRepoIamgeUrl = (repoInfo: any) => {
+	let repoName: [string] = ['']
+	for (let index: number = 0; index < repoInfo.length; index++)
+		repoName[index] = repoInfo[index].name
+	const repoImageUrl: [string] = ['']
+	for (let index: number = 0; index < repoName.length; index++) {
+		repoImageUrl[index] = `${baseUrl}/${repoName[index]}${suffix}`
+	}
+	return <[string]>repoImageUrl
 }
 
 export default defineEventHandler(async (event) => {
@@ -41,19 +37,18 @@ export default defineEventHandler(async (event) => {
 			return data
 		}
 
-		let githubRepoInfo = await getGithubRepoInfo()
-		console.log(githubRepoInfo)
+		let githubRepoInfo: any = await getGithubRepoInfo()
+		const newGithubRepoInfo: any = getClearedRepo(githubRepoInfo)
+		const repoImageUrl: [string] = getRepoIamgeUrl(newGithubRepoInfo)
 
-		const repoImageUrl: [string] = getRepoIamgeUrl(githubRepoInfo)
-		const newGithubRepoInfo = getClearedRepo(githubRepoInfo)
-		console.log(newGithubRepoInfo)
+		for (let index = 0; index < newGithubRepoInfo.length; index++)
+			newGithubRepoInfo[index].imageUrl = repoImageUrl[index]
 
 		if (githubRepoInfo.status === 200) {
 			setResponseStatus(event, 200)
 			return <repoInfoGet>{
 				status: true,
 				data: newGithubRepoInfo,
-				repoImageUrl: repoImageUrl,
 			}
 		} else
 			return <errorType>{

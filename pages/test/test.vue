@@ -1,39 +1,48 @@
 <script setup lang="ts">
-// setTimeout(async () => {
-// 	const res = await useFetch('/api/register')
-// 	console.log('there is res content')
-// 	console.log(res)
-// }, 10000)
-
-const registerTest = async () => {
-	setTimeout(async () => {
-		const res = await $fetch('/api/auth/register', {
-			method: 'post',
-			body: {
-				username: 'gmzYaa',
-				password: 'gmz11',
-			},
-		})
-		console.log(res)
-	}, 3000)
+// for api response test
+const TestRepo = async () => {
+	const res = await $fetch('/api/repo/info', {
+		method: 'GET',
+	})
+	console.log(res)
 }
-const testToken = async () => {
-	const { data } = await useFetch('/api/test/apiTest?aaaaaaaa=222222')
-	console.log('log api test !')
+const TestLanguage = async () => {
+	const res = await $fetch(`/api/repo/languages?repo=nano-portfolio`, {
+		method: 'GET',
+	})
+	console.log('this is languages interface response')
+	console.log(res)
+}
+
+const TestContributors = async () => {
+	const res = await $fetch('/api/repo/contributors?repo=nano-portfolio', {
+		method: 'GET',
+	})
+	console.log('this is Contributors interface response')
+	console.log(res)
 }
 </script>
 
 <template>
-	<div>
-		<h1>TEST</h1>
+	<div class="text-center">
+		<h1 class="text-center font-bold m-5">TEST</h1>
 		<UButton
 			icon="i-material-symbols:login"
 			color="white"
 			variant="solid"
 			size="md"
-			@click="registerTest"
+			@click="TestLanguage"
 		>
-			test json
+			test languages
+		</UButton>
+		<UButton
+			icon="i-material-symbols:login"
+			color="white"
+			variant="solid"
+			size="md"
+			@click="TestContributors"
+		>
+			test contributors
 		</UButton>
 	</div>
 </template>

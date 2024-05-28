@@ -1,18 +1,20 @@
 <template>
-	<UContainer>
-		<h1 class="text-center font-bold text-3xl my-10">Contact me</h1>
+	<UContainer class="my-10">
+		<h1 class="text-center font-bold text-3xl my-10">
+			{{ $t('contactMe') }}
+		</h1>
 		<section class="shadow rounded-3xl border-gray-100 my-6 p-5">
-			<section class="flex items-center m-3">
+			<section class="flex items-center m-5">
 				<ico-phone class="text-3xl mr-3" />
 				<p>+86 13244687353</p>
 			</section>
-			<section class="flex items-center m-3">
+			<section class="flex items-center m-5">
 				<ico-email class="text-3xl mr-3" />
 				<p>gaomingzhao666@outlook.com</p>
 			</section>
-			<section class="flex items-center m-3">
+			<section class="flex items-center m-5">
 				<ico-address class="text-3xl mr-3" />
-				<p>Earth</p>
+				<p>{{ $t('earth') }}</p>
 			</section>
 		</section>
 	</UContainer>
