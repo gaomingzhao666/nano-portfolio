@@ -36,9 +36,8 @@ export default defineNuxtConfig({
 	},
 	// vueTransitions: {},
 	i18n: {
-		// vueI18n: './Internationalization/lang/i18n.config.ts', // if you are using custom path, default
+		vueI18n: './i18n.config.ts', // if you are using custom path, default
 		defaultLocale: 'en',
-		skipSettingLocaleOnNavigate: true,
 		locales: ['en', 'cn', 'jp'],
 	},
 })
