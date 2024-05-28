@@ -3,9 +3,9 @@
 		<div class="flex">
 			<ico-nano class="text-5xl rounded-full" />
 
-			<div class="ml-3">
-				<p class="text-blue-600 text-lg">Nano</p>
-				<p class="text-gray-500 text-sm">Front-end developer</p>
+			<div class="ml-3 hidden md:block">
+				<p class="text-blue-600 text-lg">{{ $t('name') }}</p>
+				<p class="text-gray-500 text-sm">{{ $t('devDesc') }}</p>
 			</div>
 		</div>
 
@@ -14,29 +14,101 @@
 			size="lg"
 			color="white"
 			trailing
-			placeholder="Search projects"
-			class="w-1/3"
+			:placeholder="$t('placeholder')"
+			class="w-1/3 hidden md:block"
 		/>
 
-		<NuxtLink to="/login" v-if="!isLogin">
+		<section class="flex items-center">
+			<UDropdown
+				:items="languages"
+				:popper="{ placement: 'bottom-start' }"
+				:ui="{
+					item: { padding: 'p-3', rounded: 'rounded-xl' },
+				}"
+			>
+				<UIcon name="i-heroicons:language" dynamic size="24" />
+			</UDropdown>
+
+			<NuxtLink to="/login" class="mx-3" v-if="!isLogin">
+				<UButton
+					icon="i-material-symbols:login"
+					color="white"
+					variant="solid"
+					size="lg"
+				>
+					{{ $t('login') }}
+				</UButton>
+			</NuxtLink>
+			<UButton color="primary" variant="ghost" v-else>{{
+				data?.data.username
+			}}</UButton>
+
 			<UButton
-				icon="i-material-symbols:login"
+				icon="i-heroicons:ellipsis-horizontal"
 				color="white"
 				variant="solid"
-				size="md"
-			>
-				Login
-			</UButton>
-		</NuxtLink>
-
-		<UButton color="primary" variant="ghost" v-else>{{
-			data?.data.username
-		}}</UButton>
+				size="lg"
+				class="md:hidden"
+				@click="isOpen = true"
+			/>
+		</section>
 	</header>
 	<UDivider />
+
+	<UModal v-model="isOpen" fullscreen>
+		<UCard
+			:ui="{
+				base: 'h-full flex flex-col',
+				rounded: '',
+				divide: 'divide-y divide-gray-200 dark:divide-gray-800',
+				body: {
+					base: 'grow',
+				},
+			}"
+		>
+			<template #header>
+				<div class="flex items-center justify-between">
+					<h3
+						class="text-base font-semibold leading-6 text-gray-900 dark:text-white"
+					>
+						{{ $t('navigation') }}
+					</h3>
+					<UButton
+						color="gray"
+						variant="ghost"
+						icon="i-heroicons-x-mark-20-solid"
+						class="-my-1"
+						@click="isOpen = false"
+					/>
+				</div>
+			</template>
+
+			<section>
+				<NuxtLink
+					:to="item.to"
+					v-for="(item, index) in navbar.links"
+					:key="index"
+					@click="isOpen = false"
+				>
+					<UButton
+						block
+						:icon="item.icon"
+						variant="link"
+						size="xl"
+						class="flex justify-start my-3"
+						>{{ item.label }}</UButton
+					>
+				</NuxtLink>
+			</section>
+		</UCard>
+	</UModal>
 </template>
 
 <script lang="ts" setup>
+const navbar = useNavbarStore()
+const { locale, setLocale } = useI18n()
+
+const isOpen: Ref<boolean> = ref(false)
 let isLogin: Ref<boolean> = ref(false)
 const token = await useCookie('token')
 
@@ -49,4 +121,34 @@ const { data, pending, error } = useFetch<userInfoGet>('/api/user/userInfo', {
 		token: token,
 	},
 })
+
+const languages = [
+	[
+		{
+			label: 'English',
+			icon: 'i-fluent-emoji-flat:flushed-face',
+			click: () => {
+				setLocale('en')
+			},
+		},
+	],
+	[
+		{
+			label: '简体中文',
+			icon: 'i-fluent-emoji-flat:flushed-face',
+			click: () => {
+				setLocale('cn')
+			},
+		},
+	],
+	[
+		{
+			label: '日本語',
+			icon: 'i-fluent-emoji-flat:flushed-face',
+			click: () => {
+				setLocale('jp')
+			},
+		},
+	],
+]
 </script>
