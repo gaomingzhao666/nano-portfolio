@@ -1,4 +1,3 @@
-// use volar for vue files, use prettier for ts & js files, use eslint for code conduct lint
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"files.associations": {
