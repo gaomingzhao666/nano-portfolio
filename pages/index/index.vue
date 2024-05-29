@@ -18,7 +18,7 @@
 				<h1
 					class="text-2xl text-center my-10 transition-all group-hover:text-3xl"
 				>
-					Click to Repo
+					<a :href="item.clone_url">Click to Repo</a>
 				</h1>
 			</section>
 
@@ -46,8 +46,5 @@
 // get github repos information
 const { data, pending, error } = await useFetch<repoInfoGet>('/api/repo/info', {
 	method: 'GET',
-	onResponse({ request, response }) {
-		console.log(response.body)
-	},
 })
 </script>
