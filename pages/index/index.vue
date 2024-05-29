@@ -8,7 +8,6 @@
 			v-for="(item, index) in data?.data"
 			:key="index"
 		>
-			<!-- <img :src="item.imageUrl" class="rounded-3xl rounded-b-none" /> -->
 			<section
 				class="text-white bg-slate-700 w-full min-h-48 p-5 rounded-3xl rounded-b-none"
 			>
