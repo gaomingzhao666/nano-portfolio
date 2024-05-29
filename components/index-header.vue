@@ -112,8 +112,8 @@ const isOpen: Ref<boolean> = ref(false)
 let isLogin: Ref<boolean> = ref(false)
 const token = await useCookie('token')
 
-if (token.value === undefined || token.value === null) isLogin = false
-else isLogin = true
+if (token.value === undefined || token.value === null) isLogin.value = false
+else isLogin.value = true
 
 const { data, pending, error } = useFetch<userInfoGet>('/api/user/userInfo', {
 	method: 'get',
