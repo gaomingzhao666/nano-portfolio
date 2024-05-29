@@ -14,7 +14,7 @@
 **/.toolstarget
 **/.vs
 **/.vscode
-**/.next
+**/.nuxt
 **/.cache
 **/*.*proj.user
 **/*.dbmdl
