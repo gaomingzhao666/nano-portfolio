@@ -1,25 +1,11 @@
 import { Octokit } from 'octokit'
 import { githubToken } from '~/server/utils/githubInfo'
 
-// repoImage url consist by `~/assets/repoImages/${repo}Image`
-// repoImages:[string]
-const baseUrl: string = '/assets/repoImages'
-const suffix: string = '.png'
 const getClearedRepo = (repoInfo: any) => {
 	return repoInfo.data.filter(
 		(data: any) =>
 			!(data.topics.includes('config') || data.topics.includes('backup'))
 	)
-}
-const getRepoIamgeUrl = (repoInfo: any) => {
-	let repoName: [string] = ['']
-	for (let index: number = 0; index < repoInfo.length; index++)
-		repoName[index] = repoInfo[index].name
-	const repoImageUrl: [string] = ['']
-	for (let index: number = 0; index < repoName.length; index++) {
-		repoImageUrl[index] = `${baseUrl}/${repoName[index]}${suffix}`
-	}
-	return <[string]>repoImageUrl
 }
 
 export default defineEventHandler(async (event) => {
@@ -39,10 +25,6 @@ export default defineEventHandler(async (event) => {
 
 		let githubRepoInfo: any = await getGithubRepoInfo()
 		const newGithubRepoInfo: any = getClearedRepo(githubRepoInfo)
-		const repoImageUrl: [string] = getRepoIamgeUrl(newGithubRepoInfo)
-
-		for (let index = 0; index < newGithubRepoInfo.length; index++)
-			newGithubRepoInfo[index].imageUrl = repoImageUrl[index]
 
 		if (githubRepoInfo.status === 200) {
 			setResponseStatus(event, 200)
