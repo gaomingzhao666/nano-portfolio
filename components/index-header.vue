@@ -16,6 +16,7 @@
 			trailing
 			:placeholder="$t('placeholder')"
 			class="w-1/3 hidden md:block"
+			@click="toast.add({ title: 'not work now' })"
 		/>
 
 		<section class="flex items-center">
@@ -106,7 +107,8 @@
 
 <script lang="ts" setup>
 const navbar = useNavbarStore()
-const { locale, setLocale } = useI18n()
+const { setLocale } = useI18n()
+const toast = useToast()
 
 const isOpen: Ref<boolean> = ref(false)
 let isLogin: Ref<boolean> = ref(false)
