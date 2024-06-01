@@ -25,7 +25,7 @@
 				<displayUrl
 					:deployedUrl="item.homepage"
 					v-if="item.homepage"
-					class="hidden absolute bottom-3 right-3 group-hover:block"
+					class="block md:hidden absolute bottom-3 right-3 group-hover:block"
 				/>
 			</section>
 
