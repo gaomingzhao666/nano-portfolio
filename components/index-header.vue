@@ -16,7 +16,7 @@
 			trailing
 			:placeholder="$t('placeholder')"
 			class="w-1/3 hidden md:block"
-			@click="toast.add({ title: 'not work now' })"
+			@click="notice('Not support now')"
 		/>
 
 		<section class="flex items-center">
@@ -123,6 +123,13 @@ const { data, pending, error } = useFetch<userInfoGet>('/api/user/userInfo', {
 		token: token,
 	},
 })
+
+const notice = (text: string) => {
+	if (!sessionStorage.getItem('isFirstDisplay')) {
+		toast.add({ title: text })
+		sessionStorage.setItem('isFirstDisplay', '1')
+	}
+}
 
 const languages = [
 	[
