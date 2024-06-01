@@ -12,6 +12,12 @@
 
 <script lang="ts" setup>
 const isProgress: Ref<boolean> = ref(false)
+
+useSeoMeta({
+	title: 'Index',
+	description:
+		'Discover a showcase of full-stack projects built with Nuxt 3 and its official libraries. Explore the work of passionate developers and find inspiration for your next web project.',
+})
 </script>
 
 <style></style>

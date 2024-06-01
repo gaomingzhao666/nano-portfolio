@@ -50,6 +50,12 @@
 </template>
 
 <script lang="ts" setup>
+useSeoMeta({
+	title: 'Index',
+	description:
+		'Explore a curated collection of GitHub repositories, organized by language and topic. Find the perfect project to inspire your next development endeavor.',
+})
+
 const { data, pending, error } = await useFetch<repoInfoGet>('/api/repo/info', {
 	method: 'GET',
 })

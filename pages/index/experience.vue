@@ -4,6 +4,9 @@
 	</UContainer>
 </template>
 
-<script lang="ts" setup></script>
-
-<style></style>
+<script lang="ts" setup>
+useSeoMeta({
+	title: 'Experience',
+	description: 'Discover my professional journey.',
+})
+</script>

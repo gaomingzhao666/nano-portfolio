@@ -20,4 +20,9 @@
 	</UContainer>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useSeoMeta({
+	title: 'Contact me',
+	description: 'Find my contact information',
+})
+</script>

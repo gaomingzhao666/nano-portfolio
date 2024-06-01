@@ -35,6 +35,12 @@
 <script setup lang="ts">
 import type { FormError } from '#ui/types'
 
+useSeoMeta({
+	title: 'Register',
+	description:
+		'Create an account to unlock exclusive content and features. Sign up today with your username and password.',
+})
+
 const userInfo = reactive({
 	username: '',
 	password: '',

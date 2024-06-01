@@ -52,6 +52,12 @@
 </template>
 
 <script lang="ts" setup>
+useSeoMeta({
+	title: 'About me',
+	description:
+		'About [Nano] - A Full-Stack Developer specializing in Vue3, Nuxt3, and modern web technologies.  Discover my expertise in JavaScript, TypeScript, MongoDB, and more. Explore my projects and connect with me!',
+})
+
 const techStack = [
 	'Html5',
 	'CSS3',
