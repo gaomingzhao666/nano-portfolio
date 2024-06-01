@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	ssr: true,
+	app: {
+		pageTransition: { name: 'page', mode: 'out-in' },
+	},
 	typescript: {
 		typeCheck: true,
 		strict: true,
