@@ -10,10 +10,10 @@ export default [
 			import('~/pages/index/index.vue').then((r) => r.default || r),
 	},
 	{
-		name: 'experience',
-		path: '/experience',
+		name: 'career',
+		path: '/career',
 		component: () =>
-			import('~/pages/index/experience.vue').then((r) => r.default || r),
+			import('~/pages/index/career.vue').then((r) => r.default || r),
 	},
 	{
 		name: 'about',
