@@ -2,6 +2,7 @@ import type { RouterConfig } from '@nuxt/schema'
 
 import index from '~/router/index'
 import auth from '~/router/auth'
+import error from '~/router/error'
 
 // custom router paths for better router control
 export default <RouterConfig>{
@@ -18,5 +19,6 @@ export default <RouterConfig>{
 			component: () => import('~/pages/index.vue').then((r) => r.default || r),
 			children: index,
 		},
+		...error,
 	],
 }

@@ -17,11 +17,11 @@
     💖 Nuxt3 エコシステムを使用したフルスタック開発による開発者個人プロフィールアプリケーション 💖
     <br />
     <br />
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README.md">English</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-CN.md">简体中文</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README-CN.md">简体中文</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-JP.md">日本語</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README-JP.md">日本語</a>
   </p>
 </div>
 
@@ -30,11 +30,12 @@
   <summary>索引</summary>
   <ul>
     <li><a href="#プロジェクトの概要">プロジェクトの概要</a> </li>
-    <li><a href="#技術の使いの方">技術の選択</a></li>
+    <li><a href="#技術の選択">技術の選択</a></li>
     <li><a href="#環境要件">環境要件</a></li>
-    <li><a href="#用法">使い方</a></li>
+    <li><a href="#使い方">使い方</a></li>
+    <li><a href="#このプロジェクトを使用してあなたのニーズに合わせる方法">このプロジェクトを使用してあなたのニーズに合わせる方法</a></li>
+    <li><a href="#cors-エラーに関して">CORS エラーに関して</a></li>
     <li><a href="#貢獻者">貢獻者</a></li>
-    <li><a href="#CORSエラーに関して">CORSエラーに関して</a></li>
     <li><a href="#オープンソース契約">オープンソース契約</a></li>
   </ul>
 </details>
@@ -77,12 +78,36 @@ Nano-portfolio は、GitHub Octokit API と Nuxt3 エコシステムを統合し
 
 ## 使い方
 
+### このリポジトリをクローンして使う
+
 ```sh
 $ https://github.com/gaomingzhao666/nano-portfolio.git # プロジェクトをクローンしてください
 $ cd nano-portfolio
 $ pnpm install # プロジェクトに必要な依存関係をインストールしてください。
 $ pnpm dev # 運行する
 ```
+
+### Docker を使う、コンテナに作りして使う
+
+1. このプロジェクトをクローンまたはダウンロードしてください。
+2. コンピュータに `Docker Desktop` がインストールされていることを確認してください。
+3. `VScode` に `Docker extension` をインストールしてください。
+4. `Dockerfile` を右クリックし、 `ビルドイメージ` オプションを選択してください。
+5. `Docker Desktop` を開いて、コンテナを起動してください。
+
+## このプロジェクトを使用してあなたのニーズに合わせる方法
+
+### 粗筋
+
+このプロジェクトは MIT オープンソースライセンスの下で公開されており、GitHub アカウントに基づいてリポジトリ情報と個人プロファイルを自動的にインポートすることができます。
+
+### ステップ
+
+- [GitHub Personal Access Token を生成する](https://products.groupdocs.app/translation/markdown)。
+- `server` ディレクトリ内の `utils` フォルダにある `githubInfo.ts` ファイルに移動してください
+- 以前に生成した`Personal Access Token`で既存のトークンを置き換えてください。これにより、バックエンド API が新しいトークンの下での GitHub アカウントを正しく認識することができます
+- `About` ページと `Contact` ページのコンポーネントデータを更新してください
+- これて終わった
 
 ## CORS エラーに関して
 
@@ -98,7 +123,7 @@ $ pnpm dev # 運行する
 
 <!-- LICENSE -->
 
-## 开源协议
+## オープンソース契約
 
 [MIT License](https://github.com/gaomingzhao666/nano-portfolio/blob/main/LICENSE)
 

@@ -17,11 +17,11 @@
     💖 A portfolio of developers made full-stackly by Nuxt3 and the official supported libs form it 💖
     <br />
     <br />
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README.md">English</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-CN.md">简体中文</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README-CN.md">简体中文</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-JP.md">日本語</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README-JP.md">日本語</a>
   </p>
 </div>
 
@@ -30,9 +30,11 @@
   <summary>Directory</summary>
   <ul>
     <li><a href="#introduction-of-project">Introduction of Project</a> </li>
-    <li><a href="#build-with">Build With</a></li>
-    <li><a href="#environment-requirement">Environment Requirement</a></li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#build-with">Build with</a></li>
+    <li><a href="#Runtime-requirement">Runtime Requirement</a></li>
+    <li><a href="#how-to-run-this-application">How to run this application</a></li>
+    <li><a href="#how-to-use-this-project-for-your-case">How to use this project for your case</a></li>
+    <li><a href="#about-cors-error">About cors error</a></li>
     <li><a href="#contributor">Contributor</a></li>
     <li><a href="#license">LICENSE</a></li>
   </ul>
@@ -74,7 +76,11 @@ Nano-portfolio is a developer introduction web application integrated with Githu
 
 - NodeJS LTS 20+
 
-## Usage
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## How to run this application
+
+### Clone this project
 
 ```sh
 $ https://github.com/gaomingzhao666/nano-portfolio.git # clone the project
@@ -83,7 +89,31 @@ $ pnpm install # install dependencies that this project needs
 $ pnpm dev # run
 ```
 
-## About CORS Problem
+### Use a Dockerfile to Create a Container
+
+1. Clone or download this project.
+2. Ensure you have `Docker Desktop` installed on your computer.
+3. Install the `Docker extension` in your `VScode`.
+4. Right-click the `Dockerfile` in this project and select the `Build Image` option.
+5. Open `Docker Desktop` and run the container.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## How to Use This Project for Your Case
+
+### Overview
+
+Utilize this completely open-source project, released under the MIT license, to create your own portfolio. It automatically imports information from your GitHub repositories and your profile using your GitHub account. Let's explore how!
+
+### Quick Start
+
+- [Generate a GitHub Personal Access Token](https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+- Navigate to the `githubInfo.ts` file located in the `utils` folder within the `server` directory
+- Replace the placeholder token with your own `Personal Access Token` to enable server-side APIs to return your GitHub information
+- Update the data on the `About` and `Contact` pages with appropriate information
+- Have fun and enjoy customizing your portfolio
+
+## About CORS Error
 
 As an [SSR](https://vuejs.org/guide/scaling-up/ssr.html) project, we do not need to care about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), but if you prefer to set SSR mode as false in the `nuxt.config.ts` file [click here](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to install a plugin that can solve the CORS problem.
 

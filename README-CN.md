@@ -17,11 +17,11 @@
     💖 由 Nuxt3 生态全栈开发的开发者个人简介应用 💖
     <br />
     <br />
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README.md">English</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-CN.md">简体中文</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README-CN.md">简体中文</a>
       <strong> · </strong>
-    <a href="https://github.com/CreamR/nano-portfolio/blob/master/README-JP.md">日本語</a>
+    <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README-JP.md">日本語</a>
   </p>
 </div>
 
@@ -30,9 +30,11 @@
   <summary>目录</summary>
   <ul>
     <li><a href="#项目介绍">项目介绍</a> </li>
-    <li><a href="#技术栈">Build With</a></li>
-    <li><a href="#环境需要">环境需要</a></li>
-    <li><a href="#用法">用法</a></li>
+    <li><a href="#技术栈">技术栈</a></li>
+    <li><a href="#运行时版本">运行时版本</a></li>
+    <li><a href="#如何启动此项目">如何使用此项目</a></li>
+    <li><a href="#如何使用此项目并为您所用">如何集成项目</a></li>
+    <li><a href="#关于-cors-报错">关于 CORS 报错</a></li>
     <li><a href="#贡献者">贡献者</a></li>
     <li><a href="#开源协议">开源协议</a></li>
   </ul>
@@ -75,7 +77,9 @@ Nano-portfolio 是一个与 Github Octokit 和 Nuxt3 生态结合的开发者个
 - NodeJS LTS 20+
 <!-- - Chrome67+ / Edge79+ / Safari12+ -->
 
-## 用法
+## 如何启动此项目
+
+### 克隆此项目
 
 ```sh
 $ https://github.com/gaomingzhao666/nano-portfolio.git # 克隆此项目
@@ -84,7 +88,29 @@ $ pnpm install # 安装项目所需依赖
 $ pnpm dev # 运行
 ```
 
-## 关于 CORS 错误
+### 使用 docker 制作容器
+
+1. 克隆或者下载此项目.
+2. 确保电脑中已安装`Docker Desktop`.
+3. Install the `Docker extension` in your `VScode`.
+4. 右击 `Dockerfile` 并选择 `Build Image` 选项.
+5. 打开 `Docker Desktop` 启动此容器.
+
+## 如何使用此项目并为您所用
+
+### 总览
+
+此项目使用 MIT 开源协议发布， 它可以基于 GitHub 账户自动导入仓库信息和个人资料。
+
+### 步骤
+
+- [生成 GitHub Personal Access Token](https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+- 前往 于 `server` 目录下 `utils` 文件夹中的 `githubInfo.ts` 文件
+- 使用此前生成的 `Personal Access Token` 替代原有 Token， 这可以使得后端制作的 API 可以正确识别新 Token 下的 Github 账户
+- 更新 `About` 和 `Contact` 页面组件的数据
+- 大功告成
+
+## 关于 CORS 报错
 
 作为 [SSR](https://vuejs.org/guide/scaling-up/ssr.html) 项目, 我们无需关心 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), 但若你在 `nuxt.config.ts` 文件中设置 SSR mode 为 false [点击此处](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) 可安装浏览器插件以此解决 CORS 错误。
 
