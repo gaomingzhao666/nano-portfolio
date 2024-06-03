@@ -11,4 +11,4 @@ interface props {
 const props = defineProps<props>()
 </script>
 
-<style></style>
+<style scoped></style>

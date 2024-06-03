@@ -83,19 +83,17 @@ const techStack = [
 	'Postman',
 ]
 
-const { data, pending, error } = await useFetch<githubUserInfoGet>(
+const { data, error } = await useFetch<githubUserInfoGet>(
 	'/api/user/githubUserInfo',
 	{
 		method: 'GET',
-		onResponse({ request, response }) {
-			console.log(response.body)
-		},
 	}
 )
-console.log(data.value)
+const router = useRouter()
+if (error.value) router.push({ name: 'error' })
 </script>
 
-<style>
+<style scoped>
 .nanoFlex {
 	display: flex;
 	justify-content: space-around;

@@ -77,30 +77,22 @@ const validate = (userInfo: {
 
 const toast = useToast()
 let errorMessage: Ref<string> = ref('')
-
 const onSubmit = async () => {
-	try {
-		const { status, data } = await $fetch<loginPost>('/api/auth/login', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: {
-				username: userInfo.username,
-				password: userInfo.password,
-			},
-		})
+	const { status, data } = await $fetch<loginPost>('/api/auth/login', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: {
+			username: userInfo.username,
+			password: userInfo.password,
+		},
+	})
 
-		if (status && data.token) {
-			localStorage.setItem('token', data.token)
-			toast.add({ title: data.message, color: 'green' })
-			navigateTo('/')
-		} else {
-			errorMessage.value = data.message
-		}
-	} catch (err) {
-		console.log('try catch err in onSubmit login.vue')
-		console.log(err)
-	}
+	if (status && data.token) {
+		localStorage.setItem('token', data.token)
+		toast.add({ title: data.message, color: 'green' })
+		navigateTo('/')
+	} else errorMessage.value = data.message
 }
 </script>

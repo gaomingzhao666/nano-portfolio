@@ -27,10 +27,21 @@
 					item: { padding: 'p-3', rounded: 'rounded-xl' },
 				}"
 			>
-				<UIcon name="i-heroicons:language" dynamic size="24" />
+				<UButton icon="i-heroicons:language" color="gray" variant="ghost" />
 			</UDropdown>
 
-			<NuxtLink to="/login" class="mx-3" v-if="!isLogin">
+			<UButton
+				:icon="
+					isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
+				"
+				color="gray"
+				variant="ghost"
+				aria-label="Theme"
+				class="mx-3"
+				@click="isDark = !isDark"
+			/>
+
+			<NuxtLink to="/login" v-if="!isLogin">
 				<UButton
 					icon="i-material-symbols:login"
 					color="white"
@@ -49,7 +60,7 @@
 				color="white"
 				variant="solid"
 				size="lg"
-				class="md:hidden"
+				class="md:hidden ml-3"
 				@click="isOpen = true"
 			/>
 		</section>
@@ -74,62 +85,40 @@
 					>
 						{{ $t('navigation') }}
 					</h3>
-					<UButton
-						color="gray"
-						variant="ghost"
-						icon="i-heroicons-x-mark-20-solid"
-						class="-my-1"
-						@click="isOpen = false"
-					/>
+					<section>
+						<UButton
+							:icon="
+								isDark
+									? 'i-heroicons-moon-20-solid'
+									: 'i-heroicons-sun-20-solid'
+							"
+							color="gray"
+							variant="ghost"
+							aria-label="Theme"
+							class="mx-3"
+							@click="isDark = !isDark"
+						/>
+
+						<UButton
+							color="gray"
+							variant="ghost"
+							icon="i-heroicons-x-mark-20-solid"
+							@click="isOpen = false"
+						/>
+					</section>
 				</div>
 			</template>
 
-			<section>
-				<NuxtLink
-					:to="item.to"
-					v-for="(item, index) in navbar.links"
-					:key="index"
-					@click="isOpen = false"
-				>
-					<UButton
-						block
-						:icon="item.icon"
-						variant="link"
-						size="xl"
-						class="flex justify-start my-3"
-						>{{ item.label }}</UButton
-					>
-				</NuxtLink>
-			</section>
+			<nav-bar @click="isOpen = false" />
 		</UCard>
 	</UModal>
 </template>
 
 <script lang="ts" setup>
-const navbar = useNavbarStore()
 const { setLocale } = useI18n()
 const toast = useToast()
-
 const isOpen: Ref<boolean> = ref(false)
-let isLogin: Ref<boolean> = ref(false)
 const token = await useCookie('token')
-
-if (token.value === undefined || token.value === null) isLogin.value = false
-else isLogin.value = true
-
-const { data, pending, error } = useFetch<userInfoGet>('/api/user/userInfo', {
-	method: 'get',
-	query: {
-		token: token,
-	},
-})
-
-const notice = (text: string) => {
-	if (!sessionStorage.getItem('isFirstDisplay')) {
-		toast.add({ title: text })
-		sessionStorage.setItem('isFirstDisplay', '1')
-	}
-}
 
 const languages = [
 	[
@@ -160,4 +149,34 @@ const languages = [
 		},
 	],
 ]
+
+const { data, error } = useFetch<userInfoGet>('/api/user/userInfo', {
+	method: 'GET',
+	query: {
+		token: token,
+	},
+})
+const router = useRouter()
+if (error.value) router.push({ name: 'error' })
+
+let isLogin: Ref<boolean> = ref(false)
+if (token.value === undefined || token.value === null) isLogin.value = false
+else isLogin.value = true
+
+const notice = (text: string) => {
+	if (!sessionStorage.getItem('isFirstDisplay')) {
+		toast.add({ title: text })
+		sessionStorage.setItem('isFirstDisplay', '1')
+	}
+}
+
+const colorMode = useColorMode()
+const isDark = computed({
+	get() {
+		return colorMode.value === 'dark'
+	},
+	set() {
+		colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+	},
+})
 </script>

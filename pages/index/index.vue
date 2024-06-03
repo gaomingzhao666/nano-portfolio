@@ -1,8 +1,5 @@
 <template>
-	<main
-		class="grid 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4"
-		v-if="!pending"
-	>
+	<main class="grid 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
 		<div
 			class="group rounded-3xl shadow-md m-3 hover:shadow-lg transition-all"
 			v-for="(item, index) in data?.data"
@@ -45,8 +42,6 @@
 			</div>
 		</div>
 	</main>
-
-	<skeleton v-else />
 </template>
 
 <script lang="ts" setup>
@@ -56,7 +51,9 @@ useSeoMeta({
 		'Explore a curated collection of GitHub repositories, organized by language and topic. Find the perfect project to inspire your next development endeavor.',
 })
 
-const { data, pending, error } = await useFetch<repoInfoGet>('/api/repo/info', {
+const { data, error } = await useFetch<repoInfoGet>('/api/repo/info', {
 	method: 'GET',
 })
+const router = useRouter()
+if (error.value) router.push({ name: 'error' })
 </script>
