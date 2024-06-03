@@ -1,18 +1,32 @@
 <template>
-	<nav class="flex m-3 h-full">
+	<nav class="flex m-3 h-full w-full md:w-[65px] lg:w-[250px]">
 		<UVerticalNavigation
-			:links="navbar.links"
-			class="h-full"
+			:links="[
+				{
+					label: $t('explore'),
+					icon: 'i-heroicons:home-solid',
+					to: '/',
+				},
+				{
+					label: $t('experience'),
+					icon: 'i-heroicons:briefcase',
+					to: '/experience',
+				},
+				{
+					label: $t('about'),
+					icon: 'i-heroicons:information-circle',
+					to: '/about',
+				},
+				{
+					label: $t('contact'),
+					icon: 'i-heroicons:globe-alt',
+					to: '/contact',
+				},
+			]"
 			:ui="{
-				padding: 'p-5',
-				width: 'w-64',
+				padding: 'p-6',
 				rounded: 'rounded-lg',
 			}"
 		/>
-		<UDivider orientation="vertical" class="m-3 h-full" />
 	</nav>
 </template>
-
-<script lang="ts" setup>
-const navbar = useNavbarStore()
-</script>
