@@ -1,7 +1,7 @@
 <template>
-	<section>
+	<div>
 		<h1>{{ props.message }}</h1>
-	</section>
+	</div>
 </template>
 
 <script lang="ts" setup>

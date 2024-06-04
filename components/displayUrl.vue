@@ -1,12 +1,12 @@
 <template>
-	<section>
+	<div>
 		<a
 			:href="props.deployedUrl"
 			class="text-sm p-1 hover:border-b-2 hover:border-b-sky-200"
 		>
 			Click to deployed website
 		</a>
-	</section>
+	</div>
 </template>
 
 <script lang="ts" setup>

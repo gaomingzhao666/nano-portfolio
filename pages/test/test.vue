@@ -24,7 +24,7 @@ const TestContributors = async () => {
 </script>
 
 <template>
-	<div class="text-center">
+	<section class="text-center">
 		<h1 class="text-center font-bold m-5">TEST</h1>
 		<UButton
 			icon="i-material-symbols:login"
@@ -44,5 +44,5 @@ const TestContributors = async () => {
 		>
 			test contributors
 		</UButton>
-	</div>
+	</section>
 </template>

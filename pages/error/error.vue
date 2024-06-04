@@ -1,10 +1,10 @@
 <!-- GPT4 generate -->
 <template>
 	<div class="error-container">
-		<div class="error-title">404</div>
-		<div class="error-description">
+		<section class="error-title">404</section>
+		<section class="error-description">
 			The page you're looking for can't be found.
-		</div>
+		</section>
 		<nuxt-link to="/">
 			<UButton class="error-button" size="xl">Go Home</UButton>
 		</nuxt-link>

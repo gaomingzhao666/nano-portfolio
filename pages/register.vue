@@ -1,35 +1,37 @@
 <template>
-	<h1 class="text-3xl font-medium mb-5 text-center mt-12 lg:mt-52 my-8">
-		{{ $t('register') }}
-	</h1>
-	<UCard class="max-w-sm mx-auto">
-		<UDivider class="my-5" :label="$t('typeInfo')" />
-		<UAlert
-			v-if="errorMessage"
-			:title="errorMessage"
-			class="mb-2"
-			variant="soft"
-			color="orange"
-		/>
-		<UForm
-			:validate="validate"
-			:state="userInfo"
-			class="space-y-4"
-			@submit="onSubmit"
-		>
-			<UFormGroup :label="$t('username')" name="username">
-				<UInput v-model="userInfo.username" />
-			</UFormGroup>
+	<div>
+		<h1 class="text-3xl font-medium mb-5 text-center mt-12 lg:mt-52 my-8">
+			{{ $t('register') }}
+		</h1>
+		<UCard class="max-w-sm mx-auto">
+			<Usectionider class="my-5" :label="$t('typeInfo')" />
+			<UAlert
+				v-if="errorMessage"
+				:title="errorMessage"
+				class="mb-2"
+				variant="soft"
+				color="orange"
+			/>
+			<UForm
+				:validate="validate"
+				:state="userInfo"
+				class="space-y-4"
+				@submit="onSubmit"
+			>
+				<UFormGroup :label="$t('username')" name="username">
+					<UInput v-model="userInfo.username" />
+				</UFormGroup>
 
-			<UFormGroup :label="$t('password')" name="password">
-				<UInput v-model="userInfo.password" type="password" />
-			</UFormGroup>
+				<UFormGroup :label="$t('password')" name="password">
+					<UInput v-model="userInfo.password" type="password" />
+				</UFormGroup>
 
-			<UButton class="w-full text-center block h-10" type="submit">
-				{{ $t('submit') }}
-			</UButton>
-		</UForm>
-	</UCard>
+				<UButton class="w-full text-center block h-10" type="submit">
+					{{ $t('submit') }}
+				</UButton>
+			</UForm>
+		</UCard>
+	</div>
 </template>
 
 <script setup lang="ts">
@@ -39,6 +41,10 @@ useSeoMeta({
 	title: 'Register',
 	description:
 		'Create an account to unlock exclusive content and features. Sign up today with your username and password.',
+})
+definePageMeta({
+	pageTransition: false,
+	layoutTransition: false,
 })
 
 const userInfo = reactive({

@@ -1,6 +1,6 @@
 <template>
 	<main class="grid 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
-		<div
+		<section
 			class="group rounded-3xl shadow-md m-3 hover:shadow-lg transition-all"
 			v-for="(item, index) in data?.data"
 			:key="index"
@@ -26,11 +26,11 @@
 				/>
 			</section>
 
-			<div class="px-3 pb-3">
-				<div class="flex justify-between m-3">
+			<section class="px-3 pb-3">
+				<section class="flex justify-between m-3">
 					<p>{{ item.name }}</p>
 					<UBadge variant="soft" size="md" :label="item.language" />
-				</div>
+				</section>
 
 				<UBadge
 					class="m-1 space-y-3"
@@ -39,8 +39,8 @@
 					:key="index"
 					:label="childItem"
 				/>
-			</div>
-		</div>
+			</section>
+		</section>
 	</main>
 </template>
 

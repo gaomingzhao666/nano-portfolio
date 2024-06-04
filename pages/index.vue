@@ -1,11 +1,11 @@
 <template>
 	<div class="h-full">
 		<index-header />
-		<div class="flex">
+		<section class="flex">
 			<nav-bar class="hidden md:block" />
 			<!-- in this case, index page where in index directory is default -->
 			<NuxtPage />
-		</div>
+		</section>
 	</div>
 </template>
 

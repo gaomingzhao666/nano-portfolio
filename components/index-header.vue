@@ -1,13 +1,13 @@
 <template>
 	<header class="flex justify-between items-center m-5 border-b-gray-700">
-		<div class="flex">
+		<section class="flex">
 			<ico-nano class="text-5xl rounded-full" />
 
-			<div class="ml-3 hidden md:block">
+			<section class="ml-3 hidden md:block">
 				<p class="text-blue-600 text-lg">{{ $t('name') }}</p>
 				<p class="text-gray-500 text-sm">{{ $t('devDesc') }}</p>
-			</div>
-		</div>
+			</section>
+		</section>
 
 		<UInput
 			icon="i-mingcute:search-line"
@@ -65,21 +65,21 @@
 			/>
 		</section>
 	</header>
-	<UDivider />
+	<Usectionider />
 
 	<UModal v-model="isOpen" fullscreen>
 		<UCard
 			:ui="{
 				base: 'h-full flex flex-col',
 				rounded: '',
-				divide: 'divide-y divide-gray-200 dark:divide-gray-800',
+				sectionide: 'sectionide-y sectionide-gray-200 dark:sectionide-gray-800',
 				body: {
 					base: 'grow',
 				},
 			}"
 		>
 			<template #header>
-				<div class="flex items-center justify-between">
+				<section class="flex items-center justify-between">
 					<h3
 						class="text-base font-semibold leading-6 text-gray-900 dark:text-white"
 					>
@@ -106,7 +106,7 @@
 							@click="isOpen = false"
 						/>
 					</section>
-				</div>
+				</section>
 			</template>
 
 			<nav-bar @click="isOpen = false" />
