@@ -10,13 +10,13 @@
 			>
 				<section class="flex justify-start items-center">
 					<UIcon name="i-grommet-icons:github" class="text-3xl mr-2" />
-					<p>Github Repo</p>
+					<p>{{ $t('githubRepo') }}</p>
 				</section>
 
 				<h1
 					class="text-2xl text-center my-10 transition-all group-hover:text-3xl"
 				>
-					<a :href="item.clone_url">Click to Repo</a>
+					<a :href="item.clone_url">{{ $t('clickToRepo') }}</a>
 				</h1>
 
 				<displayUrl
