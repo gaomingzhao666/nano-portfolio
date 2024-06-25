@@ -1,15 +1,17 @@
+import mongoose from 'mongoose'
 import { defineMongooseModel } from '#nuxt/mongoose'
 
 const comment = defineMongooseModel('comment', {
-	userId: {
+	from: {
 		type: String,
 		required: true,
 		unique: true,
 	},
-	username: {
+
+	to: {
 		type: String,
 		required: true,
-		unique: true,
+		unique: false,
 	},
 
 	comment: {
@@ -18,11 +20,12 @@ const comment = defineMongooseModel('comment', {
 		unique: false,
 	},
 
-	childComment: {
-		type: [], // Assuming child comments are strings, adjust if necessary
-		required: false,
-		unique: false,
-	},
+	replies: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'comment',
+		},
+	],
 
 	addTime: {
 		type: Date,

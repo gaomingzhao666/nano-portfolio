@@ -1,9 +1,7 @@
-declare interface comment {
-	userId: string
-	username: string
-
+interface Comment {
+	from: string
+	to: string
 	comment: string
-	childComment: [comment]
-
-	addTime: Date
+	replies: Comment[]
+	addTime?: Date
 }
