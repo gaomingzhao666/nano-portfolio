@@ -8,9 +8,9 @@
 					to: '/',
 				},
 				{
-					label: $t('experience'),
+					label: $t('career'),
 					icon: 'i-heroicons:briefcase',
-					to: '/experience',
+					to: '/career',
 				},
 				{
 					label: $t('about'),
