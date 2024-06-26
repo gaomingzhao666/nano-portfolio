@@ -1,8 +1,8 @@
 <template>
 	<div class="h-full">
-		<index-header />
+		<IndexHeader />
 		<section class="flex">
-			<nav-bar class="hidden md:block" />
+			<NavBar class="hidden md:block" />
 			<!-- in this case, index page where in index directory is default -->
 			<NuxtPage />
 		</section>

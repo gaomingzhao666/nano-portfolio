@@ -27,5 +27,7 @@
 	"username": "账号",
 	"password": "密码",
 	"submit": "提交",
-	"noAccountDesc": "新伙伴到这里"
+	"noAccountDesc": "新伙伴到这里",
+
+	"comments": "评论"
 }

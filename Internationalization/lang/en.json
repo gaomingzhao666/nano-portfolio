@@ -27,5 +27,7 @@
 	"username": "Username",
 	"password": "Password",
 	"submit": "Submit",
-	"noAccountDesc": "Don't have an account?"
+	"noAccountDesc": "Don't have an account?",
+
+	"comments": "Comments"
 }

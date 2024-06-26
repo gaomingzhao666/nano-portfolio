@@ -27,4 +27,10 @@ export default [
 		component: () =>
 			import('~/pages/index/contact.vue').then((r) => r.default || r),
 	},
+	{
+		name: 'comments',
+		path: '/comments',
+		component: () =>
+			import('~/pages/index/comments.vue').then((r) => r.default || r),
+	},
 ]

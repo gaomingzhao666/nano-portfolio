@@ -27,5 +27,7 @@
 	"username": "アカウント",
 	"password": "パスワード",
 	"submit": "完了",
-	"noAccountDesc": "新人さんはこちら"
+	"noAccountDesc": "新人さんはこちら",
+
+	"comments": "話しましょう"
 }
