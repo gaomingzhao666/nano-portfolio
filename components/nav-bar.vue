@@ -4,7 +4,7 @@
 			:links="[
 				{
 					label: $t('explore'),
-					icon: 'i-heroicons:home-solid',
+					icon: 'i-heroicons:cpu-chip',
 					to: '/',
 				},
 				{
@@ -21,6 +21,11 @@
 					label: $t('contact'),
 					icon: 'i-heroicons:globe-alt',
 					to: '/contact',
+				},
+				{
+					label: $t('comments'),
+					icon: 'i-heroicons:chat-bubble-oval-left-ellipsis',
+					to: '/comments',
 				},
 			]"
 			:ui="{
