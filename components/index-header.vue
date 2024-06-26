@@ -118,7 +118,7 @@
 const { setLocale } = useI18n()
 const toast = useToast()
 const isOpen: Ref<boolean> = ref(false)
-const token = await useCookie('token')
+const token = useCookie('token').value
 
 const languages = [
 	[
@@ -160,7 +160,7 @@ const router = useRouter()
 if (error.value) router.push({ name: 'error' })
 
 let isLogin: Ref<boolean> = ref(false)
-if (token.value === undefined || token.value === null) isLogin.value = false
+if (token === undefined || token === null) isLogin.value = false
 else isLogin.value = true
 
 const notice = (text: string) => {

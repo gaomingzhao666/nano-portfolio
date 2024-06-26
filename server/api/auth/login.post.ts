@@ -46,6 +46,7 @@ export default defineEventHandler(async (event) => {
 
 	setResponseStatus(event, 200)
 	setCookie(event, 'token', token)
+	setCookie(event, 'username', user.username)
 	return <loginPost>{
 		status: true,
 		data: {
