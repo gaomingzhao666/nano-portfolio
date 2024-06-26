@@ -1,7 +1,5 @@
-interface Comment {
-	from: string
-	to: string
+interface comment {
+	user: accountInfo
 	comment: string
-	replies: Comment[]
-	addTime?: Date
+	addTime: Date
 }
