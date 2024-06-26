@@ -1,18 +1,17 @@
 import comments from '~/server/models/comment'
 
 export default defineEventHandler(async (event) => {
-	const allComments = await comments.find()
+	try {
+		const allComments = await comments.find().lean()
 
-	if (allComments) {
 		setResponseStatus(event, 200)
-		return <getCommentGet>{
+		return {
 			status: true,
-			data: {
-				comments: allComments,
-			},
+			data: allComments,
 		}
-	} else {
-		return <errorType>{
+	} catch (error) {
+		setResponseStatus(event, 500)
+		return {
 			status: false,
 			data: {
 				message: 'Failed to retrieve comments',

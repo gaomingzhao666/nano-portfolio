@@ -1,29 +1,20 @@
 import comments from '~/server/models/comment'
 
-interface deleteCommentQuery {
-	commentId: string
+interface deleteCommentBody {
+	comment: string
 }
 
 export default defineEventHandler(async (event) => {
-	const { commentId }: deleteCommentQuery = getQuery(event)
+	const { comment }: deleteCommentBody = await readBody(event)
 
-	if (!commentId) {
-		return <errorType>{
-			status: false,
-			data: {
-				message: 'Comment ID is required',
-			},
-		}
-	}
-
-	const deletedComment = await comments.findByIdAndDelete(commentId)
+	const deletedComment = await comments.findOneAndDelete({ comment })
 
 	if (deletedComment) {
 		setResponseStatus(event, 200)
 		return <delCommentDelete>{
 			status: true,
 			data: {
-				message: `Comment ${deletedComment} has been deleted.`,
+				message: 'Comment deleted.',
 			},
 		}
 	} else {

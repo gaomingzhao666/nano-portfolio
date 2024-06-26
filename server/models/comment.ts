@@ -1,17 +1,12 @@
-import mongoose from 'mongoose'
+import { Types } from 'mongoose'
 import { defineMongooseModel } from '#nuxt/mongoose'
 
-const comment = defineMongooseModel('comment', {
-	from: {
-		type: String,
+const comment = defineMongooseModel<comment>('comment', {
+	// ref on nuxt-mongoose official use cases
+	user: {
+		type: Types.ObjectId,
 		required: true,
-		unique: true,
-	},
-
-	to: {
-		type: String,
-		required: true,
-		unique: false,
+		ref: 'accountInfo',
 	},
 
 	comment: {
@@ -20,17 +15,11 @@ const comment = defineMongooseModel('comment', {
 		unique: false,
 	},
 
-	replies: [
-		{
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'comment',
-		},
-	],
-
 	addTime: {
 		type: Date,
-		required: false,
+		required: true,
 		unique: false,
+		default: Date.now,
 	},
 })
 
