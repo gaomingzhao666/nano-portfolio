@@ -1,16 +1,17 @@
 import comments from '~/server/models/comment'
 
 interface addCommentBody {
-	user: accountInfo
+	username: string
 	comment: string
+	device: string
 }
-
 export default defineEventHandler(async (event) => {
-	const { user, comment }: addCommentBody = await readBody(event)
+	const { username, comment, device }: addCommentBody = await readBody(event)
 
 	const newComment = new comments({
-		user,
-		comment,
+		username: username,
+		comment: comment,
+		device: device,
 	})
 	await newComment.save()
 
