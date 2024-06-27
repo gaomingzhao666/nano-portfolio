@@ -1,10 +1,16 @@
 <template>
 	<UContainer>
-		<h1 class="text-center font-bold text-3xl my-5">
+		<h1 class="text-center font-bold text-3xl my-3">
 			{{ $t('comments') }}
 		</h1>
 
-		<CommentsCard v-for="(item, index) in data" :key="index" />
+		<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+			<CommentsCard
+				v-for="(item, index) in data?.data || []"
+				:key="index"
+				:data="item"
+			/>
+		</section>
 	</UContainer>
 
 	<UButton
@@ -27,27 +33,56 @@
 				<h1 class="font-bold text-lg">Post Comment</h1>
 			</template>
 
-			<UInputMenu v-model="userType" :options="options" size="lg" />
-			<UTextarea
-				padded
-				placeholder="Write your comment here..."
-				variant="outline"
-				size="xl"
-				class="w-full mt-6"
-			/>
+			<section class="text-end">
+				<UTextarea
+					v-model="comment"
+					padded
+					placeholder="Write your comment here..."
+					variant="outline"
+					size="xl"
+					class="w-full"
+				/>
+				<UButton @click="addComment" class="text-lg mt-5" block>Post</UButton>
+			</section>
 		</UCard>
 	</UModal>
 </template>
 
 <script lang="ts" setup>
 const isOpen: Ref<boolean> = ref(false)
-const options = ['userName', 'Anonymous']
-const userType: Ref<string> = ref(options[0])
 
 const { data, error } = useFetch<getCommentGet>('/api/comment/getComment', {
 	method: 'GET',
 })
+console.log(data)
 
 const router = useRouter()
 if (error.value) router.push({ name: 'error' })
+
+const comment: Ref<string> = ref('')
+const addComment = async () => {
+	const toast = useToast()
+
+	if (!comment.value) {
+		toast.add({ title: 'Please fill in all fields' })
+		return
+	}
+	const token = useCookie('token').value
+	if (!token) {
+		toast.add({ title: 'You must login to post a comment' })
+		return
+	}
+
+	const username = useCookie('username').value
+	const { data } = await $fetch<addCommentPost>('/api/comment/addComment', {
+		method: 'POST',
+		body: {
+			username: username,
+			comment: comment.value,
+			device: getOS(),
+		},
+	})
+
+	toast.add({ title: data.message })
+}
 </script>
