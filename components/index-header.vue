@@ -51,9 +51,7 @@
 					{{ $t('login') }}
 				</UButton>
 			</NuxtLink>
-			<UButton color="primary" variant="ghost" v-else>{{
-				data?.data.username
-			}}</UButton>
+			<UButton color="primary" variant="ghost" v-else>{{ username }}</UButton>
 
 			<UButton
 				icon="i-heroicons:ellipsis-horizontal"
@@ -118,7 +116,6 @@
 const { setLocale } = useI18n()
 const toast = useToast()
 const isOpen: Ref<boolean> = ref(false)
-const token = useCookie('token').value
 
 const languages = [
 	[
@@ -150,6 +147,8 @@ const languages = [
 	],
 ]
 
+const token: string | null | undefined = useCookie('token').value
+const username: string | null | undefined = useCookie('username').value
 const { data, error } = useFetch<userInfoGet>('/api/user/userInfo', {
 	method: 'GET',
 	query: {
@@ -160,7 +159,7 @@ const router = useRouter()
 if (error.value) router.push({ name: 'error' })
 
 let isLogin: Ref<boolean> = ref(false)
-if (token === undefined || token === null) isLogin.value = false
+if (!token || !username) isLogin.value = false
 else isLogin.value = true
 
 const notice = (text: string) => {
