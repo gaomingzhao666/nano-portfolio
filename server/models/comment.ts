@@ -32,7 +32,7 @@ const comment = defineMongooseModel<comment>('comment', {
 		type: Date,
 		required: true,
 		unique: false,
-		default: Date.now(),
+		default: new Date(),
 	},
 })
 

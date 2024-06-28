@@ -19,7 +19,7 @@ const accountInfo = defineMongooseModel<accountInfo>('accountInfo', {
 		type: Date,
 		required: false,
 		unique: true,
-		default: Date.now,
+		default: new Date(),
 	},
 })
 
