@@ -11,6 +11,7 @@
 				v-for="(item, index) in data?.data || []"
 				:key="index"
 				:data="item"
+				@freshData="deleteComment"
 			/>
 		</section>
 	</main>
@@ -56,7 +57,6 @@ const isOpen: Ref<boolean> = ref(false)
 const { data, error } = useFetch<getCommentGet>('/api/comment/getComment', {
 	method: 'GET',
 })
-console.log(data)
 
 const router = useRouter()
 if (error.value) router.push({ name: 'error' })
@@ -69,14 +69,15 @@ const addComment = async () => {
 		toast.add({ title: 'Please fill in all fields' })
 		return
 	}
-	const token = useCookie('token').value
-	if (!token) {
+	const token: string | null | undefined = useCookie('token').value
+	const username: string | null | undefined = useCookie('username').value
+	if (!token || !username) {
 		toast.add({ title: 'You must login to post a comment' })
+		router.push({ name: 'login' })
 		return
 	}
 
-	const username = useCookie('username').value
-	const { data } = await $fetch<addCommentPost>('/api/comment/addComment', {
+	const res = await $fetch<addCommentPost>('/api/comment/addComment', {
 		method: 'POST',
 		body: {
 			username: username,
@@ -85,6 +86,13 @@ const addComment = async () => {
 		},
 	})
 
-	toast.add({ title: data.message })
+	toast.add({ title: res.data.message })
+	isOpen.value = false
+
+	await refreshNuxtData()
+}
+
+const deleteComment = (needFresh: boolean) => {
+	if (needFresh) refreshNuxtData()
 }
 </script>
