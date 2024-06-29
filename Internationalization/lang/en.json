@@ -29,5 +29,8 @@
 	"submit": "Submit",
 	"noAccountDesc": "Don't have an account?",
 
-	"comments": "Comments"
+	"comments": "Comments",
+	"postComment": "Post Comment",
+	"writeYourCommentHere": "Write your comment here...",
+	"post": "Post"
 }

@@ -29,5 +29,8 @@
 	"submit": "完了",
 	"noAccountDesc": "新人さんはこちら",
 
-	"comments": "話しましょう"
+	"comments": "話しましょう",
+	"postComment": "発表しましょう",
+	"writeYourCommentHere": "コメントをここに書いてください...",
+	"post": "発表"
 }

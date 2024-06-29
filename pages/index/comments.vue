@@ -33,19 +33,21 @@
 			class="p-3"
 		>
 			<template #header>
-				<h1 class="font-bold text-lg">Post Comment</h1>
+				<h1 class="font-bold text-lg">{{ $t('postComment') }}</h1>
 			</template>
 
 			<section class="text-end">
 				<UTextarea
 					v-model="comment"
 					padded
-					placeholder="Write your comment here..."
+					placeholder="{{ $t('writeYourCommentHere') }}"
 					variant="outline"
 					size="xl"
 					class="w-full"
 				/>
-				<UButton @click="addComment" class="text-lg mt-5" block>Post</UButton>
+				<UButton @click="addComment" class="text-lg mt-5" block>
+					{{ $t('post') }}
+				</UButton>
 			</section>
 		</UCard>
 	</UModal>
