@@ -8,7 +8,7 @@ interface addCommentBody {
 export default defineEventHandler(async (event) => {
 	const { username, comment, device }: addCommentBody = await readBody(event)
 
-	if (!getCookie(event, 'username')) {
+	if (!getCookie(event, 'token')) {
 		return <errorType>{
 			status: false,
 			data: {
