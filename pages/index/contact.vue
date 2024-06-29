@@ -9,10 +9,12 @@
 				<ico-phone class="text-3xl mr-3" />
 				<p>+86 13244687353</p>
 			</section>
+
 			<section class="flex items-center m-5">
 				<ico-email class="text-3xl mr-3" />
 				<p>gaomingzhao666@outlook.com</p>
 			</section>
+
 			<section class="flex items-center m-5">
 				<ico-address class="text-3xl mr-3" />
 				<p>{{ $t('earth') }}</p>

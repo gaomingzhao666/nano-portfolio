@@ -3,19 +3,10 @@
 		<h1 class="text-3xl font-medium mb-4 text-center mt-44 my-8">
 			{{ $t('login') }}
 		</h1>
+
 		<UCard class="max-w-sm mx-auto">
-			<!-- <UButton
-			block
-			class="mb-4"
-			variant="outline"
-			color="gray"
-			to="/auth/google"
-			external
-		>
-			<UIcon name="i-logos-google-icon" class="h-6 w-6 m-1" /> Log in with
-			Google
-		</UButton> -->
 			<Usectionider class="my-5" :label="$t('typeInfo')" />
+
 			<UAlert
 				v-if="errorMessage"
 				:title="errorMessage"
@@ -23,6 +14,7 @@
 				variant="soft"
 				color="orange"
 			/>
+
 			<UForm
 				:validate="validate"
 				:state="userInfo"
@@ -40,6 +32,7 @@
 				<UButton class="w-full text-center block h-10" type="submit">
 					{{ $t('submit') }}
 				</UButton>
+
 				<p class="text-sm mt-5">
 					{{ $t('noAccountDesc') }}
 					<NuxtLink to="/register" class="text-primary">

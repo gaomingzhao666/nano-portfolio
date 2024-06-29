@@ -3,8 +3,10 @@
 		<h1 class="text-3xl font-medium mb-5 text-center mt-12 lg:mt-52 my-8">
 			{{ $t('register') }}
 		</h1>
+
 		<UCard class="max-w-sm mx-auto">
 			<Usectionider class="my-5" :label="$t('typeInfo')" />
+
 			<UAlert
 				v-if="errorMessage"
 				:title="errorMessage"
@@ -12,6 +14,7 @@
 				variant="soft"
 				color="orange"
 			/>
+
 			<UForm
 				:validate="validate"
 				:state="userInfo"

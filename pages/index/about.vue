@@ -19,18 +19,22 @@
 					<UIcon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
 					<p class="nanoFont">2020-2024</p>
 				</section>
+
 				<section class="nanoFlex">
 					<UIcon name="i-fluent-emoji-flat:military-medal" class="text-3xl" />
 					<p class="nanoFont">{{ $t('degree') }}</p>
 				</section>
 			</section>
+
 			<h1 class="text-xl font-bold text-left my-5">
 				{{ $t('major') }}
 			</h1>
+
 			<section class="flex items-center my-3">
 				<UIcon name="i-fluent-emoji-flat:school" class="text-3xl mr-2" />
 				<p class="nanoFont">Qiqihar Institute of Engineering</p>
 			</section>
+
 			<section class="flex items-center mt-3">
 				<UIcon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
 				<p class="nanoFont">Qiqihar, Heilongjiang, China</p>
