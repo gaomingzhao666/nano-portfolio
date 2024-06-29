@@ -8,6 +8,7 @@ interface addCommentBody {
 export default defineEventHandler(async (event) => {
 	const { username, comment, device }: addCommentBody = await readBody(event)
 
+	// validate the user login condition
 	if (!getCookie(event, 'token')) {
 		return <errorType>{
 			status: false,
@@ -16,6 +17,17 @@ export default defineEventHandler(async (event) => {
 			},
 		}
 	}
+	// validate the user permission
+	if (getCookie(event, 'username') !== username) {
+		return <errorType>{
+			status: false,
+			data: {
+				message: 'You are not allowed to add comment.',
+			},
+		}
+	}
+
+	// check if the comment already exists, this system(nano-portfolio) is not allow users to publish the same comment multiple times
 	const isExistComment = await comments.findOne({
 		username: username,
 		comment: comment,
@@ -28,12 +40,14 @@ export default defineEventHandler(async (event) => {
 			},
 		}
 
+	// add the comment to the database
 	const newComment = await comments.create({
 		username: username,
 		comment: comment,
 		device: device,
 	})
 
+	// return the condition message
 	if (newComment) {
 		setResponseStatus(event, 200)
 		return <addCommentPost>{
