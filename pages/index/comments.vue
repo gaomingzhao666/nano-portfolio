@@ -40,7 +40,7 @@
 				<UTextarea
 					v-model="comment"
 					padded
-					placeholder="{{ $t('writeYourCommentHere') }}"
+					:placeholder="$t('writeYourCommentHere')"
 					variant="outline"
 					size="xl"
 					class="w-full"
