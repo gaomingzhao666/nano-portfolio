@@ -18,7 +18,6 @@ export default defineEventHandler(async (event) => {
 			},
 		}
 	}
-
 	// check if the user is allowed to delete the comment
 	if (getCookie(event, 'username') !== username) {
 		setResponseStatus(event, 401)

@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<main class="w-full">
 		<h1 class="text-center font-bold text-3xl my-3">
 			{{ $t('comments') }}
 		</h1>
@@ -67,8 +67,13 @@ const comment: Ref<string> = ref('')
 const addComment = async () => {
 	const toast = useToast()
 
+	// validate the comment and user login condition
 	if (!comment.value) {
 		toast.add({ title: 'Please fill in all fields' })
+		return
+	}
+	if (comment.value.length > 300) {
+		toast.add({ title: 'Comment too much characters' })
 		return
 	}
 	const token: string | null | undefined = useCookie('token').value
@@ -79,11 +84,13 @@ const addComment = async () => {
 		return
 	}
 
+	// clean all of the break in a string
+	const cleanedComment = comment.value.replace(/[\r\n]+/g, ' ').trim()
 	const res = await $fetch<addCommentPost>('/api/comment/addComment', {
 		method: 'POST',
 		body: {
 			username: username,
-			comment: comment.value,
+			comment: cleanedComment,
 			device: getOS(),
 		},
 	})
