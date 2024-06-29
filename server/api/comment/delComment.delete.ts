@@ -8,6 +8,7 @@ interface deleteCommentBody {
 export default defineEventHandler(async (event) => {
 	const { username, comment }: deleteCommentBody = await getQuery(event)
 
+	// validate the user login condition
 	if (!getCookie(event, 'token')) {
 		setResponseStatus(event, 401)
 		return <delCommentDelete>{
@@ -17,6 +18,8 @@ export default defineEventHandler(async (event) => {
 			},
 		}
 	}
+
+	// check if the user is allowed to delete the comment
 	if (getCookie(event, 'username') !== username) {
 		setResponseStatus(event, 401)
 		return <delCommentDelete>{
@@ -27,11 +30,13 @@ export default defineEventHandler(async (event) => {
 		}
 	}
 
+	// delete the comment from the database
 	const deletedComment = await comments.findOneAndDelete({
 		username: username,
 		comment: comment,
 	})
 
+	// return the condition message
 	if (deletedComment) {
 		setResponseStatus(event, 200)
 		return <delCommentDelete>{

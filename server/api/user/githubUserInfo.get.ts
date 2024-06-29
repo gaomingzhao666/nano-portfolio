@@ -17,6 +17,7 @@ export default defineEventHandler(async (event) => {
 		}
 
 		const githubUserInfo = await getGithubUserInfo()
+
 		if (githubUserInfo.status === 200) {
 			setResponseStatus(event, 200)
 			return <githubUserInfoGet>{

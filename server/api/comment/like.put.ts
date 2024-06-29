@@ -7,6 +7,7 @@ interface addCommentBody {
 export default defineEventHandler(async (event) => {
 	const { username, comment }: addCommentBody = await readBody(event)
 
+	// validate the user login condition
 	if (!getCookie(event, 'token')) {
 		setResponseStatus(event, 401)
 		return <addCommentPost>{
@@ -17,6 +18,7 @@ export default defineEventHandler(async (event) => {
 		}
 	}
 
+	// check if the comment exists
 	const commentToUpdate = await comments.findOne({
 		username: username,
 		comment: comment,
@@ -31,12 +33,14 @@ export default defineEventHandler(async (event) => {
 		}
 	}
 
+	// update the comment like count
 	const updatedComment = await comments.findOneAndUpdate(
 		{ username: username, comment: comment },
 		{ $set: { like: commentToUpdate.like + 1 } },
 		{ new: true }
 	)
 
+	// return the condition message
 	if (updatedComment) {
 		setResponseStatus(event, 200)
 		return <addCommentPost>{

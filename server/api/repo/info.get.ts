@@ -1,6 +1,7 @@
 import { Octokit } from 'octokit'
 import { githubToken } from '~/server/utils/githubInfo'
 
+// clear the repo info, make it have no config and backup repos
 const getClearedRepo = (repoInfo: any) => {
 	return repoInfo.data.filter(
 		(data: any) =>
@@ -22,6 +23,7 @@ export default defineEventHandler(async (event) => {
 		return data
 	}
 
+	// get the github repo info and then clear it
 	let githubRepoInfo: any = await getGithubRepoInfo()
 	const newGithubRepoInfo: any = getClearedRepo(githubRepoInfo)
 
