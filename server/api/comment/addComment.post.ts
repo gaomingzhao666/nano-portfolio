@@ -8,12 +8,31 @@ interface addCommentBody {
 export default defineEventHandler(async (event) => {
 	const { username, comment, device }: addCommentBody = await readBody(event)
 
-	const newComment = new comments({
+	if (!getCookie(event, 'username')) {
+		return <errorType>{
+			status: false,
+			data: {
+				message: 'You are not logged in.',
+			},
+		}
+	}
+	const isExistComment = await comments.findOne({
+		username: username,
+		comment: comment,
+	})
+	if (isExistComment)
+		return <errorType>{
+			status: false,
+			data: {
+				message: 'Comment already exists, do not publish it again.',
+			},
+		}
+
+	const newComment = await comments.create({
 		username: username,
 		comment: comment,
 		device: device,
 	})
-	await newComment.save()
 
 	if (newComment) {
 		setResponseStatus(event, 200)
