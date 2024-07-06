@@ -3,7 +3,7 @@
 		<IndexHeader />
 
 		<section class="flex">
-			<NavBar />
+			<NavBar class="hidden md:block" />
 			<!-- in this case, index page where in index directory is default -->
 			<NuxtPage />
 		</section>

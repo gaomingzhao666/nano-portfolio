@@ -24,6 +24,7 @@
 				:items="languages"
 				:popper="{ placement: 'bottom-start' }"
 				:ui="{
+					rounded: 'rounded-xl',
 					item: { padding: 'p-3', rounded: 'rounded-xl' },
 				}"
 			>
@@ -51,7 +52,26 @@
 					{{ $t('login') }}
 				</UButton>
 			</NuxtLink>
-			<UButton color="primary" variant="ghost" v-else>{{ username }}</UButton>
+			<UDropdown
+				v-model:open="isUserOpen"
+				:ui="{
+					rounded: 'rounded-xl',
+					item: { padding: 'p-3', rounded: 'rounded-xl' },
+				}"
+				:items="[
+					[
+						{
+							label: $t('logout'),
+							icon: 'i-heroicons:arrow-up-circle',
+							click: logout,
+						},
+					],
+				]"
+				:popper="{ placement: 'bottom-start' }"
+				v-else
+			>
+				<UButton color="primary" variant="ghost">{{ username }}</UButton>
+			</UDropdown>
 
 			<UButton
 				icon="i-heroicons:ellipsis-horizontal"
@@ -59,13 +79,13 @@
 				variant="solid"
 				size="lg"
 				class="md:hidden ml-3"
-				@click="isOpen = true"
+				@click="isModalOpen = true"
 			/>
 		</section>
 	</header>
 	<Usectionider />
 
-	<UModal v-model="isOpen" fullscreen>
+	<UModal v-model="isModalOpen" fullscreen>
 		<UCard
 			:ui="{
 				base: 'h-full flex flex-col',
@@ -101,13 +121,13 @@
 							color="gray"
 							variant="ghost"
 							icon="i-heroicons-x-mark-20-solid"
-							@click="isOpen = false"
+							@click="isModalOpen = false"
 						/>
 					</section>
 				</section>
 			</template>
 
-			<nav-bar @click="isOpen = false" />
+			<NavBar @click="isModalOpen = false" />
 		</UCard>
 	</UModal>
 </template>
@@ -115,7 +135,10 @@
 <script lang="ts" setup>
 const { setLocale } = useI18n()
 const toast = useToast()
-const isOpen: Ref<boolean> = ref(false)
+// control modal of NavBar
+const isModalOpen: Ref<boolean> = ref(false)
+// control user dropdown
+const isUserOpen: Ref<boolean> = ref(true)
 
 const languages = [
 	[
@@ -149,14 +172,6 @@ const languages = [
 
 const token: string | null | undefined = useCookie('token').value
 const username: string | null | undefined = useCookie('username').value
-const { data, error } = useFetch<userInfoGet>('/api/user/userInfo', {
-	method: 'GET',
-	query: {
-		token: token,
-	},
-})
-const router = useRouter()
-if (error.value) router.push({ name: 'error' })
 
 let isLogin: Ref<boolean> = ref(false)
 if (!token || !username) isLogin.value = false
@@ -178,4 +193,17 @@ const isDark = computed({
 		colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 	},
 })
+
+const router = useRouter()
+const logout = async () => {
+	const { data } = await $fetch<logoutDelete>(`/api/auth/logout`, {
+		method: 'DELETE',
+		query: {
+			token: token,
+		},
+	})
+
+	toast.add({ title: data.message })
+	router.push({ name: 'login' })
+}
 </script>

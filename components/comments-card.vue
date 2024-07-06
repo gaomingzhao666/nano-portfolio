@@ -1,5 +1,7 @@
 <template>
-	<UCard class="p-1 group">
+	<UCard
+		class="p-1 group rounded-3xl transition-all hover:ring-2 hover:ring-green-500"
+	>
 		<section class="flex justify-between items-center">
 			<section class="flex justify-start items-center">
 				<UIcon name="i-heroicons:user-circle" size="24" />
@@ -68,12 +70,13 @@ const emit = defineEmits<{
 	(e: 'freshData', needFresh: boolean): void
 }>()
 const deleteComment = async () => {
-	const { data } = await $fetch<delCommentDelete>(
-		`/api/comment/delComment?username=${props.data.username}&comment=${props.data.comment}`,
-		{
-			method: 'DELETE',
-		}
-	)
+	const { data } = await $fetch<delCommentDelete>(`/api/comment/delComment`, {
+		method: 'DELETE',
+		query: {
+			username: props.data.username,
+			comment: props.data.comment,
+		},
+	})
 
 	toast.add({ title: data.message })
 

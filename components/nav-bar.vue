@@ -1,7 +1,5 @@
 <template>
-	<nav
-		class="hidden md:block m-3 h-full w-[65px] lg:min-w-[200px] xl:min-w-[250px]"
-	>
+	<nav class="m-3 h-full md:w-[65px] lg:min-w-[200px] xl:min-w-[250px]">
 		<UVerticalNavigation
 			:links="[
 				{
