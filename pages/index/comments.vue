@@ -12,7 +12,10 @@
 				:key="index"
 				:data="item"
 				@freshData="deleteComment"
+				v-if="!pending"
 			/>
+
+			<SkeletonComments v-else v-for="item in skeletonItems" />
 		</section>
 	</main>
 
@@ -56,9 +59,16 @@
 <script lang="ts" setup>
 const isOpen: Ref<boolean> = ref(false)
 
-const { data, error } = useFetch<getCommentGet>('/api/comment/getComment', {
-	method: 'GET',
-})
+const skeletonItems: string[] = []
+for (let i = 0; i < 10; i++) skeletonItems[i] = ''
+
+const { data, error, pending } = useFetch<getCommentGet>(
+	'/api/comment/getComment',
+	{
+		method: 'GET',
+		server: false,
+	}
+)
 
 const router = useRouter()
 if (error.value) router.push({ name: 'error' })
