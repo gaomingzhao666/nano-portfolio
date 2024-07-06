@@ -23,7 +23,7 @@ export default defineNuxtConfig({
 	},
 
 	mongoose: {
-		uri: 'mongodb+srv://gaomingzhao:<Gmz020413>@gaomingzhao.skelvi3.mongodb.net/?retryWrites=true&w=majority&appName=gaomingzhao',
+		uri: 'mongodb+srv://gaomingzhao:<Gmz020413>@gaomingzhao.skelvi3.mongodb.net/?appName=gaomingzhao',
 		options: {},
 	},
 
