@@ -21,7 +21,7 @@
 		size="xl"
 		@click="isOpen = true"
 		class="fixed bottom-5 right-5 p-3"
-		>Post Comment</UButton
+		>{{ $t('postComment') }}</UButton
 	>
 
 	<UModal v-model="isOpen">

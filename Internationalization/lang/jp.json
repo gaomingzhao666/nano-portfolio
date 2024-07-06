@@ -32,5 +32,7 @@
 	"comments": "話しましょう",
 	"postComment": "発表しましょう",
 	"writeYourCommentHere": "コメントをここに書いてください...",
-	"post": "発表"
+	"post": "発表",
+
+	"logout": "ログアウト"
 }

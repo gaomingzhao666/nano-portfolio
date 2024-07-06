@@ -32,5 +32,7 @@
 	"comments": "Comments",
 	"postComment": "Post Comment",
 	"writeYourCommentHere": "Write your comment here...",
-	"post": "Post"
+	"post": "Post",
+
+	"logout": "Logout"
 }
