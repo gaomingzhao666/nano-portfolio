@@ -23,7 +23,7 @@ export default defineNuxtConfig({
 	},
 
 	mongoose: {
-		uri: 'mongodb://localhost:27017/nano-portfolio',
+		uri: 'mongodb+srv://gaomingzhao:<Gmz020413>@gaomingzhao.skelvi3.mongodb.net/?appName=gaomingzhao',
 		options: {},
 	},
 
