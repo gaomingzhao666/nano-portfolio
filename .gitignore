@@ -25,3 +25,4 @@ logs
 
 # ignore tailwind.config because it is just for make my TailwindCSS extension work properly, and if it is existed that will make my tsconfig inside of server folder throwed error
 tailwind.config.js
+.vercel

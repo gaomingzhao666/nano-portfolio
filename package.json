@@ -13,11 +13,11 @@
 		"@nuxt/ui": "^2.16.0",
 		"@pinia/nuxt": "^0.5.1",
 		"jsonwebtoken": "^9.0.2",
-		"mongodb": "^6.8.0",
 		"nuxt": "^3.11.2",
 		"nuxt-mongoose": "^1.0.6",
 		"octokit": "^3.2.1",
 		"pinia": "^2.1.7",
+		"vercel": "^34.3.0",
 		"vue": "^3.4.27",
 		"vue-router": "^4.3.2"
 	},
