@@ -80,6 +80,7 @@ const deleteComment = async () => {
 
 	toast.add({ title: data.message })
 
-	emit('freshData', true)
+	if (useCookie('token').value && useCookie('username').value)
+		emit('freshData', true)
 }
 </script>
