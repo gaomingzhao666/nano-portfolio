@@ -8,30 +8,26 @@ export default defineEventHandler(async (event) => {
 	const { username, comment }: addCommentBody = await readBody(event)
 
 	// validate the user login condition
-	if (!getCookie(event, 'token')) {
-		setResponseStatus(event, 401)
+	if (!getCookie(event, 'token'))
 		return <addCommentPost>{
 			status: false,
 			data: {
 				message: 'You are not logged in',
 			},
 		}
-	}
 
 	// check if the comment exists
 	const commentToUpdate = await comments.findOne({
 		username: username,
 		comment: comment,
 	})
-	if (!commentToUpdate) {
-		setResponseStatus(event, 404)
+	if (!commentToUpdate)
 		return <addCommentPost>{
 			status: false,
 			data: {
 				message: 'Comment not found',
 			},
 		}
-	}
 
 	// update the comment like count
 	const updatedComment = await comments.findOneAndUpdate(

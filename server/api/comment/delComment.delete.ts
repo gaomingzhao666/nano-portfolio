@@ -9,25 +9,22 @@ export default defineEventHandler(async (event) => {
 	const { username, comment }: deleteCommentBody = await getQuery(event)
 
 	// validate the user login condition
-	if (!getCookie(event, 'token')) {
-		setResponseStatus(event, 401)
+	if (!getCookie(event, 'token'))
 		return <delCommentDelete>{
 			status: false,
 			data: {
 				message: 'You are not logged in',
 			},
 		}
-	}
+
 	// check if the user is allowed to delete the comment
-	if (getCookie(event, 'username') !== username) {
-		setResponseStatus(event, 401)
+	if (getCookie(event, 'username') !== username)
 		return <delCommentDelete>{
 			status: false,
 			data: {
 				message: 'You are not allowed to delete this comment',
 			},
 		}
-	}
 
 	// delete the comment from the database
 	const deletedComment = await comments.findOneAndDelete({
