@@ -3,7 +3,7 @@
 		class="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 mx-auto"
 	>
 		<section
-			class="group rounded-3xl shadow-md m-3 hover:shadow-lg transition-all"
+			class="group rounded-3xl shadow m-3 hover:shadow-lg transition-all"
 			v-for="(item, index) in data?.data"
 			:key="index"
 		>

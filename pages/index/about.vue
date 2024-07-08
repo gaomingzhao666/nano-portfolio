@@ -1,6 +1,6 @@
 <template>
 	<UContainer class="my-5 align-middle">
-		<section class="mb-6 text-center max-w-3xl rounded-3xl shadow-lg p-6">
+		<section class="mb-6 text-center max-w-3xl rounded-3xl shadow p-6">
 			<UAvatar
 				:src="data?.data.data.avatar_url"
 				alt="Avatar"
@@ -13,7 +13,7 @@
 			</p>
 		</section>
 
-		<section class="mb-6 text-center max-w-3xl rounded-3xl shadow-lg p-6">
+		<section class="mb-6 text-center max-w-3xl rounded-3xl shadow p-6">
 			<section class="flex justify-between items-center my-5">
 				<section class="nanoFlex border-cyan-800 border-2 rounded-full p-2">
 					<UIcon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
@@ -41,7 +41,7 @@
 			</section>
 		</section>
 
-		<section class="text-center max-w-3xl rounded-3xl shadow-lg p-6">
+		<section class="text-center max-w-3xl rounded-3xl shadow p-6">
 			<section class="flex flex-wrap">
 				<UBadge
 					class="m-1"
