@@ -25,15 +25,3 @@ const { progress, isLoading, start, finish, clear } = useLoadingIndicator({
 		(2 / Math.PI) * 100 * Math.atan(((elapsed / duration) * 100) / 50),
 })
 </script>
-
-<style scoped>
-.page-enter-active,
-.page-leave-active {
-	transition: all 0.4s;
-}
-.page-enter-from,
-.page-leave-to {
-	opacity: 0;
-	filter: blur(1rem);
-}
-</style>
