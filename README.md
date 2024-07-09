@@ -47,7 +47,7 @@
 <!-- IMAGE OF PROJECT -->
 
 <p align="center">
-    <img src="/SCREENSHOT/about-mockup.png">
+    <img src="/SCREENSHOT/index-mockup.png">
 </p>
 
 > The image shown here is a about-page for laptop-size, [click here](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) to see more detailed screenshot for this application.
