@@ -1,15 +1,15 @@
 {
 	"name": "なの",
-	"devDesc": "ワブ開発者",
+	"devDesc": "フロントエンド開発者",
 	"placeholder": "検索",
 	"login": "ログイン",
 	"register": "サインアップ",
 	"navigation": "ナビゲーション",
 
-	"explore": "探索しましょう",
-	"experience": "仕事経験",
+	"explore": "探索",
+	"career": "キャリア",
 	"about": "私のこと",
-	"contact": "連絡",
+	"contact": "連絡先",
 
 	"githubRepo": "Github レポ",
 	"clickToRepo": "リポにジャンプする",
