@@ -1,6 +1,6 @@
 <template>
 	<UContainer class="my-5 align-middle">
-		<section class="mb-6 text-center max-w-3xl rounded-3xl shadow p-6">
+		<UCard class="mb-6 text-center max-w-3xl rounded-3xl">
 			<UAvatar
 				:src="data?.data.data.avatar_url"
 				alt="Avatar"
@@ -11,10 +11,10 @@
 			<p class="text-neutral-500 text-sm">
 				{{ $t('devDescDetail') }}
 			</p>
-		</section>
+		</UCard>
 
-		<section class="mb-6 text-center max-w-3xl rounded-3xl shadow p-6">
-			<section class="flex justify-between items-center my-5">
+		<UCard class="mb-6 text-center max-w-3xl rounded-3xl">
+			<section class="flex justify-between items-center mb-5">
 				<section class="nanoFlex border-cyan-800 border-2 rounded-full p-2">
 					<UIcon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
 					<p class="nanoFont">2020-2024</p>
@@ -39,19 +39,19 @@
 				<UIcon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
 				<p class="nanoFont">Qiqihar, Heilongjiang, China</p>
 			</section>
-		</section>
+		</UCard>
 
-		<section class="text-center max-w-3xl rounded-3xl shadow p-6">
+		<UCard class="text-center max-w-3xl rounded-3xl">
 			<section class="flex flex-wrap">
 				<UBadge
 					class="m-1"
 					v-for="(item, index) in techStack"
 					:key="index"
-					size="md"
+					:ui="{ rounded: 'rounded-lg' }"
 					>{{ item }}</UBadge
 				>
 			</section>
-		</section>
+		</UCard>
 	</UContainer>
 </template>
 

@@ -4,7 +4,7 @@
 			{{ $t('contactMe') }}
 		</h1>
 
-		<section class="shadow rounded-3xl border-gray-100 my-6 p-5">
+		<UCard class="rounded-3xl border-gray-100 my-6">
 			<section class="flex items-center m-5">
 				<ico-phone class="text-3xl mr-3" />
 				<p>+86 13244687353</p>
@@ -19,9 +19,9 @@
 				<ico-address class="text-3xl mr-3" />
 				<p>{{ $t('earth') }}</p>
 			</section>
-		</section>
+		</UCard>
 
-		<section class="text-center shadow rounded-3xl border-gray-100 my-6 p-5">
+		<UCard class="text-center rounded-3xl border-gray-100 my-6">
 			<a href="https://github.com/gaomingzhao666">
 				<UButton
 					icon="i-grommet-icons:github"
@@ -30,7 +30,7 @@
 					class="rounded-full"
 				/>
 			</a>
-		</section>
+		</UCard>
 	</UContainer>
 </template>
 
