@@ -42,7 +42,7 @@
 		</UCard>
 
 		<UCard class="text-center max-w-3xl rounded-3xl">
-			<section class="flex flex-wrap">
+			<!-- <section class="flex flex-wrap">
 				<UBadge
 					class="m-1"
 					v-for="(item, index) in techStack"
@@ -50,7 +50,11 @@
 					:ui="{ rounded: 'rounded-lg' }"
 					>{{ item }}</UBadge
 				>
-			</section>
+			</section> -->
+			<img
+				:src="`${index.baseSkillIconUrl}html,css,javascript,typescript,nuxt,vue,svelte,pinia,tailwindcss,vuetify,bootstrap,less,sass,vite,vitest,nodejs,express,mongodb,tauri,git,github,vercel,vscode,postman,npm,pnpm,md,figma,&theme=${index.colorMode.value}`"
+				alt="icons"
+			/>
 		</UCard>
 	</UContainer>
 </template>
@@ -59,33 +63,35 @@
 useSeoMeta({
 	title: 'About me',
 	description:
-		'About [Nano] - A Full-Stack Developer specializing in Vue3, Nuxt3, and modern web technologies.  Discover my expertise in JavaScript, TypeScript, MongoDB, and more. Explore my projects and connect with me!',
+		'About [Nano] - A Full-Stack Developer specializing in Vue3, Nuxt3, and modern web technologies. Discover my expertise in JavaScript, TypeScript, MongoDB, and more. Explore my projects and connect with me!',
 })
 
-const techStack = [
-	'Html5',
-	'CSS3',
-	'JavaScript',
-	'TypeScript',
-	'Nuxt3',
-	'Vue3',
-	'vue-router',
-	'Pinia',
-	'TailwindCSS',
-	'Bootstrap',
-	'NuxtUI',
-	'Less',
-	'Sass',
-	'Vite',
-	'NodeJS',
-	'Express',
-	'MongoDB & Mongoose',
-	'Git',
-	'Docker',
-	'Vercel',
-	'VScode',
-	'Postman',
-]
+const index = useIndexStore()
+
+// const techStack = [
+// 	'Html',
+// 	'CSS',
+// 	'JavaScript',
+// 	'TypeScript',
+// 	'Nuxt',
+// 	'Vue',
+// 	'vue-router',
+// 	'Pinia',
+// 	'TailwindCSS',
+// 	'Bootstrap',
+// 	'NuxtUI',
+// 	'Less',
+// 	'Sass',
+// 	'Vite',
+// 	'NodeJS',
+// 	'Express',
+// 	'MongoDB & Mongoose',
+// 	'Git',
+// 	'Docker',
+// 	'Vercel',
+// 	'VScode',
+// 	'Postman',
+// ]
 
 const { data, error } = await useFetch<githubUserInfoGet>(
 	'/api/user/githubUserInfo',

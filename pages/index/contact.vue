@@ -21,14 +21,9 @@
 			</section>
 		</UCard>
 
-		<UCard class="text-center rounded-3xl border-gray-100 my-6">
+		<UCard class="flex justify-center rounded-3xl border-gray-100 my-6">
 			<a href="https://github.com/gaomingzhao666">
-				<UButton
-					icon="i-grommet-icons:github"
-					size="sm"
-					color="black"
-					class="rounded-full"
-				/>
+				<ico-github class="text-3xl rounded-full" />
 			</a>
 		</UCard>
 	</UContainer>
@@ -39,4 +34,7 @@ useSeoMeta({
 	title: 'Contact me',
 	description: 'Find my contact information',
 })
+
+const index = useIndexStore()
+console.log(index.colorMode.value)
 </script>
