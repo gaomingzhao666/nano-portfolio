@@ -2,6 +2,7 @@
 	"name": "Nano",
 	"devDesc": "前端开发者",
 	"placeholder": "搜索项目",
+	"search": "搜索",
 	"login": "登录",
 	"register": "注册",
 	"navigation": "导航",

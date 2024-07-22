@@ -2,6 +2,7 @@
 	"name": "なの",
 	"devDesc": "フロントエンド開発者",
 	"placeholder": "検索",
+	"search": "検索",
 	"login": "ログイン",
 	"register": "サインアップ",
 	"navigation": "ナビゲーション",

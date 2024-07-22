@@ -32,7 +32,7 @@
 						})
 					"
 					class="font-normal"
-					>Search</UButton
+					>{{ $t('search') }}</UButton
 				>
 			</template>
 		</UInput>

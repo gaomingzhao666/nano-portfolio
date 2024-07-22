@@ -2,6 +2,7 @@
 	"name": "Nano",
 	"devDesc": "Front-end developer",
 	"placeholder": "search projects",
+	"search": "Search",
 	"login": "Login",
 	"register": "Register",
 	"navigation": "Navigation",
