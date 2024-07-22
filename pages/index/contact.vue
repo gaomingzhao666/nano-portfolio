@@ -34,7 +34,4 @@ useSeoMeta({
 	title: 'Contact me',
 	description: 'Find my contact information',
 })
-
-const index = useIndexStore()
-console.log(index.colorMode.value)
 </script>
