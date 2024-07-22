@@ -12,12 +12,30 @@
 		<UInput
 			icon="i-mingcute:search-line"
 			size="lg"
+			name="searchReposName"
 			color="white"
 			trailing
 			:placeholder="$t('placeholder')"
 			class="w-1/3 hidden md:block"
-			@click="notice('Not support now')"
-		/>
+			v-model="searchReposName"
+			:ui="{ icon: { trailing: { pointer: '' } } }"
+		>
+			<template #trailing>
+				<UButton
+					v-show="searchReposName !== ''"
+					size="sm"
+					variant="solid"
+					@click="
+						$router.push({
+							path: '/index',
+							query: { repoName: searchReposName },
+						})
+					"
+					class="font-normal"
+					>Search</UButton
+				>
+			</template>
+		</UInput>
 
 		<section class="flex items-center">
 			<UDropdown
@@ -139,6 +157,10 @@ const toast = useToast()
 const isModalOpen: Ref<boolean> = ref(false)
 // control user dropdown
 const isUserOpen: Ref<boolean> = ref(true)
+// search keyword of repoName
+const searchReposName: Ref<string> = ref('')
+
+const router = useRouter()
 
 const languages = [
 	[
@@ -194,7 +216,6 @@ const isDark = computed({
 	},
 })
 
-const router = useRouter()
 const logout = async () => {
 	const { data } = await $fetch<logoutDelete>(`/api/auth/logout`, {
 		method: 'DELETE',
