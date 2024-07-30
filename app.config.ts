@@ -7,10 +7,5 @@ export default defineAppConfig({
 			// Show toasts at the top right of the screen
 			position: 'top-0 bottom-auto',
 		},
-
-		//make nuxt-icon(namely iconify) available
-		icons: {
-			dynamic: true,
-		},
 	},
 })
