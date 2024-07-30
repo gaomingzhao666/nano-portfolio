@@ -23,7 +23,8 @@ export default defineEventHandler(async (event) => {
 		from: `${username} <onboarding@resend.dev>`,
 		to: ['gaomingzhao666@outlook.com'],
 		subject: title,
-		html: `<h1>${email}</h1> <p>${contents}</p>`,
+		html: `<h3>Email Address:</h3> <p>${email}</p> 
+			   <h3>content:</h3> <p>${contents}</p>`,
 	})
 	if (data.error === null)
 		return <formSendGet>{
