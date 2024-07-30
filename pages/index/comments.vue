@@ -42,9 +42,7 @@
 			<section class="text-end">
 				<UTextarea
 					v-model="comment"
-					padded
 					:placeholder="$t('writeYourCommentHere')"
-					variant="outline"
 					size="xl"
 					class="w-full"
 				/>
