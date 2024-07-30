@@ -21,8 +21,15 @@
 	"degree": "学士",
 	"major": "情報科学",
 
-	"contactMe": "僕に連絡する",
-	"earth": "地球",
+	"contactInfo": "連絡先情報",
+	"contactForm": "お問い合わせフォーム",
+	"contactFormSubject": "テーマ",
+	"contactFormSubjectDesc": "このフォームのテーマを入力してください",
+	"contactFormPlaceholder": "求人情報のお問い合わせ",
+	"contactEmail": "メールアドレス",
+	"contactEmaildesc": "連絡用のメールアドレスをお届けください",
+	"contactFormContent": "あなたの応募面接に参加することを決めました、このアドレスにアクセスしてください...",
+	"send": "送信する",
 
 	"username": "アカウント",
 	"password": "パスワード",

@@ -6,37 +6,40 @@
 
 		<UCard class="rounded-3xl my-6">
 			<UFormGroup
-				label="Subject"
+				:label="$t('contactFormSubject')"
 				size="lg"
-				description="Enter your title or subject for this form"
+				:description="$t('contactFormSubjectDesc')"
 				required
 				class="m-5 w-[320px]"
 			>
 				<UInput
-					placeholder="Job Invitation"
+					:placeholder="$t('contactFormPlaceholder')"
 					icon="i-heroicons-envelope"
 					v-model="formData.title"
+					class="font-bold"
 				/>
 			</UFormGroup>
 
 			<UFormGroup
 				size="lg"
-				label="Email"
+				:label="$t('contactEmail')"
 				hint="Optional"
-				description="Leave an email so that I can contact you"
+				:description="$t('contactEmailDesc')"
 				class="m-5 w-[320px]"
 			>
 				<UInput
 					placeholder="You@example.com"
 					icon="i-heroicons-envelope"
 					v-model="formData.email"
+					class="font-bold"
 				/>
 			</UFormGroup>
 
 			<UFormGroup size="lg" label="Content" required class="m-5 w-[320px]">
 				<UTextarea
-					placeholder="We have decided to invite you for a brief interview, you can access this address..."
+					:placeholder="$t('contactFormContent')"
 					v-model="formData.contents"
+					class="font-bold"
 				/>
 			</UFormGroup>
 		</UCard>
@@ -47,7 +50,7 @@
 			block
 			:disabled="isSended"
 		>
-			{{ $t('sendEmail') }}
+			{{ $t('send') }}
 		</UButton>
 	</UContainer>
 </template>

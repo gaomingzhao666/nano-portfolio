@@ -21,8 +21,15 @@
 	"degree": "学士",
 	"major": "计算机科学与技术",
 
-	"contactMe": "联系我",
-	"earth": "地球",
+	"contactInfo": "联系方式",
+	"contactForm": "联系表单",
+	"contactFormSubject": "主题",
+	"contactFormSubjectDesc": "在此输入您的主题",
+	"contactFormPlaceholder": "职业邀请",
+	"contactEmail": "邮件",
+	"contactEmaildesc": "留下您的邮件，以便我与您联系",
+	"contactFormContent": "我们决定邀请您参加一个简短的面试，您可以访问此地址...",
+	"send": "发送",
 
 	"username": "账号",
 	"password": "密码",

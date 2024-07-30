@@ -21,8 +21,15 @@
 	"degree": "Bachelor",
 	"major": "Computer Science and Technology",
 
-	"contactMe": "Contact me",
-	"earth": "Earth",
+	"contactInfo": "Contact Info",
+	"contactForm": "Contact Form",
+	"contactFormSubject": "Subject",
+	"contactFormSubjectDesc": "Enter you subject for this form",
+	"contactFormPlaceholder": "Job Invitation",
+	"contactEmail": "Email",
+	"contactEmaildesc": "Leave an email so I can contact you",
+	"contactFormContent": "We have decided to invite you for a brief interview, you can access this address...",
+	"send": "Send",
 
 	"username": "Username",
 	"password": "Password",
