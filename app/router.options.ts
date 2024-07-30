@@ -14,7 +14,6 @@ export default <RouterConfig>{
 		},
 		...auth,
 		{
-			name: 'index',
 			path: '/index',
 			component: () => import('~/pages/index.vue').then((r) => r.default || r),
 			children: index,
