@@ -23,7 +23,7 @@
 			<UFormGroup
 				size="lg"
 				:label="$t('contactEmail')"
-				hint="$t('contactEmailOptional')"
+				:hint="$t('contactEmailOptional')"
 				:description="$t('contactEmailDesc')"
 				class="m-5 w-[320px]"
 			>
