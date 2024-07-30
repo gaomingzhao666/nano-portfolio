@@ -10,29 +10,30 @@
 		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
-		"@nuxt/ui": "^2.16.0",
-		"@pinia/nuxt": "^0.5.1",
+		"@nuxt/ui": "^2.18.2",
+		"@pinia/nuxt": "^0.5.2",
 		"jsonwebtoken": "^9.0.2",
-		"nuxt": "^3.11.2",
+		"nuxt": "^3.12.4",
 		"nuxt-mongoose": "^1.0.6",
-		"octokit": "^3.2.1",
-		"pinia": "^2.1.7",
-		"vercel": "^34.3.0",
-		"vue": "^3.4.27",
-		"vue-router": "^4.3.2"
+		"octokit": "^4.0.2",
+		"pinia": "^2.2.0",
+		"resend": "^3.5.0",
+		"vercel": "^35.2.1",
+		"vue": "^3.4.34",
+		"vue-router": "^4.4.0"
 	},
 	"devDependencies": {
-		"@nuxt/test-utils": "^3.13.1",
-		"@nuxtjs/i18n": "^8.3.1",
-		"@octokit/types": "^12.6.0",
+		"@nuxt/test-utils": "^3.14.0",
+		"@nuxtjs/i18n": "^8.3.3",
+		"@octokit/types": "^13.5.0",
 		"@types/jsonwebtoken": "^9.0.6",
-		"@types/node": "^20.12.12",
+		"@types/node": "^22.0.0",
 		"@vue/test-utils": "^2.4.6",
-		"happy-dom": "^13.10.1",
-		"nuxt-svgo": "^4.0.1",
-		"playwright-core": "^1.44.1",
-		"typescript": "^5.4.5",
-		"vitest": "^1.6.0",
-		"vue-tsc": "^1.8.27"
+		"happy-dom": "^14.12.3",
+		"nuxt-svgo": "^4.0.2",
+		"playwright-core": "^1.45.3",
+		"typescript": "^5.5.4",
+		"vitest": "^2.0.4",
+		"vue-tsc": "^2.0.29"
 	}
 }
