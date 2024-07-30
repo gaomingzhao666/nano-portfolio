@@ -21,6 +21,17 @@ const TestContributors = async () => {
 	console.log('this is Contributors interface response')
 	console.log(res)
 }
+
+const testResend = async () => {
+	const res = await $fetch('/api/form/send', {
+		method: 'GET',
+	})
+
+	console.log(res)
+}
+
+if (null) console.log('null can do it')
+else console.log('null cannot do it')
 </script>
 
 <template>
@@ -43,6 +54,16 @@ const TestContributors = async () => {
 			@click="TestContributors"
 		>
 			test contributors
+		</UButton>
+
+		<UButton
+			icon="i-material-symbols:login"
+			color="white"
+			variant="solid"
+			size="md"
+			@click="testResend"
+		>
+			test resend
 		</UButton>
 	</section>
 </template>

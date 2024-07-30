@@ -1,31 +1,19 @@
 <template>
-	<UContainer class="my-10">
-		<h1 class="text-center font-bold text-3xl my-10">
-			{{ $t('contactMe') }}
-		</h1>
+	<UContainer class="my-5 align-middle">
+		<!-- tabs -->
+		<UTabs :items="items" v-model="selected" class="w-full">
+			<template #icon="{ item, selected }">
+				<UIcon
+					:name="item.icon"
+					class="w-4 h-4 flex-shrink-0 mr-2"
+					:class="[selected && 'text-primary-500 dark:text-primary-400']"
+				/>
+			</template>
+		</UTabs>
 
-		<UCard class="rounded-3xl border-gray-100 my-6">
-			<section class="flex items-center m-5">
-				<ico-phone class="text-3xl mr-3" />
-				<p>+86 13244687353</p>
-			</section>
-
-			<section class="flex items-center m-5">
-				<ico-email class="text-3xl mr-3" />
-				<p>gaomingzhao666@outlook.com</p>
-			</section>
-
-			<section class="flex items-center m-5">
-				<ico-address class="text-3xl mr-3" />
-				<p>{{ $t('earth') }}</p>
-			</section>
-		</UCard>
-
-		<UCard class="flex justify-center rounded-3xl border-gray-100 my-6">
-			<a href="https://github.com/gaomingzhao666">
-				<ico-github class="text-3xl rounded-full" />
-			</a>
-		</UCard>
+		<!-- content -->
+		<ContactInfo v-if="selected === 0" />
+		<ContactForm v-if="selected === 1" />
 	</UContainer>
 </template>
 
@@ -33,5 +21,38 @@
 useSeoMeta({
 	title: 'Contact me',
 	description: 'Find my contact information',
+})
+
+const items = [
+	{
+		label: 'Contact Info',
+		component: 'ContactInfo',
+		icon: 'i-heroicons:finger-print',
+	},
+	{
+		label: 'Contact Form',
+		component: 'ContactForm',
+		icon: 'i-heroicons:folder-plus',
+	},
+]
+
+const route = useRoute()
+const router = useRouter()
+const selected = computed({
+	get() {
+		const index = items.findIndex((item) => item.label === route.query.tab)
+		if (index === -1) {
+			return 0
+		}
+
+		return index
+	},
+	set(value) {
+		// Hash is specified here to prevent the page from scrolling to the top
+		router.replace({
+			query: { tab: items[value].label },
+			hash: '#control-the-selected-index',
+		})
+	},
 })
 </script>
