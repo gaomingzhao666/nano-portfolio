@@ -5,8 +5,6 @@
 		</h1>
 
 		<UCard class="max-w-sm mx-auto">
-			<Usectionider class="my-5" :label="$t('typeInfo')" />
-
 			<UAlert
 				v-if="errorMessage"
 				:title="errorMessage"

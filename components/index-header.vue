@@ -101,7 +101,6 @@
 			/>
 		</section>
 	</header>
-	<Usectionider />
 
 	<UModal v-model="isModalOpen" fullscreen>
 		<UCard
