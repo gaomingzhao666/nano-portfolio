@@ -27,7 +27,8 @@
 	"contactFormSubjectDesc": "在此输入您的主题",
 	"contactFormPlaceholder": "职业邀请",
 	"contactEmail": "邮件",
-	"contactEmaildesc": "留下您的邮件，以便我与您联系",
+	"contactEmailOptional": "可选",
+	"contactEmailDesc": "留下您的邮件，以便我与您联系",
 	"contactFormContent": "我们决定邀请您参加一个简短的面试，您可以访问此地址...",
 	"send": "发送",
 

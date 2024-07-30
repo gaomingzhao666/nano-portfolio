@@ -27,7 +27,8 @@
 	"contactFormSubjectDesc": "Enter you subject for this form",
 	"contactFormPlaceholder": "Job Invitation",
 	"contactEmail": "Email",
-	"contactEmaildesc": "Leave an email so I can contact you",
+	"contactEmailOptional": "Optional",
+	"contactEmailDesc": "Leave an email so I can contact you",
 	"contactFormContent": "We have decided to invite you for a brief interview, you can access this address...",
 	"send": "Send",
 

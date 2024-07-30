@@ -27,7 +27,8 @@
 	"contactFormSubjectDesc": "このフォームのテーマを入力してください",
 	"contactFormPlaceholder": "求人情報のお問い合わせ",
 	"contactEmail": "メールアドレス",
-	"contactEmaildesc": "連絡用のメールアドレスをお届けください",
+	"contactEmailOptional": "可不",
+	"contactEmailDesc": "連絡用のメールアドレスをお届けください",
 	"contactFormContent": "あなたの応募面接に参加することを決めました、このアドレスにアクセスしてください...",
 	"send": "送信する",
 
