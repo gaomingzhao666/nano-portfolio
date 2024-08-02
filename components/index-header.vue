@@ -26,7 +26,7 @@
 					size="sm"
 					variant="solid"
 					@click="
-						$router.push({
+						router.push({
 							path: '/index',
 							query: { repoName: searchReposName },
 						})
