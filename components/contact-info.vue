@@ -21,10 +21,16 @@
 			</section>
 		</UCard>
 
-		<UCard class="flex justify-center rounded-3xl my-6">
-			<a href="https://github.com/gaomingzhao666">
-				<ico-github class="text-3xl rounded-full" />
-			</a>
+		<UCard class="rounded-3xl my-6">
+			<div class="flex justify-center items-center space-x-3">
+				<a href="https://github.com/gaomingzhao666">
+					<ico-github class="text-3xl rounded-full" />
+				</a>
+
+				<a href="https://space.bilibili.com/57143509">
+					<ico-bilibili class="text-3xl rounded-full" />
+				</a>
+			</div>
 		</UCard>
 	</UContainer>
 </template>
