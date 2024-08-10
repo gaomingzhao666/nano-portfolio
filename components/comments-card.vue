@@ -37,7 +37,7 @@
 
 			<section class="flex justify-start items-center">
 				<UIcon name="i-heroicons:calendar" size="24" />
-				<p class="text-sm ml-1">{{ getLocalTime(props.data.addTime) }}</p>
+				<p class="text-sm ml-1">{{ localTime }}</p>
 			</section>
 		</section>
 	</UCard>
@@ -54,6 +54,8 @@ interface props {
 	}
 }
 const props = defineProps<props>()
+
+const localTime: string = getLocalTime(props.data.addTime)
 
 const toast = useToast()
 const likeComment = async () => {
