@@ -31,7 +31,7 @@
 				class="flex justify-start items-center transition-all duration-75 hover:cursor-pointer active:scale-110"
 				@click="likeComment"
 			>
-				<UIcon name="i-twemoji:sparkling-heart" size="24" />
+				<heart />
 				<p class="ml-1">{{ props.data.like }}</p>
 			</section>
 
