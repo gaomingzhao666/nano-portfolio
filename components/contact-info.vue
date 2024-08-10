@@ -17,7 +17,7 @@
 
 			<section class="flex items-center m-5">
 				<ico-address class="text-3xl mr-3" />
-				<p>{{ $t('福岡') }}</p>
+				<p>福岡</p>
 			</section>
 		</UCard>
 
