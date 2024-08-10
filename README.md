@@ -64,7 +64,8 @@ Nano-portfolio is a developer introduction web application integrated with Githu
 - TailwindCSS
 - Nuxt-UI
 - MongoDB with Mongoose
-- localize with i18n
+- Localize with i18n
+- Email connection with Resend
 - Typescript with ES6+ syntax
 - Dockerfile
 

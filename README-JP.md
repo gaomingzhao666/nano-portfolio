@@ -65,6 +65,7 @@ Nano-portfolio は、GitHub Octokit API と Nuxt3 エコシステムを統合し
 - Nuxt-UI
 - MongoDB with Mongoose
 - localize with i18n
+- Email connection with Resend
 - Typescript with ES6+ syntax
 - Dockerfile
 
