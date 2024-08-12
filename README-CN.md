@@ -4,7 +4,6 @@
 [![MIT License][license-shield]][license-url]
 [![Release][release-shield]][release-url]
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/gaomingzhao666/nano-portfolio">
@@ -25,7 +24,6 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 <details open>
   <summary>目录</summary>
   <ul>
@@ -40,17 +38,13 @@
   </ul>
 </details>
 
-<!-- ABOUT THE PROJECT -->
-
 ## 项目介绍
-
-<!-- IMAGE OF PROJECT -->
 
 <p align="center">
     <img src="/SCREENSHOT/index-mockup.png">
 </p>
 
-> 上方是 平板 设备尺寸的 about 页面截图, [点击此处](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) 可查看更多详细截图。
+> 上方是 平板 设备尺寸的 index 页面截图, [点击此处](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) 可查看更多详细截图。
 
 Nano-portfolio 是一个与 Github Octokit 和 Nuxt3 生态结合的开发者个人简介网页应用，其使用的大部分依赖被官方所支持和维护，其中包括 `Nuxt-UI` `Nuxt-Mongoose` `Pinia` `i18n` 等。所有模块均与 Nuxt 所兼容，库内所有代码均使用组合式 API 以及 ESM 进行模块导入。
 
@@ -64,28 +58,25 @@ Nano-portfolio 是一个与 Github Octokit 和 Nuxt3 生态结合的开发者个
 - TailwindCSS
 - Nuxt-UI
 - MongoDB with Mongoose
-- localize with i18n
+- Localize with i18n
 - Email connection with Resend
 - Typescript with ES6+ syntax
 - Dockerfile
 
 <p align="right">(<a href="#readme-top">至顶层</a>)</p>
 
-<!-- GETTING STARTED -->
-
 ## 运行时版本
 
 - NodeJS LTS 20+
-<!-- - Chrome67+ / Edge79+ / Safari12+ -->
 
 ## 如何启动此项目
 
 ### 克隆此项目
 
 ```sh
-$ https://github.com/gaomingzhao666/nano-portfolio.git # 克隆此项目
+$ https://github.com/gaomingzhao666/nano-portfolio.git # 克隆
 $ cd nano-portfolio
-$ pnpm install # 安装项目所需依赖
+$ pnpm install # 安装依赖
 $ pnpm dev # 运行
 ```
 
@@ -122,8 +113,6 @@ $ pnpm dev # 运行
 此项目由 gaomingzhao666@Nano 所开发
 
 <p align="right">(<a href="#readme-top">至顶层</a>)</p>
-
-<!-- LICENSE -->
 
 ## 开源协议
 

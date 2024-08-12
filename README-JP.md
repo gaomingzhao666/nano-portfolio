@@ -4,7 +4,6 @@
 [![MIT License][license-shield]][license-url]
 [![Release][release-shield]][release-url]
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/gaomingzhao666/nano-portfolio">
@@ -25,7 +24,6 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 <details open>
   <summary>索引</summary>
   <ul>
@@ -40,17 +38,13 @@
   </ul>
 </details>
 
-<!-- ABOUT THE PROJECT -->
-
 ## プロジェクトの概要
-
-<!-- IMAGE OF PROJECT -->
 
 <p align="center">
     <img src="/SCREENSHOT/index-mockup.png">
 </p>
 
-> この写真は iPad サイに基づいた about ページ, [こちらへ](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) このプロジェクトの写真をご覧ください。
+> この写真は iPad サイに基づいた index ページ, [こちらへ](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) このプロジェクトの写真をご覧ください。
 
 Nano-portfolio は、GitHub Octokit API と Nuxt3 エコシステムを統合した開発者個人プロフィールウェブアプリケーションです。使用されているほとんどのディペンデンシーは公式にサポートされ、メンテナンスされています。これには `Nuxt-UI`、`Nuxt-Mongoose`、`Pinia`、`i18n` などが含まれています。すべてのモジュールは Nuxt と互換性があり、コードはすべてコンポジション API と ESM を使用してモジュールインポートされています。
 
@@ -64,14 +58,12 @@ Nano-portfolio は、GitHub Octokit API と Nuxt3 エコシステムを統合し
 - TailwindCSS
 - Nuxt-UI
 - MongoDB with Mongoose
-- localize with i18n
+- Localize with i18n
 - Email connection with Resend
 - Typescript with ES6+ syntax
 - Dockerfile
 
 <p align="right">(<a href="#readme-top">トップに戻る</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 運行時要件
 
@@ -82,9 +74,9 @@ Nano-portfolio は、GitHub Octokit API と Nuxt3 エコシステムを統合し
 ### このリポジトリをクローンして使う
 
 ```sh
-$ https://github.com/gaomingzhao666/nano-portfolio.git # プロジェクトをクローンしてください
+$ https://github.com/gaomingzhao666/nano-portfolio.git # プロジェクトをクローン
 $ cd nano-portfolio
-$ pnpm install # プロジェクトに必要な依存関係をインストールしてください。
+$ pnpm install # 必要な依存関係をインストール。
 $ pnpm dev # 運行する
 ```
 
@@ -121,8 +113,6 @@ $ pnpm dev # 運行する
 このプロジェクトは gaomingzhao666@Nano に開発しました。
 
 <p align="right">(<a href="#readme-top">トップに戻る</a>)</p>
-
-<!-- LICENSE -->
 
 ## オープンソース契約
 

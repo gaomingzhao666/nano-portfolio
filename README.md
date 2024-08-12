@@ -4,7 +4,6 @@
 [![MIT License][license-shield]][license-url]
 [![Release][release-shield]][release-url]
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/gaomingzhao666/nano-portfolio">
@@ -25,14 +24,13 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 <details open>
   <summary>Directory</summary>
   <ul>
     <li><a href="#introduction-of-project">Introduction of Project</a> </li>
     <li><a href="#build-with">Build with</a></li>
-    <li><a href="#Runtime-requirement">Runtime Requirement</a></li>
-    <li><a href="#how-to-run-this-application">How to run this application</a></li>
+    <li><a href="#runtime-requirement">Runtime Requirement</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#how-to-use-this-project-for-your-case">How to use this project for your case</a></li>
     <li><a href="#about-cors-error">About cors error</a></li>
     <li><a href="#contributor">Contributor</a></li>
@@ -40,17 +38,13 @@
   </ul>
 </details>
 
-<!-- ABOUT THE PROJECT -->
-
 ## Introduction of Project
-
-<!-- IMAGE OF PROJECT -->
 
 <p align="center">
     <img src="/SCREENSHOT/index-mockup.png">
 </p>
 
-> The image shown here is a about-page for laptop-size, [click here](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) to see more detailed screenshot for this application.
+> The image shown here is a index-page for laptop-size, [click here](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) to see more detailed screenshot for this application.
 
 Nano-portfolio is a developer introduction web application integrated with Github Octokit and Nuxt3 ecosystem that includes `Nuxt-UI` `Nuxt-Mongoose` `Pinia` `i18n` etc. All of the modules are officially compatible with Nuxt3, and all of the code inside of this project uses composition API and ESM.
 
@@ -71,26 +65,24 @@ Nano-portfolio is a developer introduction web application integrated with Githu
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
 ## Runtime Requirement
 
 - NodeJS LTS 20+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## How to run this application
+## Getting Started
 
-### Clone this project
+### Clone and Run
 
 ```sh
-$ https://github.com/gaomingzhao666/nano-portfolio.git # clone the project
+$ https://github.com/gaomingzhao666/nano-portfolio.git # clone
 $ cd nano-portfolio
-$ pnpm install # install dependencies that this project needs
+$ pnpm install # install dependencies
 $ pnpm dev # run
 ```
 
-### Use a Dockerfile to Create a Container
+### Use Docker
 
 1. Clone or download this project.
 2. Ensure you have `Docker Desktop` installed on your computer.
@@ -104,7 +96,7 @@ $ pnpm dev # run
 
 ### Overview
 
-Utilize this completely open-source project, released under the MIT license, to create your own portfolio. It automatically imports information from your GitHub repositories and your profile using your GitHub account. Let's explore how!
+You can use this project to create your own portfolio. It automatically imports information from your GitHub repositories and your profile using your GitHub account.
 
 ### Quick Start
 
@@ -125,8 +117,6 @@ As an [SSR](https://vuejs.org/guide/scaling-up/ssr.html) project, we do not need
 The project developed by gaomingzhao666@Nano
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## LICENSE
 
