@@ -52,7 +52,7 @@
 				>
 			</section> -->
 			<img
-				:src="`${index.baseSkillIconUrl}html,css,javascript,typescript,nuxt,vue,svelte,pinia,tailwindcss,vuetify,bootstrap,less,sass,vite,vitest,nodejs,express,mongodb,tauri,git,github,vercel,vscode,postman,npm,pnpm,md,figma,&theme=${index.colorMode.value}`"
+				:src="`${index.baseSkillIconUrl}html,css,javascript,typescript,nuxtjs,vue,svelte,pinia,tailwindcss,vuetify,bootstrap,less,sass,vite,vitest,nodejs,express,mongodb,tauri,git,github,stackoverflow,vercel,vscode,postman,npm,pnpm,md,figma,&theme=${index.colorMode.value}`"
 				alt="icons"
 			/>
 		</UCard>
