@@ -18,9 +18,11 @@
 			:placeholder="$t('placeholder')"
 			class="w-1/3 hidden md:block"
 			v-model="searchReposName"
+			id="searchRepoInput"
 			:ui="{ icon: { trailing: { pointer: '' } } }"
 		>
 			<template #trailing>
+				<UKbd size="md" v-show="searchReposName === ''">Q</UKbd>
 				<UButton
 					v-show="searchReposName !== ''"
 					size="sm"
@@ -157,7 +159,7 @@ const isModalOpen: Ref<boolean> = ref(false)
 // control user dropdown
 const isUserOpen: Ref<boolean> = ref(true)
 // search keyword of repoName
-const searchReposName: Ref<string> = ref('')
+let searchReposName: Ref<string> = ref('')
 
 const router = useRouter()
 
@@ -191,19 +193,28 @@ const languages = [
 	],
 ]
 
+// keyword handler
+onMounted(() => {
+	window.addEventListener('keydown', async (e) => {
+		if (e.key === 'q' || e.key === 'Q') {
+			const input = document.querySelector<HTMLInputElement>('#searchRepoInput')
+
+			if (input !== document.activeElement) {
+				e.preventDefault()
+				if (input) {
+					input.focus()
+				}
+			}
+		}
+	})
+})
+
 const token: string | null | undefined = useCookie('token').value
 const username: string | null | undefined = useCookie('username').value
 
 let isLogin: Ref<boolean> = ref(false)
 if (!token || !username) isLogin.value = false
 else isLogin.value = true
-
-const notice = (text: string) => {
-	if (!sessionStorage.getItem('isFirstDisplay')) {
-		toast.add({ title: text })
-		sessionStorage.setItem('isFirstDisplay', '1')
-	}
-}
 
 const colorMode = useColorMode()
 const isDark = computed({
