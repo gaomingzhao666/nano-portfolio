@@ -1,7 +1,8 @@
 <template>
 	<UContainer>
-		<h1 class="text-center mt-52 font-bold text-3xl">
-			worked company and details (no work experience yet since 6.2024)
+		<h1 class="text-center mt-52 text-3xl">
+			Wanna be the first? Please
+			<NuxtLink to="/contact" class="text-blue-600">contact me</NuxtLink>
 		</h1>
 	</UContainer>
 </template>
