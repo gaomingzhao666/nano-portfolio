@@ -22,6 +22,12 @@ export default [
 			import('~/pages/index/about.vue').then((r) => r.default || r),
 	},
 	{
+		name: 'new-about',
+		path: '/new-about',
+		component: () =>
+			import('~/pages/index/new-about.vue').then((r) => r.default || r),
+	},
+	{
 		name: 'contact',
 		path: '/contact',
 		component: () =>
