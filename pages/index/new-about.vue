@@ -1,8 +1,8 @@
 <template>
 	<UContainer class="my-5 align-middle">
-		<section
-			class="mb-6 max-w-3xl flex flex-wrap justify-around items-center space-x-5"
-		>
+		<!-- top -->
+		<section class="mb-6 max-w-3xl flex flex-wrap justify-around items-center">
+			<!-- left card -->
 			<UCard class="w-full md:w-[450px] h-56 text-center rounded-3xl">
 				<UAvatar
 					:src="data?.data.data.avatar_url"
@@ -15,8 +15,9 @@
 				<h1 class="text-2xl my-3">Nano@Gaomingzhao</h1>
 			</UCard>
 
+			<!-- right card -->
 			<UCard class="w-full md:w-64 h-56 rounded-3xl">
-				<h1 class="text-2xl mb-3">Language</h1>
+				<h1 class="text-2xl mb-5">Language</h1>
 				<ul class="space-y-2">
 					<li class="flex justify-between">
 						English
@@ -34,34 +35,62 @@
 			</UCard>
 		</section>
 
-		<section></section>
-		<UCard class="mb-6 text-center max-w-3xl rounded-3xl">
-			<section class="flex justify-between items-center mb-5">
-				<section class="nanoFlex border-cyan-800 border-2 rounded-full p-2">
-					<UIcon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
-					<p class="nanoFont">2020-2024</p>
+		<!-- middle -->
+		<section class="mb-6 max-w-3xl flex flex-wrap justify-around items-center">
+			<!-- left card -->
+			<UCard class="w-full md:w-64 h-56 rounded-3xl">
+				<h1>test</h1>
+			</UCard>
+
+			<!-- right card -->
+			<UCard class="w-full md:w-[450px] h-56 text-center rounded-3xl">
+				<!-- calendar of study -->
+				<section class="flex justify-between items-center mb-3">
+					<section class="nanoFlex border-cyan-800 border-2 rounded-full p-2">
+						<UIcon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
+						<p class="nanoFont">2020-2024</p>
+					</section>
+
+					<!-- degree title -->
+					<section class="nanoFlex">
+						<UIcon name="i-fluent-emoji-flat:military-medal" class="text-3xl" />
+						<p class="nanoFont">{{ $t('degree') }}</p>
+					</section>
 				</section>
 
-				<section class="nanoFlex">
-					<UIcon name="i-fluent-emoji-flat:military-medal" class="text-3xl" />
-					<p class="nanoFont">{{ $t('degree') }}</p>
+				<!-- major title -->
+				<h1 class="text-xl font-bold text-left mb-3">
+					{{ $t('major') }}
+				</h1>
+
+				<!-- location -->
+				<section class="flex items-center mb-3">
+					<UIcon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
+					<p class="nanoFont">China</p>
 				</section>
-			</section>
 
-			<h1 class="text-xl font-bold text-left my-5">
-				{{ $t('major') }}
-			</h1>
-
-			<section class="flex items-center my-3">
-				<UIcon name="i-fluent-emoji-flat:school" class="text-3xl mr-2" />
-				<p class="nanoFont">Qiqihar Institute of Engineering</p>
-			</section>
-
-			<section class="flex items-center mt-3">
-				<UIcon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
-				<p class="nanoFont">Qiqihar, Heilongjiang, China</p>
-			</section>
-		</UCard>
+				<!-- tags group 1 -->
+				<section
+					class="mt-2 flex flex-wrap justify-start items-center space-x-2"
+				>
+					<span
+						v-for="(item, index) in courseTags"
+						:key="index"
+						class="text-xs font-semibold"
+						>#{{ item }}</span
+					>
+				</section>
+				<!-- tags group 2 -->
+				<section class="flex flex-wrap justify-start items-center space-x-2">
+					<span
+						v-for="(item, index) in courseTags2"
+						:key="index"
+						class="text-xs font-semibold"
+						>#{{ item }}</span
+					>
+				</section>
+			</UCard>
+		</section>
 
 		<UCard class="text-center max-w-3xl rounded-3xl">
 			<!-- <section class="flex flex-wrap">
@@ -114,6 +143,17 @@ const index = useIndexStore()
 // 	'VScode',
 // 	'Postman',
 // ]
+const fieldTags = ['Web', 'Frontend', 'engineering', 'Logics']
+const courseTags = [
+	'Data Structure and Algorithms',
+	' Networking',
+	'Database principles',
+]
+const courseTags2 = [
+	'Software Engineering',
+	'Computer Architecture',
+	'Operating Systems',
+]
 
 const { data, error } = await useFetch<githubUserInfoGet>(
 	'/api/user/githubUserInfo',
@@ -135,6 +175,6 @@ if (error.value) router.push({ name: 'error' })
 	margin-left: 5px;
 
 	font-weight: bold;
-	font-size: small;
+	font-size: medium;
 }
 </style>
