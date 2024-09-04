@@ -1,7 +1,9 @@
 <template>
 	<UContainer class="my-5 align-middle">
 		<!-- top -->
-		<section class="mb-6 max-w-3xl flex flex-wrap justify-around items-center">
+		<section
+			class="mb-6 max-w-3xl flex flex-wrap justify-around items-center space-x-3"
+		>
 			<!-- left card -->
 			<UCard class="w-full md:w-[450px] h-56 text-center rounded-3xl">
 				<UAvatar
@@ -36,10 +38,19 @@
 		</section>
 
 		<!-- middle -->
-		<section class="mb-6 max-w-3xl flex flex-wrap justify-around items-center">
+		<section
+			class="mb-6 max-w-3xl flex flex-wrap justify-around items-center space-x-3"
+		>
 			<!-- left card -->
 			<UCard class="w-full md:w-64 h-56 rounded-3xl">
-				<h1>test</h1>
+				<section
+					v-for="(item, index) in mainStack"
+					:key="index"
+					class="flex justify-between items-center my-2"
+				>
+					<h1 class="text-md font-semibold">{{ item.name }}</h1>
+					<UMeter size="xl" :value="item.value" class="w-32" />
+				</section>
 			</UCard>
 
 			<!-- right card -->
@@ -92,21 +103,48 @@
 			</UCard>
 		</section>
 
-		<UCard class="text-center max-w-3xl rounded-3xl">
-			<!-- <section class="flex flex-wrap">
-				<UBadge
-					class="m-1"
-					v-for="(item, index) in techStack"
-					:key="index"
-					:ui="{ rounded: 'rounded-lg' }"
-					>{{ item }}</UBadge
-				>
-			</section> -->
-			<img
-				:src="`${index.baseSkillIconUrl}html,css,javascript,typescript,nuxtjs,vue,svelte,pinia,tailwindcss,vuetify,bootstrap,less,sass,vite,vitest,nodejs,express,mongodb,tauri,git,github,stackoverflow,vercel,vscode,postman,npm,pnpm,md,figma,&theme=${index.colorMode.value}`"
-				alt="icons"
-			/>
-		</UCard>
+		<!-- bottom -->
+		<section
+			class="mb-6 max-w-3xl flex flex-wrap justify-around items-center space-x-3"
+		>
+			<UCard class="w-full md:w-[384px] h-56 rounded-3xl text-center space-x-2">
+				<div class="text-start">
+					<UIcon
+						v-for="(item, index) in frontendStackIcon"
+						:key="index"
+						:name="item"
+						class="w-[40px] h-[40px] mx-1"
+					/>
+				</div>
+			</UCard>
+
+			<UCard class="w-full md:w-24 h-56 rounded-3xl text-center space-x-2">
+				<div class="text-start">
+					<UIcon
+						v-for="(item, index) in backendStackIcon"
+						:key="index"
+						:name="item"
+						class="w-[40px] h-[40px] mx-1"
+					/>
+				</div>
+			</UCard>
+
+			<UCard class="w-full md:w-48 h-56 rounded-3xl text-center space-x-2">
+				<div class="text-start">
+					<UIcon
+						v-for="(item, index) in toolStackIcon"
+						:key="index"
+						:name="item"
+						class="w-[40px] h-[40px] mx-1"
+					/>
+				</div>
+			</UCard>
+		</section>
+
+		<!-- <img
+			:src="`${index.baseSkillIconUrl}html,css,javascript,typescript,nuxtjs,vue,svelte,pinia,tailwindcss,vuetify,bootstrap,less,sass,vite,vitest,nodejs,express,mongodb,tauri,git,github,stackoverflow,vercel,vscode,postman,npm,pnpm,md,figma,&theme=${index.colorMode.value}`"
+			alt="icons"
+		/> -->
 	</UContainer>
 </template>
 
@@ -119,40 +157,85 @@ useSeoMeta({
 
 const index = useIndexStore()
 
-// const techStack = [
-// 	'Html',
-// 	'CSS',
-// 	'JavaScript',
-// 	'TypeScript',
-// 	'Nuxt',
-// 	'Vue',
-// 	'vue-router',
-// 	'Pinia',
-// 	'TailwindCSS',
-// 	'Bootstrap',
-// 	'NuxtUI',
-// 	'Less',
-// 	'Sass',
-// 	'Vite',
-// 	'NodeJS',
-// 	'Express',
-// 	'MongoDB & Mongoose',
-// 	'Git',
-// 	'Docker',
-// 	'Vercel',
-// 	'VScode',
-// 	'Postman',
-// ]
-const fieldTags = ['Web', 'Frontend', 'engineering', 'Logics']
+// static data to show my skills and fields of study
 const courseTags = [
 	'Data Structure and Algorithms',
-	' Networking',
+	'Networking',
 	'Database principles',
 ]
 const courseTags2 = [
 	'Software Engineering',
 	'Computer Architecture',
 	'Operating Systems',
+]
+
+const mainStack = [
+	{
+		name: 'Frontend',
+		value: 100,
+	},
+	{
+		name: 'Backend',
+		value: 65,
+	},
+	{
+		name: 'UI/UX',
+		value: 40,
+	},
+	{
+		name: 'Testing',
+		value: 60,
+	},
+	{
+		name: 'DevOps',
+		value: 50,
+	},
+]
+
+const frontendStackIcon = [
+	'i-skill-icons:html',
+	'i-skill-icons:css',
+	'i-skill-icons:javascript',
+	'i-skill-icons:typescript',
+	'i-skill-icons:vuejs-light',
+	'i-skill-icons:nuxtjs-light',
+	'i-skill-icons:svelte',
+	'i-skill-icons:pinia-light',
+	'i-skill-icons:tailwindcss-light',
+	'i-skill-icons:sass',
+	'i-skill-icons:less-light',
+	'i-skill-icons:vuetify-light',
+	'i-logos:headlessui-icon',
+	'i-logos:element',
+	'i-logos:daisyui',
+	'i-simple-icons:shadcnui',
+	'i-skill-icons:bootstrap',
+	'i-skill-icons:tauri-light',
+	'i-skill-icons:vite-light',
+	'i-skill-icons:vitest-light',
+	'i-skill-icons:vercel-dark',
+	'i-skill-icons:npm-light',
+	'i-skill-icons:pnpm-light',
+	'i-skill-icons:yarn-light',
+]
+const backendStackIcon = [
+	'i-skill-icons:nodejs-light',
+	'i-skill-icons:expressjs-light',
+	'i-skill-icons:mongodb',
+	'i-skill-icons:postman',
+]
+const toolStackIcon = [
+	'i-skill-icons:vscode-light',
+	'i-skill-icons:docker',
+	'i-skill-icons:git',
+	'i-skill-icons:github-dark',
+	'i-skill-icons:stackoverflow-light',
+	'i-skill-icons:figma-dark',
+	'i-skill-icons:markdown-light',
+	'i-skill-icons:windows-light',
+	'i-skill-icons:linux-light',
+	'i-logos:chrome',
+	'i-logos:microsoft-edge',
 ]
 
 const { data, error } = await useFetch<githubUserInfoGet>(
