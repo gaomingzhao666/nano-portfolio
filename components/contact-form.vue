@@ -16,7 +16,7 @@
 					:placeholder="$t('contactFormPlaceholder')"
 					icon="i-heroicons-envelope"
 					v-model="formData.title"
-					class="font-bold"
+					class="font-semibold"
 				/>
 			</UFormGroup>
 
@@ -31,7 +31,7 @@
 					placeholder="You@example.com"
 					icon="i-heroicons-envelope"
 					v-model="formData.email"
-					class="font-bold"
+					class="font-semibold"
 				/>
 			</UFormGroup>
 
@@ -39,7 +39,7 @@
 				<UTextarea
 					:placeholder="$t('contactFormContent')"
 					v-model="formData.contents"
-					class="font-bold"
+					class="font-semibold"
 				/>
 			</UFormGroup>
 		</UCard>

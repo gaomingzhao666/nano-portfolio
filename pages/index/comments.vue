@@ -36,7 +36,7 @@
 			class="p-3"
 		>
 			<template #header>
-				<h1 class="font-bold text-lg">{{ $t('postComment') }}</h1>
+				<h1 class="font-semibold text-lg">{{ $t('postComment') }}</h1>
 			</template>
 
 			<section class="text-end">
