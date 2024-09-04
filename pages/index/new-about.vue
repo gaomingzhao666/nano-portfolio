@@ -140,11 +140,6 @@
 				</div>
 			</UCard>
 		</section>
-
-		<!-- <img
-			:src="`${index.baseSkillIconUrl}html,css,javascript,typescript,nuxtjs,vue,svelte,pinia,tailwindcss,vuetify,bootstrap,less,sass,vite,vitest,nodejs,express,mongodb,tauri,git,github,stackoverflow,vercel,vscode,postman,npm,pnpm,md,figma,&theme=${index.colorMode.value}`"
-			alt="icons"
-		/> -->
 	</UContainer>
 </template>
 
@@ -154,8 +149,6 @@ useSeoMeta({
 	description:
 		'About [Nano] - A Full-Stack Developer specializing in Vue3, Nuxt3, and modern web technologies. Discover my expertise in JavaScript, TypeScript, MongoDB, and more. Explore my projects and connect with me!',
 })
-
-const index = useIndexStore()
 
 // static data to show my skills and fields of study
 const courseTags = [
@@ -257,7 +250,7 @@ if (error.value) router.push({ name: 'error' })
 .nanoFont {
 	margin-left: 5px;
 
-	font-weight: bold;
+	font-weight: 500;
 	font-size: medium;
 }
 </style>
