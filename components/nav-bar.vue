@@ -15,7 +15,7 @@
 				{
 					label: $t('about'),
 					icon: 'i-heroicons:information-circle',
-					to: '/about',
+					to: '/new-about',
 				},
 				{
 					label: $t('contact'),
