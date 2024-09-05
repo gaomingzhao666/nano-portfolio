@@ -1,8 +1,8 @@
 <template>
-	<UContainer class="my-5 align-middle">
+	<UContainer class="my-5">
 		<!-- top -->
 		<section
-			class="mb-6 max-w-3xl flex flex-wrap justify-around items-center space-x-3"
+			class="space-y-3 md:space-y-0 my-3 md:mb-6 flex flex-wrap justify-around items-center md:space-x-3"
 		>
 			<!-- left card -->
 			<UCard class="w-full md:w-[450px] h-56 text-center rounded-3xl">
@@ -39,7 +39,7 @@
 
 		<!-- middle -->
 		<section
-			class="mb-6 max-w-3xl flex flex-wrap justify-around items-center space-x-3"
+			class="space-y-3 md:space-y-0 my-3 md:mb-6 flex flex-wrap justify-around items-center md:space-x-3"
 		>
 			<!-- left card -->
 			<UCard class="w-full md:w-64 h-56 rounded-3xl">
@@ -54,18 +54,22 @@
 			</UCard>
 
 			<!-- right card -->
-			<UCard class="w-full md:w-[450px] h-56 text-center rounded-3xl">
+			<UCard
+				class="w-full h-64 md:w-[450px] md:h-56 text-center flex items-center rounded-3xl"
+			>
 				<!-- calendar of study -->
 				<section class="flex justify-between items-center mb-3">
-					<section class="nanoFlex border-cyan-800 border-2 rounded-full p-2">
+					<section
+						class="flex items-center border-cyan-800 border-2 rounded-full p-2"
+					>
 						<UIcon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
-						<p class="nanoFont">2020-2024</p>
+						<p class="font-semibold ml-1">2020-2024</p>
 					</section>
 
 					<!-- degree title -->
-					<section class="nanoFlex">
+					<section class="flex items-center">
 						<UIcon name="i-fluent-emoji-flat:military-medal" class="text-3xl" />
-						<p class="nanoFont">{{ $t('degree') }}</p>
+						<p class="font-semibold ml-1">{{ $t('degree') }}</p>
 					</section>
 				</section>
 
@@ -77,7 +81,7 @@
 				<!-- location -->
 				<section class="flex items-center mb-3">
 					<UIcon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
-					<p class="nanoFont">China</p>
+					<p class="font-semibold ml-1">China</p>
 				</section>
 
 				<!-- tags group 1 -->
@@ -105,7 +109,7 @@
 
 		<!-- bottom -->
 		<section
-			class="mb-6 max-w-3xl flex flex-wrap justify-around items-center space-x-3"
+			class="space-y-3 md:space-y-0 my-3 md:mb-6 flex flex-wrap justify-around items-center md:space-x-3"
 		>
 			<UCard class="w-full md:w-[384px] h-56 rounded-3xl text-center space-x-2">
 				<div class="text-start">
@@ -240,17 +244,3 @@ const { data, error } = await useFetch<githubUserInfoGet>(
 const router = useRouter()
 if (error.value) router.push({ name: 'error' })
 </script>
-
-<style scoped>
-.nanoFlex {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-.nanoFont {
-	margin-left: 5px;
-
-	font-weight: 500;
-	font-size: medium;
-}
-</style>
