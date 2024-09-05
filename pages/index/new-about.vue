@@ -242,4 +242,40 @@ const { data, error } = await useFetch<githubUserInfoGet>(
 )
 const router = useRouter()
 if (error.value) router.push({ name: 'error' })
+
+const initNotice = () => {
+	const router = useRouter()
+	const toast = useToast()
+
+	const toastAction = ref([
+		{
+			label: 'Never Show Again',
+			click: () => {
+				// here's false value is just the comment to programmers
+				// actually, once it exist, it will never show again
+				localStorage.setItem('isNotice', 'false')
+			},
+		},
+		{
+			label: 'Back to Legacy',
+			click: () => {
+				router.push({ name: 'about' })
+			},
+		},
+	])
+
+	if (!localStorage.getItem('isNotice'))
+		toast.add({
+			title: 'Hey there!',
+			description:
+				'Here is new About Page, click back button to legacy About Page',
+			icon: 'i-fluent-emoji-flat:flushed-face',
+
+			actions: toastAction.value,
+		})
+}
+
+onMounted(() => {
+	initNotice()
+})
 </script>
