@@ -146,6 +146,36 @@
 				</section>
 			</template>
 
+			<UInput
+				icon="i-mingcute:search-line"
+				size="xl"
+				name="searchReposName"
+				color="white"
+				trailing
+				:placeholder="$t('placeholder')"
+				class="w-full block text-center"
+				v-model="searchReposName"
+				id="searchRepoInput"
+				:ui="{ icon: { trailing: { pointer: '' } } }"
+			>
+				<template #trailing>
+					<UKbd size="md" v-show="searchReposName === ''">Q</UKbd>
+					<UButton
+						v-show="searchReposName !== ''"
+						size="sm"
+						variant="solid"
+						@click="
+							router.push({
+								path: '/index',
+								query: { repoName: searchReposName },
+							})
+						"
+						class="font-normal"
+						>{{ $t('search') }}</UButton
+					>
+				</template>
+			</UInput>
+
 			<NavBar @click="isModalOpen = false" />
 		</UCard>
 	</UModal>
