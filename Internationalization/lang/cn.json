@@ -16,8 +16,14 @@
 	"clickToRepo": "点击进入此仓库",
 	"clickToWebsite": "点击跳转至已部署网站",
 
-	"sayHello": "你好, 这里是 Nano!",
-	"devDescDetail": "现如今我是一名前端开发者并热衷于使用现代 Web 技术, 除了前端技术栈以外我还可以使用NodeJS生态实现一些后端业务。 我于2024年获得计算机科学与技术学士学位。我使用普通话作为母语, 同时也会一些英语和日语。",
+	"sayHello": "嘿，这里 Nano!",
+	"devDescDetail": "我是一名热爱使用现代技术的前端开发者，我也可以使用Node.js生态系统编写后端API。我拥有计算机科学和技术的学士学位。我的母语是中文，同时也会有限地说英语和日语。",
+	"sayHey": "你好👋 我是",
+	"language": "语言",
+	"english": "英语",
+	"chinese": "中文",
+	"native": "母语",
+	"japanese": "日语",
 	"degree": "学士",
 	"major": "计算机科学与技术",
 

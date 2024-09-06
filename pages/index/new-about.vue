@@ -13,24 +13,24 @@
 					size="3xl"
 				/>
 
-				<h1 class="text-2xl my-3">Hello 👋 I am</h1>
+				<h1 class="text-2xl my-3">{{ $t('sayHello') }}</h1>
 				<h1 class="text-2xl my-3">Nano@Gaomingzhao</h1>
 			</UCard>
 
 			<!-- right card -->
 			<UCard class="w-full md:w-64 h-56 rounded-3xl">
-				<h1 class="text-2xl mb-5">Language</h1>
+				<h1 class="text-2xl mb-5">{{ $t('language') }}</h1>
 				<ul class="space-y-2">
 					<li class="flex justify-between">
-						English
+						{{ $t('english') }}
 						<UBadge color="primary" variant="soft">TOEIC 800</UBadge>
 					</li>
 					<li class="flex justify-between">
-						Chinese
+						{{ $t('chinese') }}
 						<UBadge color="primary" variant="soft">NATIVE</UBadge>
 					</li>
 					<li class="flex justify-between">
-						Japanese
+						{{ $t('japanese') }}
 						<UBadge color="primary" variant="soft">JLPT N1</UBadge>
 					</li>
 				</ul>
