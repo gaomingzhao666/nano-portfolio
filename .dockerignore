@@ -14,14 +14,14 @@
 **/.toolstarget
 **/.vs
 **/.vscode
-**/.nuxt
+**/.next
 **/.cache
 **/*.*proj.user
 **/*.dbmdl
 **/*.jfm
 **/charts
 **/docker-compose*
-**/compose*
+**/compose.y*ml
 **/Dockerfile*
 **/node_modules
 **/npm-debug.log
