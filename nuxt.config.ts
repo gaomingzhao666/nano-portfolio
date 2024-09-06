@@ -2,10 +2,12 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	ssr: true,
+
 	typescript: {
 		typeCheck: true,
 		strict: true,
 	},
+
 	imports: {
 		autoImport: true,
 	},
@@ -18,6 +20,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/i18n',
 		'nuxt-svgo',
 	],
+
 	svgo: {
 		componentPrefix: 'ico',
 	},
@@ -33,16 +36,18 @@ export default defineNuxtConfig({
 		locales: [
 			{
 				code: 'en',
-				iso: 'en-US',
+				language: 'en-US',
 			},
 			{
 				code: 'jp',
-				iso: 'ja',
+				language: 'ja',
 			},
 			{
 				code: 'cn',
-				iso: 'zh-CN',
+				language: 'zh-CN',
 			},
 		],
 	},
+
+	compatibilityDate: '2024-09-06',
 })
