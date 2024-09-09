@@ -164,12 +164,7 @@
 						v-show="searchReposName !== ''"
 						size="sm"
 						variant="solid"
-						@click="
-							router.push({
-								path: '/index',
-								query: { repoName: searchReposName },
-							})
-						"
+						@click="searchRepo"
 						class="font-normal"
 						>{{ $t('search') }}</UButton
 					>
@@ -255,6 +250,14 @@ const isDark = computed({
 		colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 	},
 })
+
+const searchRepo = () => {
+	router.push({
+		path: '/index',
+		query: { repoName: searchReposName.value },
+	})
+	isModalOpen.value = false
+}
 
 const logout = async () => {
 	const { data } = await $fetch<logoutDelete>(`/api/auth/logout`, {
