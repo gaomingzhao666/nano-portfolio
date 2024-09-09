@@ -13,7 +13,7 @@
 					size="3xl"
 				/>
 
-				<h1 class="text-2xl my-3">{{ $t('sayHello') }}</h1>
+				<h1 class="text-2xl my-3">{{ $t('sayHey') }}</h1>
 				<h1 class="text-2xl my-3">Nano@Gaomingzhao</h1>
 			</UCard>
 
