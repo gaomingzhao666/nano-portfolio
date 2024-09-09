@@ -13,7 +13,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    💖 Nuxt3 エコシステムを使用したフルスタック開発による開発者個人プロフィールアプリケーション 💖
+    ❤️ Nuxt3 エコシステムを使用したフルスタック開発による、自動的に Github のプロファイルとレポを導入する開発者個人ポートフォリオ ❤️
     <br />
     <br />
     <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
@@ -42,6 +42,7 @@
 
 <p align="center">
     <img src="/SCREENSHOT/index-mockup.png">
+    <img src="/SCREENSHOT/new-about-mockup.png">
 </p>
 
 > この写真は iPad サイに基づいた index ページ, [こちらへ](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) このプロジェクトの写真をご覧ください。

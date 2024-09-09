@@ -13,7 +13,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    💖 A portfolio of developers made full-stackly by Nuxt3 and the official supported libs form it 💖
+    ❤️ A dev portfolio that can automatically import Github profile and repo info, made by Nuxt ecosystem ❤️
     <br />
     <br />
     <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
@@ -42,6 +42,7 @@
 
 <p align="center">
     <img src="/SCREENSHOT/index-mockup.png">
+    <img src="/SCREENSHOT/new-about-mockup.png">
 </p>
 
 > The image shown here is a index-page for laptop-size, [click here](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) to see more detailed screenshot for this application.

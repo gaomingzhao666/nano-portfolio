@@ -13,7 +13,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    💖 由 Nuxt3 生态全栈开发的开发者个人简介应用 💖
+    ❤️ 由 Nuxt3 生态全栈开发的开发者个人简介应用 ❤️
     <br />
     <br />
     <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
@@ -42,6 +42,7 @@
 
 <p align="center">
     <img src="/SCREENSHOT/index-mockup.png">
+    <img src="/SCREENSHOT/new-about-mockup.png">
 </p>
 
 > 上方是 平板 设备尺寸的 index 页面截图, [点击此处](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) 可查看更多详细截图。
