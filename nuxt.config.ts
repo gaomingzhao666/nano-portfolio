@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 	},
 
 	icon: {
-		serverBundle: 'local',
+		serverBundle: 'remote',
 	},
 	mongoose: {
 		uri: 'mongodb+srv://vercel-admin-user:AUK7HEtudWfWbJt3@gaomingzhao.skelvi3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
