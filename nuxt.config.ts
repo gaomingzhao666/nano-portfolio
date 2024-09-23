@@ -19,6 +19,7 @@ export default defineNuxtConfig({
 		'@nuxt/ui',
 		'@nuxtjs/i18n',
 		'nuxt-svgo',
+		'@nuxt/icon',
 	],
 
 	svgo: {
@@ -26,7 +27,7 @@ export default defineNuxtConfig({
 	},
 
 	icon: {
-		serverBundle: 'remote',
+		serverBundle: 'local',
 	},
 	mongoose: {
 		uri: 'mongodb+srv://vercel-admin-user:AUK7HEtudWfWbJt3@gaomingzhao.skelvi3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
@@ -52,5 +53,5 @@ export default defineNuxtConfig({
 		],
 	},
 
-	compatibilityDate: '2024-09-06',
+	compatibilityDate: '2024-09-23',
 })
