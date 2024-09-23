@@ -1,44 +1,49 @@
 <template>
-	<UCard
-		class="group rounded-3xl m-3 hover:shadow-lg transition-all"
-		:ui="{ body: { padding: '' } }"
-	>
-		<section
-			class="relative text-white bg-slate-700 w-full min-h-48 p-5 rounded-3xl rounded-b-none"
+	<NuxtLink :to="props.data.clone_url">
+		<UCard
+			class="rounded-3xl m-3 h-[350px] transition-all hover:ring-2 hover:ring-green-500"
+			:ui="{ body: { padding: '' } }"
 		>
-			<section class="flex justify-start items-center">
-				<UIcon name="i-grommet-icons:github" class="text-3xl mr-2" />
-				<p>{{ $t('githubRepo') }}</p>
-			</section>
-
-			<h1
-				class="text-2xl text-center my-10 transition-all group-hover:text-3xl"
+			<!-- <a :href="props.data.clone_url"> -->
+			<section
+				class="relative flex items-center text-white bg-slate-700 w-full min-h-48 p-5 rounded-3xl rounded-b-none"
 			>
-				<a :href="props.data.clone_url">{{ $t('clickToRepo') }}</a>
-			</h1>
+				<section
+					class="absolute w-full top-0 left-0 p-5 flex justify-between items-center"
+				>
+					<section class="flex justify-start items-center">
+						<UIcon name="i-grommet-icons:github" class="text-2xl mr-2" />
+						<p>{{ $t('githubRepo') }}</p>
+					</section>
 
-			<displayUrl
-				:deployedUrl="props.data.homepage"
-				v-if="props.data.homepage"
-				class="block md:hidden absolute bottom-3 right-3 group-hover:block"
-			/>
-		</section>
+					<DisplayUrl
+						:deployedUrl="props.data.homepage"
+						v-if="props.data.homepage"
+					/>
+				</section>
 
-		<section class="px-3 pb-3">
-			<section class="flex justify-between m-3">
-				<p>{{ props.data.name }}</p>
-				<UBadge variant="soft" size="md" :label="props.data.language" />
+				<h1 class="text-center mt-8">
+					{{ props.data.description }}
+				</h1>
 			</section>
+			<!-- </a> -->
 
-			<UBadge
-				class="m-1 space-y-3"
-				:ui="{ rounded: 'rounded-full' }"
-				v-for="(childItem, index) in props.data.topics"
-				:key="index"
-				:label="childItem"
-			/>
-		</section>
-	</UCard>
+			<section class="px-3 pb-3">
+				<section class="flex justify-between m-3">
+					<p class="font-semibold">{{ props.data.name }}</p>
+					<UBadge variant="soft" size="md" :label="props.data.language" />
+				</section>
+
+				<UBadge
+					class="m-1 space-y-3"
+					:ui="{ rounded: 'rounded-full' }"
+					v-for="(childItem, index) in props.data.topics"
+					:key="index"
+					:label="childItem"
+				/>
+			</section>
+		</UCard>
+	</NuxtLink>
 </template>
 
 <script lang="ts" setup>
@@ -49,9 +54,8 @@ interface props {
 		name: string
 		language: string
 		topics: string[]
+		description: string
 	}
 }
 const props = defineProps<props>()
 </script>
-
-<style></style>
