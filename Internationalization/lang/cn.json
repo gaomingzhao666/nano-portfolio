@@ -13,8 +13,7 @@
 	"contact": "联系",
 
 	"githubRepo": "Github 仓库",
-	"clickToRepo": "点击进入此仓库",
-	"clickToWebsite": "点击跳转至已部署网站",
+	"clickToWebsite": "网站跳转",
 
 	"sayHello": "嘿，这里 Nano!",
 	"devDescDetail": "我是一名热爱使用现代技术的前端开发者，我也可以使用Node.js生态系统编写后端API。我拥有计算机科学和技术的学士学位。我的母语是中文，同时也会有限地说英语和日语。",
