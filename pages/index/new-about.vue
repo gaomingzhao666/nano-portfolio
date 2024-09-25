@@ -62,13 +62,13 @@
 					<section
 						class="flex items-center border-cyan-800 border-2 rounded-full p-2"
 					>
-						<UIcon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
+						<Icon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
 						<p class="font-semibold ml-1">2020-2024</p>
 					</section>
 
 					<!-- degree title -->
 					<section class="flex items-center">
-						<UIcon name="i-fluent-emoji-flat:military-medal" class="text-3xl" />
+						<Icon name="i-fluent-emoji-flat:military-medal" class="text-3xl" />
 						<p class="font-semibold ml-1">{{ $t('degree') }}</p>
 					</section>
 				</section>
@@ -80,7 +80,7 @@
 
 				<!-- location -->
 				<section class="flex items-center mb-3">
-					<UIcon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
+					<Icon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
 					<p class="font-semibold ml-1">China</p>
 				</section>
 
@@ -124,7 +124,7 @@
 
 			<UCard class="w-full md:w-24 h-56 rounded-3xl text-center space-x-2">
 				<div class="text-start">
-					<UIcon
+					<Icon
 						v-for="(item, index) in backendStackIcon"
 						:key="index"
 						:name="item"
@@ -135,7 +135,7 @@
 
 			<UCard class="w-full md:w-48 h-56 rounded-3xl text-center space-x-2">
 				<div class="text-start">
-					<UIcon
+					<Icon
 						v-for="(item, index) in toolStackIcon"
 						:key="index"
 						:name="item"
