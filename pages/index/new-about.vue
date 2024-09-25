@@ -62,13 +62,13 @@
 					<section
 						class="flex items-center border-cyan-800 border-2 rounded-full p-2"
 					>
-						<Icon name="i-fluent-emoji-flat:calendar" class="text-3xl" />
+						<Icon name="fluent-emoji-flat:calendar" class="text-3xl" />
 						<p class="font-semibold ml-1">2020-2024</p>
 					</section>
 
 					<!-- degree title -->
 					<section class="flex items-center">
-						<Icon name="i-fluent-emoji-flat:military-medal" class="text-3xl" />
+						<Icon name="fluent-emoji-flat:military-medal" class="text-3xl" />
 						<p class="font-semibold ml-1">{{ $t('degree') }}</p>
 					</section>
 				</section>
@@ -80,7 +80,7 @@
 
 				<!-- location -->
 				<section class="flex items-center mb-3">
-					<Icon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
+					<Icon name="fluent-emoji-flat:house" class="text-3xl mr-2" />
 					<p class="font-semibold ml-1">China</p>
 				</section>
 
@@ -189,49 +189,49 @@ const mainStack: Ref<{ name: string; value: number }[]> = ref([
 ])
 
 let frontendStackIcon: Ref<string[]> = ref([
-	'i-skill-icons:html',
-	'i-skill-icons:css',
-	'i-skill-icons:javascript',
-	'i-skill-icons:typescript',
-	'i-skill-icons:vuejs-light',
-	'i-skill-icons:nuxtjs-light',
-	'i-skill-icons:svelte',
-	'i-skill-icons:pinia-light',
-	'i-skill-icons:tailwindcss-light',
-	'i-skill-icons:sass',
-	'i-skill-icons:less-light',
-	'i-skill-icons:vuetify-light',
-	'i-logos:headlessui-icon',
-	'i-logos:element',
-	'i-logos:daisyui',
-	'i-simple-icons:shadcnui',
-	'i-skill-icons:bootstrap',
-	'i-skill-icons:tauri-light',
-	'i-skill-icons:vite-light',
-	'i-skill-icons:vitest-light',
-	'i-skill-icons:vercel-dark',
-	'i-skill-icons:npm-light',
-	'i-skill-icons:pnpm-light',
-	'i-skill-icons:yarn-light',
+	'skill-icons:html',
+	'skill-icons:css',
+	'skill-icons:javascript',
+	'skill-icons:typescript',
+	'skill-icons:vuejs-light',
+	'skill-icons:nuxtjs-light',
+	'skill-icons:svelte',
+	'skill-icons:pinia-light',
+	'skill-icons:tailwindcss-light',
+	'skill-icons:sass',
+	'skill-icons:less-light',
+	'skill-icons:vuetify-light',
+	'logos:headlessui-icon',
+	'logos:element',
+	'logos:daisyui',
+	'simple-icons:shadcnui',
+	'skill-icons:bootstrap',
+	'skill-icons:tauri-light',
+	'skill-icons:vite-light',
+	'skill-icons:vitest-light',
+	'skill-icons:vercel-dark',
+	'skill-icons:npm-light',
+	'skill-icons:pnpm-light',
+	'skill-icons:yarn-light',
 ])
 const backendStackIcon: Ref<string[]> = ref([
-	'i-skill-icons:nodejs-light',
-	'i-skill-icons:expressjs-light',
-	'i-skill-icons:mongodb',
-	'i-skill-icons:postman',
+	'skill-icons:nodejs-light',
+	'skill-icons:expressjs-light',
+	'skill-icons:mongodb',
+	'skill-icons:postman',
 ])
 const toolStackIcon: Ref<string[]> = ref([
-	'i-skill-icons:vscode-light',
-	'i-skill-icons:docker',
-	'i-skill-icons:git',
-	'i-skill-icons:github-dark',
-	'i-skill-icons:stackoverflow-light',
-	'i-skill-icons:figma-dark',
-	'i-skill-icons:markdown-light',
-	'i-skill-icons:windows-light',
-	'i-skill-icons:linux-light',
-	'i-logos:chrome',
-	'i-logos:microsoft-edge',
+	'skill-icons:vscode-light',
+	'skill-icons:docker',
+	'skill-icons:git',
+	'skill-icons:github-dark',
+	'skill-icons:stackoverflow-light',
+	'skill-icons:figma-dark',
+	'skill-icons:markdown-light',
+	'skill-icons:windows-light',
+	'skill-icons:linux-light',
+	'logos:chrome',
+	'logos:microsoft-edge',
 ])
 
 const { data, error } = await useFetch<githubUserInfoGet>(
