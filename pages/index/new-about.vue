@@ -113,7 +113,7 @@
 		>
 			<UCard class="w-full md:w-[384px] h-56 rounded-3xl text-center space-x-2">
 				<div class="text-start">
-					<UIcon
+					<Icon
 						v-for="(item, index) in frontendStackIcon"
 						:key="index"
 						:name="item"
@@ -188,7 +188,32 @@ const mainStack: Ref<{ name: string; value: number }[]> = ref([
 	},
 ])
 
-let frontendStackIcon: Ref<string[]> = ref([''])
+let frontendStackIcon: Ref<string[]> = ref([
+	'i-skill-icons:html',
+	'i-skill-icons:css',
+	'i-skill-icons:javascript',
+	'i-skill-icons:typescript',
+	'i-skill-icons:vuejs-light',
+	'i-skill-icons:nuxtjs-light',
+	'i-skill-icons:svelte',
+	'i-skill-icons:pinia-light',
+	'i-skill-icons:tailwindcss-light',
+	'i-skill-icons:sass',
+	'i-skill-icons:less-light',
+	'i-skill-icons:vuetify-light',
+	'i-logos:headlessui-icon',
+	'i-logos:element',
+	'i-logos:daisyui',
+	'i-simple-icons:shadcnui',
+	'i-skill-icons:bootstrap',
+	'i-skill-icons:tauri-light',
+	'i-skill-icons:vite-light',
+	'i-skill-icons:vitest-light',
+	'i-skill-icons:vercel-dark',
+	'i-skill-icons:npm-light',
+	'i-skill-icons:pnpm-light',
+	'i-skill-icons:yarn-light',
+])
 const backendStackIcon: Ref<string[]> = ref([
 	'i-skill-icons:nodejs-light',
 	'i-skill-icons:expressjs-light',
@@ -252,32 +277,5 @@ const initNotice = () => {
 
 onMounted(() => {
 	initNotice()
-
-	frontendStackIcon.value = [
-		'i-skill-icons:html',
-		'i-skill-icons:css',
-		'i-skill-icons:javascript',
-		'i-skill-icons:typescript',
-		'i-skill-icons:vuejs-light',
-		'i-skill-icons:nuxtjs-light',
-		'i-skill-icons:svelte',
-		'i-skill-icons:pinia-light',
-		'i-skill-icons:tailwindcss-light',
-		'i-skill-icons:sass',
-		'i-skill-icons:less-light',
-		'i-skill-icons:vuetify-light',
-		'i-logos:headlessui-icon',
-		'i-logos:element',
-		'i-logos:daisyui',
-		'i-simple-icons:shadcnui',
-		'i-skill-icons:bootstrap',
-		'i-skill-icons:tauri-light',
-		'i-skill-icons:vite-light',
-		'i-skill-icons:vitest-light',
-		'i-skill-icons:vercel-dark',
-		'i-skill-icons:npm-light',
-		'i-skill-icons:pnpm-light',
-		'i-skill-icons:yarn-light',
-	]
 })
 </script>

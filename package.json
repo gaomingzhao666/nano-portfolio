@@ -25,6 +25,7 @@
 	"devDependencies": {
 		"@iconify-json/heroicons": "^1.2.0",
 		"@iconify-json/skill-icons": "^1.2.0",
+		"@nuxt/icon": "^1.5.1",
 		"@nuxt/test-utils": "^3.14.2",
 		"@nuxtjs/i18n": "^8.5.5",
 		"@octokit/types": "^13.5.1",
