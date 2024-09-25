@@ -154,18 +154,18 @@ useSeoMeta({
 		'About [Nano] - A Full-Stack Developer specializing in Frontend, Backend, UI/UX, and modern web technologies. Discover my expertise in Html, CSS, JavaScript, TypeScript, NodeJS, Express, MongoDB, and more. Explore my projects and connect with me!',
 })
 // static data to show my skills and fields of study
-const courseTags = [
+const courseTags: Ref<string[]> = ref([
 	'Data Structure and Algorithms',
 	'Networking',
 	'Database principles',
-]
-const courseTags2 = [
+])
+const courseTags2: Ref<string[]> = ref([
 	'Software Engineering',
 	'Computer Architecture',
 	'Operating Systems',
-]
+])
 
-const mainStack = [
+const mainStack: Ref<{ name: string; value: number }[]> = ref([
 	{
 		name: 'Frontend',
 		value: 100,
@@ -186,9 +186,9 @@ const mainStack = [
 		name: 'DevOps',
 		value: 50,
 	},
-]
+])
 
-const frontendStackIcon = [
+const frontendStackIcon: Ref<string[]> = ref([
 	'i-skill-icons:html',
 	'i-skill-icons:css',
 	'i-skill-icons:javascript',
@@ -213,14 +213,14 @@ const frontendStackIcon = [
 	'i-skill-icons:npm-light',
 	'i-skill-icons:pnpm-light',
 	'i-skill-icons:yarn-light',
-]
-const backendStackIcon = [
+])
+const backendStackIcon: Ref<string[]> = ref([
 	'i-skill-icons:nodejs-light',
 	'i-skill-icons:expressjs-light',
 	'i-skill-icons:mongodb',
 	'i-skill-icons:postman',
-]
-const toolStackIcon = [
+])
+const toolStackIcon: Ref<string[]> = ref([
 	'i-skill-icons:vscode-light',
 	'i-skill-icons:docker',
 	'i-skill-icons:git',
@@ -232,7 +232,7 @@ const toolStackIcon = [
 	'i-skill-icons:linux-light',
 	'i-logos:chrome',
 	'i-logos:microsoft-edge',
-]
+])
 
 const { data, error } = await useFetch<githubUserInfoGet>(
 	'/api/user/githubUserInfo',
