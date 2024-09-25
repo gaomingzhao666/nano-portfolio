@@ -19,16 +19,12 @@ export default defineNuxtConfig({
 		'@nuxt/ui',
 		'@nuxtjs/i18n',
 		'nuxt-svgo',
-		'@nuxt/icon',
 	],
 
 	svgo: {
 		componentPrefix: 'ico',
 	},
 
-	icon: {
-		serverBundle: 'local',
-	},
 	mongoose: {
 		uri: 'mongodb+srv://vercel-admin-user:AUK7HEtudWfWbJt3@gaomingzhao.skelvi3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
 		options: {},

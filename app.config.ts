@@ -8,7 +8,4 @@ export default defineAppConfig({
 			position: 'top-0 bottom-auto',
 		},
 	},
-	icon: {
-		fetchTimeout: 500,
-	},
 })
