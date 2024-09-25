@@ -19,10 +19,15 @@ export default defineNuxtConfig({
 		'@nuxt/ui',
 		'@nuxtjs/i18n',
 		'nuxt-svgo',
+		'@nuxt/icon',
 	],
 
 	svgo: {
 		componentPrefix: 'ico',
+	},
+
+	icon: {
+		serverBundle: 'local',
 	},
 
 	mongoose: {
