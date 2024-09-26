@@ -28,6 +28,10 @@ export default defineNuxtConfig({
 
 	icon: {
 		serverBundle: 'local',
+		clientBundle: {
+			scan: true,
+			sizeLimitKb: 256,
+		},
 	},
 
 	mongoose: {
