@@ -37,7 +37,7 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 .heart-container {
 	--heart-color: red;
 
