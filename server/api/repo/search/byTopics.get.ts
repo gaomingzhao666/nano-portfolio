@@ -1,21 +1,39 @@
-import comments from '~/server/models/comment'
+const getAllRepos = async () => {
+	const { data } = await $fetch<repoInfoGet>('/api/repo/info', {
+		method: 'GET',
+	})
+	return data
+}
 
+interface reposBody {
+	repoTopics: string[]
+}
 export default defineEventHandler(async (event) => {
-	try {
-		const allComments = await comments.find().lean()
+	const { repoTopics }: reposBody = getQuery(event)
 
-		setResponseStatus(event, 200)
-		return {
-			status: true,
-			data: allComments,
-		}
-	} catch (error) {
-		setResponseStatus(event, 500)
-		return {
+	if (!repoTopics)
+		return <errorType>{
 			status: false,
 			data: {
-				message: 'Failed to retrieve comments',
+				message: 'Repo topics does not exist',
 			},
 		}
-	}
+
+	const allRepos = await getAllRepos()
+	const filteredRepos = allRepos.filter((item: any) =>
+		repoTopics.every((topic) => item.topics.includes(topic))
+	)
+
+	if (filteredRepos.length > 0) {
+		return <repoSearchByTopicsGet>{
+			status: true,
+			data: filteredRepos,
+		}
+	} else
+		return <errorType>{
+			status: false,
+			data: {
+				message: 'Repos not found',
+			},
+		}
 })
