@@ -42,9 +42,21 @@ importers:
         specifier: ^4.4.5
         version: 4.4.5(vue@3.5.8(typescript@5.6.2))
     devDependencies:
+      '@iconify-json/fluent-emoji-flat':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@iconify-json/grommet-icons':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@iconify-json/heroicons':
         specifier: ^1.2.0
         version: 1.2.0
+      '@iconify-json/logos':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.4
+        version: 1.2.4
       '@iconify-json/skill-icons':
         specifier: ^1.2.0
         version: 1.2.0
@@ -748,6 +760,12 @@ packages:
   '@iconify-json/carbon@1.2.1':
     resolution: {integrity: sha512-dIMY6OOY9LnwR3kOqAtfz4phGFG+KNfESEwSL6muCprBelSlSPpRXtdqvEEO/qWhkf5AJ9hWrOV3Egi5Z2IuKA==}
 
+  '@iconify-json/fluent-emoji-flat@1.2.0':
+    resolution: {integrity: sha512-WhU4XA2v+Nv+LTPfzFrWyip0G3L+t7gb7OuVnPN3FZL9s1MY+hRUn7PpXzLV1rGi7BLTro+tYbZC2K/5nX/GJQ==}
+
+  '@iconify-json/grommet-icons@1.2.0':
+    resolution: {integrity: sha512-YnhfMsJeXsfsSkMQP206MpVPY/O0jXbyhC9+P70W6SkVvpODqw72GK7TV1pnKUuPvNRZzRik2x+9KWQxgmMhGQ==}
+
   '@iconify-json/heroicons@1.2.0':
     resolution: {integrity: sha512-EmvGN0L9EUJCmQ82rkLGZ4tkz0YGQfZV7ugKT6UvHni/bxNitQrD0gLj6NJj2W9zsSoXyNHyCX236+EJmO4pmA==}
 
@@ -756,6 +774,9 @@ packages:
 
   '@iconify-json/ri@1.2.0':
     resolution: {integrity: sha512-br8It3uRHylNhEH72aU9VF6gIdL4BAi6JMdcxsCaVbAyWBJ0jd4RxfmsYnil6TmEfP5wxihiCKbtbQmIHZdqKg==}
+
+  '@iconify-json/simple-icons@1.2.4':
+    resolution: {integrity: sha512-AKUGO7cX2KykFEJ+P6tY3wGhGgbrL3RMqbxNTfutGsKojaSEFosN/cmWQ9l9hmUiS2IN7fVLsPMAIvV1uJyyVw==}
 
   '@iconify-json/skill-icons@1.2.0':
     resolution: {integrity: sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw==}
@@ -5977,6 +5998,14 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/fluent-emoji-flat@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/grommet-icons@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/heroicons@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
@@ -5986,6 +6015,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/ri@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.4':
     dependencies:
       '@iconify/types': 2.0.0
 
