@@ -15,6 +15,8 @@
 </template>
 
 <script lang="ts" setup>
+import type { LocationQueryValue } from 'vue-router'
+
 useSeoMeta({
 	title: 'Index',
 	description:
@@ -32,25 +34,47 @@ const route = useRoute()
 // when search keyword changes, get filtered repos
 let isFilteredRepoExists: Ref<boolean> = ref(true)
 let noFilteredReposNotice: Ref<string> = ref('')
-const getfilteredRepos = async () => {
-	const data = await $fetch<repoInfoGet>(`/api/repo/search/byName`, {
-		method: 'GET',
-		query: {
-			repoName: route.query.repoName,
-		},
-	})
-	return data
+const getFilteredRepos = async (keywords: LocationQueryValue[] | string) => {
+	const filteredReposByName = await $fetch<repoSearchByNameGet>(
+		`/api/repo/search/byName`,
+		{
+			method: 'GET',
+			query: {
+				repoName: keywords,
+			},
+		}
+	)
+	const filteredReposByTopics = await $fetch<repoSearchByTopicsGet>(
+		`/api/repo/search/byTopics`,
+		{
+			method: 'GET',
+			query: {
+				repoTopics: keywords,
+			},
+		}
+	)
+
+	let filteredRepos: any | string = []
+	filteredRepos = [
+		...(filteredReposByName.status ? filteredReposByName.data : []),
+		...(filteredReposByTopics.status ? filteredReposByTopics.data : []),
+	]
+
+	return {
+		status: filteredReposByName.status || filteredReposByTopics.status,
+		data: filteredRepos,
+	}
 }
 watchEffect(async () => {
-	if (route.query.repoName) {
-		const filteredRepos = await getfilteredRepos()
+	if (route.query.searchKeywords) {
+		const filteredRepos = await getFilteredRepos(route.query.searchKeywords)
 
 		if (filteredRepos.status) {
 			isFilteredRepoExists.value = true
 			data.value = filteredRepos
 		} else {
 			isFilteredRepoExists.value = false
-			noFilteredReposNotice.value = filteredRepos.data.message
+			noFilteredReposNotice.value = 'No repos found'
 		}
 	}
 })

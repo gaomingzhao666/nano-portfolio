@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
 
 	const allRepos = await getAllRepos()
 	const filteredRepos = allRepos.filter((item: any) =>
-		repoTopics.every((topic) => item.topics.includes(topic))
+		item.topics.includes(repoTopics)
 	)
 
 	if (filteredRepos.length > 0) {

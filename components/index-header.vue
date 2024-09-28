@@ -9,6 +9,7 @@
 			</section>
 		</section>
 
+		<!-- search repo input -->
 		<UInput
 			icon="i-mingcute:search-line"
 			size="lg"
@@ -17,20 +18,20 @@
 			trailing
 			:placeholder="$t('placeholder')"
 			class="w-1/3 hidden md:block"
-			v-model="searchReposName"
+			v-model="searchReposKeywords"
 			id="searchRepoInput"
 			:ui="{ icon: { trailing: { pointer: '' } } }"
 		>
 			<template #trailing>
-				<UKbd size="md" v-show="searchReposName === ''">Q</UKbd>
+				<UKbd size="md" v-show="searchReposKeywords === ''">Q</UKbd>
 				<UButton
-					v-show="searchReposName !== ''"
+					v-show="searchReposKeywords !== ''"
 					size="sm"
 					variant="solid"
 					@click="
 						router.push({
 							path: '/index',
-							query: { repoName: searchReposName },
+							query: { searchKeywords: searchReposKeywords },
 						})
 					"
 					class="font-normal"
@@ -64,7 +65,7 @@
 
 			<NuxtLink to="/login" v-if="!isLogin">
 				<UButton
-					icon="i-material-symbols:login"
+					icon="i-heroicons:arrow-up-circle"
 					color="white"
 					variant="solid"
 					size="lg"
@@ -82,7 +83,7 @@
 					[
 						{
 							label: $t('logout'),
-							icon: 'i-heroicons:arrow-up-circle',
+							icon: 'i-heroicons:arrow-down-circle',
 							click: logout,
 						},
 					],
@@ -104,6 +105,7 @@
 		</section>
 	</header>
 
+	<!-- modal for mobile devices-->
 	<UModal v-model="isModalOpen" fullscreen>
 		<UCard
 			:ui="{
@@ -154,14 +156,14 @@
 				trailing
 				:placeholder="$t('placeholder')"
 				class="w-full block text-center"
-				v-model="searchReposName"
+				v-model="searchReposKeywords"
 				id="searchRepoInput"
 				:ui="{ icon: { trailing: { pointer: '' } } }"
 			>
 				<template #trailing>
-					<UKbd size="md" v-show="searchReposName === ''">Q</UKbd>
+					<UKbd size="md" v-show="searchReposKeywords === ''">Q</UKbd>
 					<UButton
-						v-show="searchReposName !== ''"
+						v-show="searchReposKeywords !== ''"
 						size="sm"
 						variant="solid"
 						@click="searchRepo"
@@ -183,8 +185,6 @@ const toast = useToast()
 const isModalOpen: Ref<boolean> = ref(false)
 // control user dropdown
 const isUserOpen: Ref<boolean> = ref(true)
-// search keyword of repoName
-let searchReposName: Ref<string> = ref('')
 
 const router = useRouter()
 
@@ -251,10 +251,12 @@ const isDark = computed({
 	},
 })
 
+// search keyword of repoName
+let searchReposKeywords: Ref<string> = ref('')
 const searchRepo = () => {
 	router.push({
 		path: '/index',
-		query: { repoName: searchReposName.value },
+		query: { searchKeywords: searchReposKeywords.value },
 	})
 	isModalOpen.value = false
 }
