@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
 
 	const allRepos = await getAllRepos()
 	const filteredRepos = allRepos.filter((item: any) =>
-		item.name.includes(repoName)
+		item.name.toLowerCase().includes(repoName.toLowerCase())
 	)
 
 	if (filteredRepos.length > 0) {

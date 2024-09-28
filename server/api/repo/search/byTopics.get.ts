@@ -6,7 +6,7 @@ const getAllRepos = async () => {
 }
 
 interface reposBody {
-	repoTopics: string[]
+	repoTopics: string
 }
 export default defineEventHandler(async (event) => {
 	const { repoTopics }: reposBody = getQuery(event)
@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
 
 	const allRepos = await getAllRepos()
 	const filteredRepos = allRepos.filter((item: any) =>
-		item.topics.includes(repoTopics)
+		item.topics.toLowerCase().includes(repoTopics.toLowerCase())
 	)
 
 	if (filteredRepos.length > 0) {
