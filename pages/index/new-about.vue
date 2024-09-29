@@ -1,11 +1,13 @@
 <template>
-	<UContainer class="my-5">
+	<UContainer class="mt-2">
 		<!-- top -->
 		<section
 			class="space-y-3 md:space-y-0 my-3 md:mb-6 flex flex-wrap justify-around items-center md:space-x-3"
 		>
 			<!-- left card -->
-			<UCard class="w-full md:w-[450px] h-56 text-center rounded-3xl">
+			<UCard
+				class="w-full md:w-[450px] h-56 text-center rounded-3xl nano-container"
+			>
 				<UAvatar
 					:src="data?.data.data.avatar_url"
 					alt="Avatar"
@@ -20,7 +22,7 @@
 			<!-- right card -->
 			<UCard class="w-full md:w-64 h-56 rounded-3xl">
 				<h1 class="text-2xl mb-5">{{ $t('language') }}</h1>
-				<ul class="space-y-2">
+				<ul class="space-y-2 font-semibold">
 					<li class="flex justify-between">
 						{{ $t('english') }}
 						<UBadge color="primary" variant="soft">TOEIC 800</UBadge>
@@ -55,7 +57,7 @@
 
 			<!-- right card -->
 			<UCard
-				class="w-full h-64 md:w-[450px] md:h-56 text-center flex items-center rounded-3xl"
+				class="w-full h-64 md:w-[450px] md:h-56 flex justify-center items-center rounded-3xl"
 			>
 				<!-- calendar of study -->
 				<section class="flex justify-between items-center mb-3">
@@ -74,19 +76,19 @@
 				</section>
 
 				<!-- major title -->
-				<h1 class="text-xl font-bold text-left mb-3">
+				<h1 class="text-xl font-bold text-left my-3">
 					{{ $t('major') }}
 				</h1>
 
 				<!-- location -->
-				<section class="flex items-center mb-3">
+				<section class="flex items-center my-3">
 					<UIcon name="i-fluent-emoji-flat:house" class="text-3xl mr-2" />
 					<p class="font-semibold ml-1">China</p>
 				</section>
 
 				<!-- tags group 1 -->
 				<section
-					class="mt-2 flex flex-wrap justify-start items-center space-x-2"
+					class="mt-3 flex flex-wrap justify-start items-center space-x-2"
 				>
 					<span
 						v-for="(item, index) in courseTags"
@@ -279,3 +281,35 @@ onMounted(() => {
 	initNotice()
 })
 </script>
+
+<style scoped>
+/* From Uiverse.io by kennyotsu-monochromia */
+.nano-container {
+	--color: #e1e1e1;
+	background-image: linear-gradient(
+			0deg,
+			transparent 24%,
+			var(--color) 25%,
+			var(--color) 26%,
+			transparent 27%,
+			transparent 74%,
+			var(--color) 75%,
+			var(--color) 76%,
+			transparent 77%,
+			transparent
+		),
+		linear-gradient(
+			90deg,
+			transparent 24%,
+			var(--color) 25%,
+			var(--color) 26%,
+			transparent 27%,
+			transparent 74%,
+			var(--color) 75%,
+			var(--color) 76%,
+			transparent 77%,
+			transparent
+		);
+	background-size: 55px 55px;
+}
+</style>
