@@ -1,5 +1,5 @@
 <template>
-	<UContainer class="my-5 align-middle">
+	<UContainer class="mt-5">
 		<!-- tabs -->
 		<UTabs :items="items" v-model="selected" class="w-full">
 			<template #icon="{ item, selected }">

@@ -1,6 +1,6 @@
 <template>
 	<UCard
-		class="p-1 group rounded-3xl transition-all hover:ring-2 hover:ring-green-500"
+		class="p-1 group rounded-3xl transition-all hover:ring-2 hover:ring-green-400"
 	>
 		<section class="flex justify-between items-center">
 			<section class="flex justify-start items-center">
