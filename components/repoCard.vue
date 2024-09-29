@@ -1,10 +1,9 @@
 <template>
-	<NuxtLink :to="props.data.clone_url">
-		<UCard
-			class="rounded-3xl m-3 h-[350px] transition-all hover:ring-2 hover:ring-green-500"
-			:ui="{ body: { padding: '' } }"
-		>
-			<!-- <a :href="props.data.clone_url"> -->
+	<UCard
+		class="rounded-3xl m-3 h-[350px] transition-all hover:ring-2 hover:ring-green-400"
+		:ui="{ body: { padding: '' } }"
+	>
+		<NuxtLink :to="props.data.clone_url">
 			<section
 				class="relative flex items-center text-white bg-slate-700 w-full min-h-48 p-5 rounded-3xl rounded-b-none"
 			>
@@ -26,7 +25,6 @@
 					{{ props.data.description }}
 				</h1>
 			</section>
-			<!-- </a> -->
 
 			<section class="px-3 pb-3">
 				<section class="flex justify-between m-3">
@@ -42,8 +40,8 @@
 					:label="childItem"
 				/>
 			</section>
-		</UCard>
-	</NuxtLink>
+		</NuxtLink>
+	</UCard>
 </template>
 
 <script lang="ts" setup>
