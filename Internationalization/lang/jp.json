@@ -1,7 +1,7 @@
 {
 	"name": "なの",
 	"devDesc": "フロントエンド開発者",
-	"placeholder": "検索",
+	"placeholder": "名前、タグ、もしくは技術を通してプロジェクトを検索",
 	"search": "検索",
 	"login": "ログイン",
 	"register": "サインアップ",
@@ -47,5 +47,7 @@
 	"writeYourCommentHere": "コメントをここに書いてください...",
 	"post": "発表",
 
-	"logout": "ログアウト"
+	"logout": "ログアウト",
+	"errorDesc": "やば！エラーが起きているみたい",
+	"backToHome": "ホームページに戻る"
 }

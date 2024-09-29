@@ -1,7 +1,7 @@
 {
 	"name": "Nano",
 	"devDesc": "Front-end developer",
-	"placeholder": "search projects",
+	"placeholder": "search projects by name, topic or technologies...",
 	"search": "Search",
 	"login": "Login",
 	"register": "Register",
@@ -47,5 +47,8 @@
 	"writeYourCommentHere": "Write your comment here...",
 	"post": "Post",
 
-	"logout": "Logout"
+	"logout": "Logout",
+
+	"errorDesc": "Ops! Seems something went wrong.",
+	"backToHome": "Back to Home"
 }

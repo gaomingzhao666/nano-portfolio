@@ -1,7 +1,7 @@
 {
 	"name": "Nano",
 	"devDesc": "前端开发者",
-	"placeholder": "搜索项目",
+	"placeholder": "通过名字、标签或技术搜索项目",
 	"search": "搜索",
 	"login": "登录",
 	"register": "注册",
@@ -47,5 +47,8 @@
 	"writeYourCommentHere": "写下你的评论...",
 	"post": "发布",
 
-	"logout": "登出"
+	"logout": "登出",
+
+	"errorDesc": "坏事了！好像出了点小问题",
+	"backToHome": "回到首页"
 }
