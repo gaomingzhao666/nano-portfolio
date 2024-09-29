@@ -1,13 +1,13 @@
 <template>
 	<header class="flex justify-between items-center m-5 border-b-gray-700">
-		<section class="flex">
-			<ico-nano class="text-5xl rounded-full" />
+		<NuxtLink to="https://github.com/gaomingzhao666" class="flex">
+			<ico-nano class="text-5xl rounded-full nano-rotate" />
 
 			<section class="ml-3 hidden md:block">
-				<p class="text-blue-600 text-lg">{{ $t('name') }}</p>
+				<p class="text-blue-600 text-lg font-semibold">{{ $t('name') }}</p>
 				<p class="text-gray-500 text-sm">{{ $t('devDesc') }}</p>
 			</section>
-		</section>
+		</NuxtLink>
 
 		<!-- search repo input -->
 		<UInput
@@ -273,3 +273,13 @@ const logout = async () => {
 	router.push({ name: 'login' })
 }
 </script>
+
+<style scoped>
+.nano-rotate {
+	transition: all 300ms ease;
+}
+
+.nano-rotate:hover {
+	transform: rotate(360deg);
+}
+</style>
