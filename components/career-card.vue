@@ -1,4 +1,5 @@
 <template>
+	<!-- make the most recent activity highlight -->
 	<UCard
 		class="w-full rounded-3xl text-center space-x-2 first:ring-2 first:ring-green-400"
 	>
