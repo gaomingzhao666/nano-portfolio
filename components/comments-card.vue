@@ -59,13 +59,13 @@ const localTime: string = getLocalTime(props.data.addTime)
 
 const toast = useToast()
 const likeComment = async () => {
-	const { data } = await $fetch<likePut>('/api/comment/like', {
+	const { data, status } = await $fetch<likePut>('/api/comment/like', {
 		method: 'PUT',
 		body: { username: props.data.username, comment: props.data.comment },
 	})
 
 	toast.add({ title: data.message })
-	props.data.like = props.data.like + 1
+	if (status) refreshNuxtData()
 }
 
 const emit = defineEmits<{
