@@ -15,8 +15,6 @@
 </template>
 
 <script lang="ts" setup>
-import type { LocationQueryValue } from 'vue-router'
-
 useSeoMeta({
 	title: 'Index',
 	description:
@@ -34,7 +32,7 @@ const route = useRoute()
 // when search keyword changes, get filtered repos
 let isFilteredRepoExists: Ref<boolean> = ref(true)
 let noFilteredReposNotice: Ref<string> = ref('')
-const getFilteredRepos = async (keywords: LocationQueryValue[] | string) => {
+const getFilteredRepos = async (keywords: string) => {
 	const filteredReposByName = await $fetch<repoSearchByNameGet>(
 		`/api/repo/search/byName`,
 		{
@@ -67,7 +65,9 @@ const getFilteredRepos = async (keywords: LocationQueryValue[] | string) => {
 }
 watchEffect(async () => {
 	if (route.query.searchKeywords) {
-		const filteredRepos = await getFilteredRepos(route.query.searchKeywords)
+		const filteredRepos = await getFilteredRepos(
+			route.query.searchKeywords.toString()
+		)
 
 		if (filteredRepos.status) {
 			isFilteredRepoExists.value = true
