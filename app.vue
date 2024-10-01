@@ -17,7 +17,7 @@ useSeoMeta({
 		'Nano-portfolio is a full-stack and open-source web application for developer introduction integrated with Github Octokit and Nuxt3 ecosystem that includes Nuxt-UI Nuxt-Mongoose Pinia i18n etc. All of the modules are officially compatible with Nuxt3, and all of the code inside of this project uses composition API and ESM.',
 })
 
-const { progress, isLoading, start, finish, clear } = useLoadingIndicator({
+useLoadingIndicator({
 	duration: 2000,
 	throttle: 200,
 	// This is how progress is calculated by default
