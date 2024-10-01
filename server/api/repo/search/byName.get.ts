@@ -21,9 +21,8 @@ export default defineEventHandler(async (event) => {
 
 	const allRepos = await getAllRepos()
 	const filteredRepos = allRepos.filter((item: any) =>
-		item.name.toLowerCase().includes(repoName.toLowerCase())
+		item.name.toLocaleLowerCase().includes(repoName.toLocaleLowerCase())
 	)
-
 	if (filteredRepos.length > 0) {
 		return <repoSearchByNameGet>{
 			status: true,
