@@ -21,7 +21,7 @@
 				/>
 			</section>
 
-			<h1 class="text-center mt-8">
+			<h1 class="w-full text-center mt-8">
 				{{ props.data.description }}
 			</h1>
 		</section>
