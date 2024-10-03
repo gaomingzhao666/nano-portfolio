@@ -13,7 +13,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    ❤️ 由 Nuxt3 生态全栈开发的开发者个人简介应用 ❤️
+    ❤️ 由 Nuxt3 生态全栈开发，可自动导入 Github Info 的开发者个人简介应用 ❤️
     <br />
     <br />
     <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>

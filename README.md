@@ -13,7 +13,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    ❤️ A dev portfolio that can automatically import Github profile and repo info, made by Nuxt ecosystem ❤️
+    ❤️ A dev portfolio that can automatically import Github profile and repo info, Powered by Nuxt ecosystem and Github APIs ❤️
     <br />
     <br />
     <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
