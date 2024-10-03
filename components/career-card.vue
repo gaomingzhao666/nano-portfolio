@@ -1,16 +1,26 @@
 <template>
 	<!-- make the most recent activity highlight -->
 	<UCard
-		class="w-full rounded-3xl text-center space-x-2 first:ring-2 first:ring-green-400"
+		class="w-full rounded-3xl text-center space-x-2 first:ring-2 first:ring-green-400 group"
 	>
 		<section class="flex justify-between items-center">
 			<h2 class="font-semibold">
 				{{ props.data.startDate }} - {{ props.data.endDate }}
 			</h2>
 
-			<UBadge color="cyan" variant="soft" size="md">{{
-				props.data.employType
-			}}</UBadge>
+			<section class="flex gap-x-2">
+				<UBadge
+					color="lime"
+					variant="soft"
+					size="md"
+					class="hidden group-first:block"
+					>Active</UBadge
+				>
+
+				<UBadge color="amber" size="md" variant="soft">{{
+					props.data.employType
+				}}</UBadge>
+			</section>
 		</section>
 
 		<section class="flex flex-wrap md:flex-nowrap justify-around mt-2">
