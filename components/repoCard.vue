@@ -29,12 +29,12 @@
 		<section class="px-3 pb-3">
 			<section class="flex justify-between m-3">
 				<p class="font-semibold">{{ props.data.name }}</p>
-				<UBadge variant="soft" size="md" :label="props.data.language" />
+				<UBadge variant="soft" :label="props.data.language" />
 			</section>
 
 			<UBadge
-				class="m-1 space-y-3"
-				:ui="{ rounded: 'rounded-full' }"
+				class="m-1 space-y-3 rounded-lg"
+				variant="subtle"
 				v-for="(childItem, index) in props.data.topics"
 				:key="index"
 				:label="childItem"
@@ -60,3 +60,10 @@ const gotoRepoLink = (url: string) => {
 	window.open(url, '_blank')
 }
 </script>
+
+<style scoped>
+.nano-text {
+	font-size: 12px;
+	line-height: 20px;
+}
+</style>
