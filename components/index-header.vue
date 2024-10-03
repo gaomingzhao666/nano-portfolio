@@ -1,6 +1,10 @@
 <template>
 	<header class="flex justify-between items-center m-5 border-b-gray-700">
-		<NuxtLink to="https://github.com/gaomingzhao666" class="flex">
+		<NuxtLink
+			to="https://github.com/gaomingzhao666"
+			target="_blank"
+			class="flex"
+		>
 			<ico-nano class="text-5xl rounded-full nano-rotate" />
 
 			<section class="ml-3 hidden md:block">
