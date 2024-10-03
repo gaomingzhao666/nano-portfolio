@@ -1,18 +1,18 @@
 <template>
 	<UContainer>
+		<!-- if you have no career, set it's display property to true -->
 		<!-- <h1 v-if="true" class="text-center mt-52 text-3xl">
 			Wanna be the first? Please
 			<NuxtLink to="/contact" class="text-blue-600">contact me</NuxtLink>
 		</h1> -->
 
-		<!-- I have no career since 2025, I probably start my career in winter of 2025 in japan, so temporarily hide this by set vif as false -->
 		<!-- title -->
-		<h1 class="text-center font-bold text-3xl my-3" v-if="true">
+		<h1 class="text-center font-bold text-3xl my-3">
 			{{ $t('career') }}
 		</h1>
 
 		<!-- career contents -->
-		<section class="mt-5 space-y-5" v-if="true">
+		<section class="mt-5 space-y-5">
 			<CareerCard
 				v-for="(item, index) in [
 					{
