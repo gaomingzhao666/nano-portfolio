@@ -1,4 +1,4 @@
-import { Octokit } from 'octokit'
+import { Octokit } from '@octokit/core'
 import { githubToken, githubName } from '@/server/utils/githubInfo'
 
 interface queryType {
