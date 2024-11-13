@@ -1,44 +1,44 @@
-import accountInfo from '~/server/models/accountInfo'
-import { hashPassword } from '~/server/utils/hashPassword'
+import accountInfo from '@/server/models/accountInfo'
+import { hashPassword } from '@/server/utils/hashPassword'
 
 interface bodyType {
-	username: string
-	password: string
+  username: string
+  password: string
 }
 
 export default defineEventHandler(async (event) => {
-	const { username, password }: bodyType = await readBody(event)
+  const { username, password }: bodyType = await readBody(event)
 
-	// Check if user already exists
-	const userExist = await accountInfo.findOne({ username: username })
-	if (userExist) {
-		return <errorType>{
-			status: false,
-			data: {
-				message: 'User already exists.',
-			},
-		}
-	}
+  // Check if user already exists
+  const userExist = await accountInfo.findOne({ username: username })
+  if (userExist) {
+    return <errorType>{
+      status: false,
+      data: {
+        message: 'User already exists.',
+      },
+    }
+  }
 
-	// Hash the password
-	const hashedPassword: string = hashPassword(password)
+  // Hash the password
+  const hashedPassword: string = hashPassword(password)
 
-	// Create a new user in database
-	const userCount: number = await accountInfo.countDocuments()
-	const userId: string = (userCount + 1).toString()
-	const newUser = new accountInfo({
-		userId: userId,
-		username: username,
-		password: hashedPassword,
-		createTime: Date.now(),
-	})
-	newUser.save()
+  // Create a new user in database
+  const userCount: number = await accountInfo.countDocuments()
+  const userId: string = (userCount + 1).toString()
+  const newUser = new accountInfo({
+    userId: userId,
+    username: username,
+    password: hashedPassword,
+    createTime: Date.now(),
+  })
+  newUser.save()
 
-	setResponseStatus(event, 200)
-	return <registerPost>{
-		status: true,
-		data: {
-			message: `Register Successfully, welcome ${username}!`,
-		},
-	}
+  setResponseStatus(event, 200)
+  return <registerPost>{
+    status: true,
+    data: {
+      message: `Register Successfully, welcome ${username}!`,
+    },
+  }
 })
