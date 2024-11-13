@@ -11,6 +11,11 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true,
   },
+  alias: {
+    // in nuxt3, there have no src folder to storage codes that devs write
+    // so the @ is using for root path
+    '@': import.meta.dirname,
+  },
 
   modules: [
     '@nuxt/test-utils/module',
