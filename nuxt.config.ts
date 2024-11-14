@@ -11,9 +11,17 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true,
   },
+
+  // relate to issue https://github.com/nuxt/nuxt/issues/22325#issuecomment-1690421926
+  // seems deployed on vercel have an error of modules can not find which is related to nitro when the deps and lockfile updated
+  // nitro: {
+  //   externals: {
+  //     traceInclude: [],
+  //   },
+  // },
+
   alias: {
-    // in nuxt3, there have no src folder to storage codes that devs write
-    // so the @ is using for root path
+    // in nuxt3, there have no src folder to storage codes that devs write, so the @ is using for root path
     '@': import.meta.dirname,
   },
 
@@ -28,17 +36,14 @@ export default defineNuxtConfig({
   ],
 
   svgo: {
+    // enable custom icons from img file
     componentPrefix: 'ico',
   },
 
   icon: {
+    // default: set automatically by nuxt, when deploy on a serverless platform such as vercel, set to local, if deploy on a server, set to remote
+    // here to spesifically set to local because all of the icon-sets are installed locally, that is also a recommend way
     serverBundle: 'local',
-    clientBundle: {
-      // scan all components in the project, include icons
-      scan: true,
-      // limit the bundle size of icons to 256kb
-      sizeLimitKb: 256,
-    },
   },
 
   mongoose: {
