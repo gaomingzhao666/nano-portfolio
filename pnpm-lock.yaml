@@ -11,6 +11,9 @@ importers:
       '@nuxt/ui':
         specifier: ^2.19.2
         version: 2.19.2(focus-trap@7.6.1)(magicast@0.3.5)(rollup@4.25.0)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+      '@octokit/core':
+        specifier: ^6.1.2
+        version: 6.1.2
       '@pinia/nuxt':
         specifier: ^0.7.0
         version: 0.7.0(magicast@0.3.5)(rollup@4.25.0)(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
@@ -6164,7 +6167,7 @@ snapshots:
     dependencies:
       '@octokit/oauth-methods': 5.1.2
       '@octokit/request': 9.1.3
-      '@octokit/types': 13.6.1
+      '@octokit/types': 13.6.2
       universal-user-agent: 7.0.2
 
   '@octokit/auth-oauth-user@5.1.1':
@@ -6188,19 +6191,19 @@ snapshots:
       '@octokit/graphql': 8.1.1
       '@octokit/request': 9.1.3
       '@octokit/request-error': 6.1.5
-      '@octokit/types': 13.6.1
+      '@octokit/types': 13.6.2
       before-after-hook: 3.0.2
       universal-user-agent: 7.0.2
 
   '@octokit/endpoint@10.1.1':
     dependencies:
-      '@octokit/types': 13.6.1
+      '@octokit/types': 13.6.2
       universal-user-agent: 7.0.2
 
   '@octokit/graphql@8.1.1':
     dependencies:
       '@octokit/request': 9.1.3
-      '@octokit/types': 13.6.1
+      '@octokit/types': 13.6.2
       universal-user-agent: 7.0.2
 
   '@octokit/oauth-app@7.1.3':
@@ -6262,7 +6265,7 @@ snapshots:
     dependencies:
       '@octokit/endpoint': 10.1.1
       '@octokit/request-error': 6.1.5
-      '@octokit/types': 13.6.1
+      '@octokit/types': 13.6.2
       universal-user-agent: 7.0.2
 
   '@octokit/types@13.6.1':
