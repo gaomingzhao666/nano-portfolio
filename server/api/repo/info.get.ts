@@ -1,4 +1,4 @@
-import { Octokit } from '@octokit/core'
+import { Octokit } from 'octokit'
 import { githubToken } from '@/server/utils/githubInfo'
 
 // clear the repo info, make it have no config and backup repos
