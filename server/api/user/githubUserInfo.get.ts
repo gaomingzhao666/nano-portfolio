@@ -1,4 +1,4 @@
-import { Octokit } from '@octokit/core'
+import { Octokit } from 'octokit'
 import { githubToken } from '@/server/utils/githubInfo'
 
 export default defineEventHandler(async (event) => {
