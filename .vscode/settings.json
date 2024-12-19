@@ -1,18 +1,19 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"files.associations": {
-		"*.css": "tailwindcss"
-	},
-	"editor.quickSuggestions": {
-		"strings": true
-	},
-	"editor.formatOnSave": true,
-	"eslint.format.enable": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
-	},
-	"eslint.enable": true,
-	"eslint.useESLintClass": true,
-	"eslint.lintTask.enable": true,
-	"cSpell.words": ["unlogined"]
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.enable": true,
+  "eslint.useESLintClass": true,
+  "eslint.lintTask.enable": true,
+  "cSpell.words": ["unlogined"],
+  "eslint.useFlatConfig": true
 }

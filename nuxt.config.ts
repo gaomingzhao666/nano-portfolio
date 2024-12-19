@@ -12,14 +12,6 @@ export default defineNuxtConfig({
     autoImport: true,
   },
 
-  // relate to issue https://github.com/nuxt/nuxt/issues/22325#issuecomment-1690421926
-  // seems deployed on vercel have an error of modules can not find which is related to nitro when the deps and lockfile updated
-  // nitro: {
-  //   externals: {
-  //     traceInclude: [],
-  //   },
-  // },
-
   alias: {
     // in nuxt3, there have no src folder to storage codes that devs write, so the @ is using for root path
     '@': import.meta.dirname,
@@ -33,6 +25,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     'nuxt-svgo',
     '@nuxt/icon',
+    '@nuxt/eslint',
   ],
 
   svgo: {
