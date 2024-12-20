@@ -8,8 +8,12 @@ export default defineNuxtConfig({
     strict: true,
   },
 
-  imports: {
-    autoImport: true,
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+    },
   },
 
   alias: {
