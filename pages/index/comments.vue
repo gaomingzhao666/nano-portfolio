@@ -17,7 +17,11 @@
       />
 
       <!-- skeleton -->
-      <SkeletonComments v-for="(item, index) in skeletonItems" :key="index" />
+      <SkeletonComments
+        v-for="(item, index) in skeletonItems"
+        v-else
+        :key="'key' + index"
+      />
     </section>
 
     <!-- post button -->
