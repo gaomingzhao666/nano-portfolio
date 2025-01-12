@@ -5,13 +5,15 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: true,
-    strict: true,
   },
 
   app: {
     head: {
       htmlAttrs: {
         lang: 'en',
+      },
+      templateParams: {
+        separator: '·',
       },
     },
   },
@@ -30,6 +32,7 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     '@nuxt/icon',
     '@nuxt/eslint',
+    '@nuxtjs/seo',
   ],
 
   svgo: {
@@ -67,5 +70,35 @@ export default defineNuxtConfig({
     ],
   },
 
-  compatibilityDate: '2024-11-06',
+  // see https://nuxtseo.com/
+  site: {
+    title: 'Nano Portfolio',
+    url: 'https://nano-portfolio-ruby.vercel.app',
+  },
+
+  schemaOrg: {
+    identity: 'Person',
+  },
+
+  seo: {
+    meta: {
+      description:
+        'A modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Nuxt ecosystem and Octokit APIs',
+      themeColor: [
+        { content: '#111827', media: '(prefers-color-scheme: dark)' },
+        { content: 'white', media: '(prefers-color-scheme: light)' },
+      ],
+
+      colorScheme: 'dark light',
+    },
+  },
+
+  robots: {
+    disallow: ['/test'],
+  },
+  ogImage: {
+    enabled: false,
+  },
+
+  compatibilityDate: '2025-01-12',
 })
