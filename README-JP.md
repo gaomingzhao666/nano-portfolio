@@ -1,5 +1,3 @@
-<a name="readme-top"></a>
-
 [![Stargazers][stars-shield]][stars-url]
 [![MIT License][license-shield]][license-url]
 [![Release][release-shield]][release-url]
@@ -13,7 +11,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    ❤️ Nuxt3 エコシステムを使用したフルスタック開発による、自動的に Github のプロファイルとレポを導入する開発者個人ポートフォリオ ❤️
+    ❤️ NuxtエコシステムとGithub APIによって開発され、Githubプロフィールとリポジトリデータを自動的にインポートできる開発者ポートフォリオ ❤️
     <br />
     <br />
     <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
@@ -25,101 +23,123 @@
 </div>
 
 <details open>
-  <summary>索引</summary>
+  <summary>目次</summary>
   <ul>
-    <li><a href="#プロジェクトの概要">プロジェクトの概要</a> </li>
-    <li><a href="#技術の選択">技術の選択</a></li>
+    <li><a href="#プロジェクトの紹介">プロジェクトの紹介</a> </li>
+    <li><a href="#技術スタック">技術スタック</a></li>
     <li><a href="#環境要件">環境要件</a></li>
-    <li><a href="#使い方">使い方</a></li>
-    <li><a href="#このプロジェクトを使用してあなたのニーズに合わせる方法">このプロジェクトを使用してあなたのニーズに合わせる方法</a></li>
-    <li><a href="#cors-エラーに関して">CORS エラーに関して</a></li>
-    <li><a href="#貢獻者">貢獻者</a></li>
-    <li><a href="#オープンソース契約">オープンソース契約</a></li>
+    <li><a href="#インストール">インストール</a></li>
+    <li><a href="#このプロジェクトを自分のケースで使用する方法">このプロジェクトを自分のケースで使用する方法</a></li>
+    <li><a href="#seo-ソリューション">SEO ソリューション</a></li>
+    <li><a href="#誰が作った">誰が作った</a></li>
+    <li><a href="#ライセンス">ライセンス</a></li>
   </ul>
 </details>
 
-## プロジェクトの概要
+## プロジェクトの紹介
 
 <p align="center">
     <img src="/SCREENSHOT/index-mockup.png">
     <img src="/SCREENSHOT/new-about-mockup.png">
 </p>
 
-> この写真は iPad サイに基づいた index ページ, [こちらへ](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) このプロジェクトの写真をご覧ください。
+> ここに表示されている画像は中等サイズのホームページです。詳細なスクリーンショットは[こちら](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT)をクリックしてください。
 
-Nano-portfolio は、GitHub Octokit API と Nuxt3 エコシステムを統合した開発者個人プロフィールウェブアプリケーションです。使用されているほとんどのディペンデンシーは公式にサポートされ、メンテナンスされています。これには `Nuxt-UI`、`Nuxt-Mongoose`、`Pinia`、`i18n` などが含まれています。すべてのモジュールは Nuxt と互換性があり、コードはすべてコンポジション API と ESM を使用してモジュールインポートされています。
+Nano-portfolio は、Github Octokit と Nuxt3 エコシステムを統合した開発者作品集ウェブアプリケーションで、`Nuxt-UI`、`Nuxt-Mongoose`、`Pinia`、`i18n`などを含まれています。すべてのモジュールは Nuxt3 と公式に互換性があり、このプロジェクト内のすべてのコードはコンポジション API と ESM を使用しています。
 
-<p align="right">(<a href="#readme-top">トップに戻る</a>)</p>
+## 技術スタック
 
-## 技術の選択
-
-- Nuxt3 with composition API
+- コンポジション API を使用した Nuxt3
 - Pinia
 - Vite
 - TailwindCSS
 - Nuxt-UI
-- MongoDB with Mongoose
-- Localize with i18n
-- Email connection with Resend
-- Typescript with ES6+ syntax
+- Mongoose を使用した MongoDB データベース
+- i18n によるローカライズ
+- Resend を使用したメール接続
+- ES6 以上の文法を使用した Typescript
 - Dockerfile
 
-<p align="right">(<a href="#readme-top">トップに戻る</a>)</p>
+## 環境要件
 
-## 運行時要件
+- NodeJS LTS 20 以上のバージョン
 
-- NodeJS LTS 20+
+## インストール
 
-## 使い方
+このプロジェクトは二つの方法を提供されていました、その一つを選んでください
 
-### このリポジトリをクローンして使う
+### クローンと実行 - おすすめ
+
+まずはこのプロジェクトのコード、またはレポジトリーをクローンする
 
 ```sh
-$ https://github.com/gaomingzhao666/nano-portfolio.git # プロジェクトをクローン
+$ git clone https://github.com/gaomingzhao666/nano-portfolio.git # クローン
 $ cd nano-portfolio
-$ pnpm install # 必要な依存関係をインストール。
-$ pnpm dev # 運行する
 ```
 
-### Docker を使う、コンテナに作りして使う
+そしてあなたのパッケージマネージャーを次第にインストールと運行してください
 
-1. このプロジェクトをクローンまたはダウンロードしてください。
-2. コンピュータに `Docker Desktop` がインストールされていることを確認してください。
-3. `VScode` に `Docker extension` をインストールしてください。
-4. `Dockerfile` を右クリックし、 `ビルドイメージ` オプションを選択してください。
-5. `Docker Desktop` を開いて、コンテナを起動してください。
+```sh
+# pnpm の場合 - おすすめ
+$ pnpm install # 依存関係をインストール
+$ pnpm dev # 実行
+```
 
-## このプロジェクトを使用してあなたのニーズに合わせる方法
+```sh
+# npm の場合 - Node のデフォルトパッケージマネージャー
+$ npm install # 依存関係をインストール
+$ pnpm run dev # 実行
+```
 
-### 粗筋
+```sh
+# yarn の場合
+$ yarn # 依存関係をインストール
+$ yarn run dev # 実行
+```
 
-このプロジェクトは MIT オープンソースライセンスの下で公開されており、GitHub アカウントに基づいてリポジトリ情報と個人プロファイルを自動的にインポートすることができます。
+### Docker を使用
 
-### ステップ
+1. このプロジェクトをクローンまたはダウンロードします。
+2. コンピュータに`Docker Desktop`がインストールされていることを確認します。
+3. `VScode`に`Docker extension`をインストールします。
+4. このプロジェクトの`Dockerfile`を右クリックし、`Build Image`オプションを選択します。
+5. `Docker Desktop`を開き、コンテナを実行します。
 
-- [GitHub Personal Access Token を生成する](https://products.groupdocs.app/translation/markdown)。
-- `server` ディレクトリ内の `utils` フォルダにある `githubInfo.ts` ファイルに移動してください
-- 以前に生成した`Personal Access Token`で既存のトークンを置き換えてください。これにより、バックエンド API が新しいトークンの下での GitHub アカウントを正しく認識することができます
-- `About` ページと `Contact` ページのコンポーネントデータを更新してください
-- これて終わった
+## このプロジェクトを自分のケースで使用する方法
 
-## CORS エラーに関して
+### オーバービュー
 
-[SSR](https://vuejs.org/guide/scaling-up/ssr.html) プロジェクトとしては, [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)　について心配する必要はありませんが, `nuxt.config.ts` ファイルで SSR モードを false に設定すなら [こちら](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) ブラウザ拡張機能をインストールして CORS エラーを解決できます。
+このプロジェクトを使用して、自分のポートフォリオを作成できます。GitHub アカウントを使用して、GitHub リポジトリとプロフィールから情報を自動的にインポートします。
 
-<p align="right">(<a href="#readme-top">トップに戻る</a>)</p>
+### スタート
 
-## 貢獻者
+- [GitHub パーソナルアクセストークンを生成](https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+- `server`ディレクトリ内の`utils`フォルダにある`githubInfo.ts`ファイルに移動します
+- プレースホルダートークンを自分の`パーソナルアクセストークン`に置き換えて、サーバーサイド API が GitHub 情報を返すようにします
+- `About`および`Contact`ページのデータをあなたの情報に更新します
+- を楽しみに～
 
-このプロジェクトは gaomingzhao666@Nano に開発しました。
+## SEO ソリューション
 
-<p align="right">(<a href="#readme-top">トップに戻る</a>)</p>
+### カスタム設定
 
-## オープンソース契約
+このプロジェクトでは、SEO パフォーマンスを向上させるために`@nuxtjs/seo`モジュールを使用しています。`nuxt.config.ts`ファイルでサイトに関する情報を設定できます。
+
+完全なセットアップガイドについては、この[ドキュメント](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules)を参照してください。
+
+### `useHead` vs `useSeoMeta` vs `useServerSeoMeta`
+
+公式ドキュメントを参照しているときに、どの SEO コンポーザブルを選択すべきか混乱するかもしれません。
+
+このプロジェクトの場合、SEO メタ情報と共有する必要がある動的、つまりダイナミックなデータがないため、`useServerSeoMeta`コンポーザブルを使用して SEO 情報を設定しています。すなわち、メタ情報はリアクティブである必要がなく、ロボットは初回ロードのみをスキャンするため、パフォーマンスに焦点を当てたユーティリティとして`useServerSeoMeta`を使用することをお勧めします。
+
+## 誰が作った
+
+このプロジェクトは gaomingzhao666@Nano によって開発されました
+
+## ライセンス
 
 [MIT License](https://github.com/gaomingzhao666/nano-portfolio/blob/main/LICENSE)
-
-<p align="right">(<a href="#readme-top">トップに戻る</a>)</p>
 
 [stars-shield]: https://img.shields.io/github/stars/gaomingzhao666/nano-portfolio?style=for-the-badge
 [stars-url]: https://github.com/gaomingzhao666/nano-portfolio/stargazers

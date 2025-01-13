@@ -1,5 +1,3 @@
-<a name="readme-top"></a>
-
 [![Stargazers][stars-shield]][stars-url]
 [![MIT License][license-shield]][license-url]
 [![Release][release-shield]][release-url]
@@ -13,7 +11,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    ❤️ 由 Nuxt3 生态全栈开发，可自动导入 Github Info 的开发者个人简介应用 ❤️
+    ❤️ 由 Nuxt3 生态全栈开发，可自动导入 Github 数据的开发者作品集网站 ❤️
     <br />
     <br />
     <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
@@ -45,11 +43,9 @@
     <img src="/SCREENSHOT/new-about-mockup.png">
 </p>
 
-> 上方是 平板 设备尺寸的 index 页面截图, [点击此处](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) 可查看更多详细截图。
+> 上方是中等大小的主页截图, [点击此处](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT) 可查看更多详细截图。
 
-Nano-portfolio 是一个与 Github Octokit 和 Nuxt3 生态结合的开发者个人简介网页应用，其使用的大部分依赖被官方所支持和维护，其中包括 `Nuxt-UI` `Nuxt-Mongoose` `Pinia` `i18n` 等。所有模块均与 Nuxt 所兼容，库内所有代码均使用组合式 API 以及 ESM 进行模块导入。
-
-<p align="right">(<a href="#readme-top">至顶层</a>)</p>
+Nano-portfolio 是一个与 Github Octokit 和 Nuxt3 生态结合的开发者个人简介网页应用，其使用的大部分依赖被官方所支持和维护，其中包括 `Nuxt-UI` `Nuxt-Mongoose` `Pinia` `i18n` 等。所有模块均与 Nuxt3 所兼容，库内所有代码均使用组合式 API 以及 ESM 进行模块导入。
 
 ## 技术栈
 
@@ -64,21 +60,41 @@ Nano-portfolio 是一个与 Github Octokit 和 Nuxt3 生态结合的开发者个
 - Typescript with ES6+ syntax
 - Dockerfile
 
-<p align="right">(<a href="#readme-top">至顶层</a>)</p>
-
 ## 运行时版本
 
-- NodeJS LTS 20+
+- NodeJS LTS 20 以上版本
 
-## 如何启动此项目
+## 安装
 
-### 克隆此项目
+我们提供了两种方法来安装并运行此项目，请任选其一
+
+### 克隆并运行此项目 - 推荐方法
+
+克隆此代码仓库并移动至项目文件夹
 
 ```sh
 $ https://github.com/gaomingzhao666/nano-portfolio.git # 克隆
 $ cd nano-portfolio
+```
+
+根据你设备上安装的包管理器安装依赖并运行此项目
+
+```sh
+# pnpm - 推荐
 $ pnpm install # 安装依赖
 $ pnpm dev # 运行
+```
+
+```sh
+# npm - Node 默认包管理器
+$ npm install # 安装依赖
+$ pnpm run dev # 运行
+```
+
+```sh
+# yarn
+$ yarn # 安装依赖
+$ yarn run dev # 运行
 ```
 
 ### 使用 docker 制作容器
@@ -89,7 +105,7 @@ $ pnpm dev # 运行
 4. 右击 `Dockerfile` 并选择 `Build Image` 选项.
 5. 打开 `Docker Desktop` 启动此容器.
 
-## 如何使用此项目并为您所用
+## 如何使用此项目并自定义
 
 ### 总览
 
@@ -103,23 +119,27 @@ $ pnpm dev # 运行
 - 更新 `About` 和 `Contact` 页面组件的数据
 - 大功告成
 
-## 关于 CORS 报错
+## SEO 解决方案
 
-作为 [SSR](https://vuejs.org/guide/scaling-up/ssr.html) 项目, 我们无需关心 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), 但若你在 `nuxt.config.ts` 文件中设置 SSR mode 为 false [点击此处](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) 可安装浏览器插件以此解决 CORS 错误。
+### 自定义配置
 
-<p align="right">(<a href="#readme-top">至顶层</a>)</p>
+此项目使用 `@nuxtjs/seo` 模块来提升 SEO 性能。你可以在 `nuxt.config.ts` 文件中配置一些关于你网站的信息。
+
+查看此[文档](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules)以获取完整的设置指南。
+
+### `useHead` vs `useSeoMeta` vs `useServerSeoMeta`
+
+当你开始阅读 nuxt.com 上的官方文档时，可能会对选择哪个 SEO 方法感到困惑。
+
+在这种情况下，你应该使用 `useServerSeoMeta` 组合来配置 SEO 信息，因为此项目没有需要与 SEO meta 共享的动态数据，这意味着元信息不需要是响应式的，因为搜索引擎机器人只会扫描初始加载。因此，此项目中推荐使用 `useServerSeoMeta`，它不会在客户端执行任何操作或返回数据。
 
 ## 贡献者
 
 此项目由 gaomingzhao666@Nano 所开发
 
-<p align="right">(<a href="#readme-top">至顶层</a>)</p>
-
 ## 开源协议
 
 [MIT License](https://github.com/gaomingzhao666/nano-portfolio/blob/main/LICENSE)
-
-<p align="right">(<a href="#readme-top">至顶层</a>)</p>
 
 [stars-shield]: https://img.shields.io/github/stars/gaomingzhao666/nano-portfolio?style=for-the-badge
 [stars-url]: https://github.com/gaomingzhao666/nano-portfolio/stargazers
