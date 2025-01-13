@@ -51,20 +51,26 @@ export default defineNuxtConfig({
     options: {},
   },
 
+  // see https://i18n.nuxtjs.org/docs/guide/seo
   i18n: {
     vueI18n: './i18n.config.ts', // if you are using custom path, default
     defaultLocale: 'en',
+    baseUrl: 'https://nano-portfolio-ruby.vercel.app',
+
     locales: [
       {
         code: 'en',
+        name: 'English',
         language: 'en-US',
       },
       {
         code: 'jp',
+        name: '日本語',
         language: 'ja',
       },
       {
         code: 'cn',
+        name: '简体中文',
         language: 'zh-CN',
       },
     ],
@@ -94,6 +100,7 @@ export default defineNuxtConfig({
   },
 
   robots: {
+    // tell Google.com do not indexing /test pages
     disallow: ['/test'],
   },
   ogImage: {
