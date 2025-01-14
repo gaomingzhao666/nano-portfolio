@@ -9,9 +9,6 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
       templateParams: {
         separator: '·',
       },
@@ -89,7 +86,7 @@ export default defineNuxtConfig({
   seo: {
     meta: {
       description:
-        'A modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Nuxt ecosystem and Octokit APIs',
+        'A modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Vue/Nuxt ecosystem and Octokit APIs',
       themeColor: [
         { content: '#111827', media: '(prefers-color-scheme: dark)' },
         { content: 'white', media: '(prefers-color-scheme: light)' },
@@ -100,8 +97,8 @@ export default defineNuxtConfig({
   },
 
   robots: {
-    // tell Google.com do not indexing /test pages
-    disallow: ['/test'],
+    // tell Google.com do not indexing /test and /error pages
+    disallow: ['/test', '/error'],
   },
   ogImage: {
     enabled: false,
