@@ -1,0 +1,28 @@
+{
+  "app.title": "Nano portfolio",
+  "app.description": "Nano portfolio是一个现代的开源开发者portfolio模板，可以自动导入 Github 资料和仓库信息，由 Vue/Nuxt 生态系统和 Octokit API 等现代 Web 技术制作。",
+
+  "index.title": "首页",
+  "index.description": "展示用 Vue、Nuxt、Svelte、Astro、Vite、TailwindCSS、Less、Sass、Resend、MongoDB、Node 等技术构建的前端、后端和全栈项目。探索热情开发者的作品，为你的下一个portfolio项目寻找灵感。",
+
+  "login.title": "登录 Nano portfolio",
+  "login.description": "登录 Nano portfolio 以获取评论权限。",
+
+  "register.title": "注册账号",
+  "register.description": "注册 Nano portfolio 账号。",
+
+  "home.title": "主页",
+  "home.description": "Nano portfolio 主页，在这里你可以探索使用 Vue、Nuxt、Svelte、Astro、Vite、TailwindCSS、Less、Sass、Resend、MongoDB、Node 等现代网页技术构建的项目，并访问相应的 Github 仓库或者 Demo 以获取详细项目信息。",
+
+  "about.title": "关于 Nano",
+  "about.description": "Nano portfolio 的关于页面，在这里你可以获取关于前端开发者 Nano 的详细信息，如使用的技能，技术和研究领域。",
+
+  "career.title": "Nano 职业生涯",
+  "career.description": "Nano portfolio 的职业页面，在这里你可以获取以前或者当前 Nano 的职业和工作经验的详细信息，如 Nano 曾在哪些公司工作，担任什么职位，何时何地加入公司，以及参与过的工作或项目等。",
+
+  "comments.title": "评论",
+  "comments.description": "Nano portfolio 的评论页面，在这里你可以查看所有访客的评论，也可以通过登录 Nano portfolio 留下你的评论或建议。",
+
+  "contact.title": "联系 Nano",
+  "contact.description": "Nano portfolio 的联系页面，在这里你可以获取 Nano 的详细联系信息，如邮箱、电话号码、地址等。你也可以通过填写联系表单发送消息给我，我会通过你留下的邮件地址尽快回复你。"
+}

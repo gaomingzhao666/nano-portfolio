@@ -1,0 +1,28 @@
+{
+  "app.title": "Nano Portfoliio",
+  "app.description": "Nano portfolio is a modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Vue/Nuxt ecosystem, Octokit APIs and other modern web technologies.",
+
+  "index.title": "Index",
+  "index.description": "Discover a showcase of frontend, backend and full-stack projects built with Vue, Nuxt, Svelte, Astro, Vite, TailwindCSS, Less, Sass, Resend, MongoDB, Node and Nuxt's official libraries, etc. Explore the works of passionate developers and find inspiration for your next portfolio project.",
+
+  "login.title": "Login to Nano Portfolio",
+  "login.description": "Login to nano portfolio to get permission for comment panel.",
+
+  "register.title": "Register an Account",
+  "register.description": "Register an account to nano portfolio.",
+
+  "home.title": "Home",
+  "home.description": "Home page for nano portfolio, here you can explore my passionate projects that built with Vue, Nuxt, Svelte, Astro, Vite, TailwindCSS, Less, Sass Resend, MongoDB, Node and other modern web technologies, and access my github repository or online demo to get detailed project information.",
+
+  "about.title": "About Nano",
+  "about.description": "About page for nano portfolio, here you can get detailed information such as skills and fields of study about nano, who is a passionate frontend developer",
+
+  "career.title": "Nano's Career",
+  "career.description": "Career page for nano portfolio, here you can get detailed information about nano's career and work experience, such as which company did nano worked for, what role did nano played in that company, when and where did nano joined that company, and what works or projects did nano worked on, etc.",
+
+  "comments.title": "Comments",
+  "comments.description": "Comments page for nano portfolio, here you can view all the comments from visitors, and you can also login to nano portfolio to leave your comments or suggestions to this project.",
+
+  "contact.title": "Contact with Nano",
+  "contact.description": "Contact page for nano portfolio, here you can get detailed contact information about nano, such as email, phone number, address, etc. You can also fill the contact form to send message to nano, and nano will get back to you across the email address you left as soon as possible."
+}
