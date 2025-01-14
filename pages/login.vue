@@ -44,12 +44,13 @@
 
 <script setup lang="ts">
 import type { FormError } from '#ui/types'
+const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Login',
-  description:
-    '"Securely log in to your account and access exclusive content. Use your username and password or sign up for a new account.',
+  title: computed(() => t('app.title')),
+  description: computed(() => t('app.description')),
 })
+
 definePageMeta({
   pageTransition: false,
   layoutTransition: false,

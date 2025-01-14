@@ -16,10 +16,11 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Index',
-  description:
-    'Explore a curated collection of GitHub repositories, organized by language and topic. Find the perfect project to inspire your next development endeavor.',
+  title: computed(() => t('home.title')),
+  description: computed(() => t('home.description')),
 })
 
 const { data, error } = await useFetch<repoInfoGet>('/api/repo/info', {

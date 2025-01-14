@@ -66,8 +66,10 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Career',
-  description: 'Discover my professional journey.',
+  title: computed(() => t('career.title')),
+  description: computed(() => t('career.description')),
 })
 </script>

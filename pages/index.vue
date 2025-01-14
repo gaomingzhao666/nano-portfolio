@@ -11,9 +11,10 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Index',
-  description:
-    'Discover a showcase of full-stack projects built with Nuxt 3 and its official libraries. Explore the work of passionate developers and find inspiration for your next web project.',
+  title: computed(() => t('index.title')),
+  description: computed(() => t('index.description')),
 })
 </script>

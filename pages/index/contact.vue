@@ -10,9 +10,11 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Contact me',
-  description: 'Find my contact information',
+  title: computed(() => t('contact.title')),
+  description: computed(() => t('contact.description')),
 })
 
 const items = [

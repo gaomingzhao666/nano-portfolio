@@ -63,6 +63,13 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n()
+
+useSeoMeta({
+  title: computed(() => t('comments.title')),
+  description: computed(() => t('comments.description')),
+})
+
 const isOpen: Ref<boolean> = ref(false)
 
 const skeletonItems: string[] = []
