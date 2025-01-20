@@ -100,10 +100,10 @@ $ yarn run dev # 実行
 ### Docker を使用
 
 1. このプロジェクトをクローンまたはダウンロードします。
-2. コンピュータに`Docker Desktop`がインストールされていることを確認します。
-3. `VScode`に`Docker extension`をインストールします。
-4. このプロジェクトの`Dockerfile`を右クリックし、`Build Image`オプションを選択します。
-5. `Docker Desktop`を開き、コンテナを実行します。
+2. コンピュータに `Docker Desktop` がインストールされていることを確認します。
+3. `VScode` に `Docker extension` をインストールします。
+4. このプロジェクトの `Dockerfile` を右クリックし、`Build Image` オプションを選択します。
+5. `Docker Desktop` を開き、コンテナを実行します。
 
 ## このプロジェクトを自分のケースで使用する方法
 
@@ -114,24 +114,57 @@ $ yarn run dev # 実行
 ### スタート
 
 - [GitHub パーソナルアクセストークンを生成](https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
-- `server`ディレクトリ内の`utils`フォルダにある`githubInfo.ts`ファイルに移動します
+- `server` ディレクトリ内の`utils`フォルダにある `githubInfo.ts` ファイルに移動します
 - プレースホルダートークンを自分の`パーソナルアクセストークン`に置き換えて、サーバーサイド API が GitHub 情報を返すようにします
-- `About`および`Contact`ページのデータをあなたの情報に更新します
+- `About` および `Contact` ページのデータをあなたの情報に更新します
 - を楽しみに～
 
 ## SEO ソリューション
 
 ### カスタム設定
 
-このプロジェクトでは、SEO パフォーマンスを向上させるために`@nuxtjs/seo`モジュールを使用しています。`nuxt.config.ts`ファイルでサイトに関する情報を設定できます。
+このプロジェクトの SEO パフォーマンスを向上させるために `@nuxtjs/seo` モジュールを使用しています。`nuxt.config.ts` をアクセスして、自分次第でウェブサイトに関する情報も設定できます。
 
-完全なセットアップガイドについては、この[ドキュメント](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules)を参照してください。
+`nuxt.config.ts` ファイルでの SEO 設定コードの例は下のコードをご覧ください:
 
-### `useHead` vs `useSeoMeta` vs `useServerSeoMeta`
+```ts
+// 詳細はhttps://nuxtseo.com/
+  site: {
+    title: 'Nano Portfolio',
+    url: 'https://nano-portfolio-ruby.vercel.app',
+  },
 
-公式ドキュメントを参照しているときに、どの SEO コンポーザブルを選択すべきか混乱するかもしれません。
+  schemaOrg: {
+    identity: 'Person',
+  },
 
-このプロジェクトの場合、SEO メタ情報と共有する必要がある動的、つまりダイナミックなデータがないため、`useServerSeoMeta`コンポーザブルを使用して SEO 情報を設定しています。すなわち、メタ情報はリアクティブである必要がなく、ロボットは初回ロードのみをスキャンするため、パフォーマンスに焦点を当てたユーティリティとして`useServerSeoMeta`を使用することをお勧めします。
+  seo: {
+    meta: {
+      description:
+        'A modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Vue/Nuxt ecosystem and Octokit APIs',
+      themeColor: [
+        { content: '#111827', media: '(prefers-color-scheme: dark)' },
+        { content: 'white', media: '(prefers-color-scheme: light)' },
+      ],
+
+      colorScheme: 'dark light',
+    },
+  },
+
+  robots: {
+    // Google.com に /test と /error ページをインデックスしないように指示します
+    disallow: ['/test', '/error'],
+  },
+  ogImage: {
+    enabled: false,
+  },
+```
+
+完全なガイドを参照したい場合は、この[ドキュメント](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules)をアクセスしてください。
+
+### 各ページの I18n
+
+すべてがすぐに使える状態で提供されており、`/src/i18n/seo/` フォルダから各ページの SEO データを設定し、需要に応じて変えることができます。
 
 ## 誰が作った
 

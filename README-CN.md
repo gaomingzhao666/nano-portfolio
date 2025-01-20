@@ -100,7 +100,7 @@ $ yarn run dev # 运行
 ### 使用 docker 制作容器
 
 1. 克隆或者下载此项目.
-2. 确保电脑中已安装`Docker Desktop`.
+2. 确保电脑中已安装 `Docker Desktop`.
 3. Install the `Docker extension` in your `VScode`.
 4. 右击 `Dockerfile` 并选择 `Build Image` 选项.
 5. 打开 `Docker Desktop` 启动此容器.
@@ -123,15 +123,44 @@ $ yarn run dev # 运行
 
 ### 自定义配置
 
-此项目使用 `@nuxtjs/seo` 模块来提升 SEO 性能。你可以在 `nuxt.config.ts` 文件中配置一些关于你网站的信息。
+```ts
+// 参考 https://nuxtseo.com/
+  site: {
+    title: 'Nano Portfolio',
+    url: 'https://nano-portfolio-ruby.vercel.app',
+  },
 
-查看此[文档](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules)以获取完整的设置指南。
+  schemaOrg: {
+    identity: 'Person',
+  },
 
-### `useHead` vs `useSeoMeta` vs `useServerSeoMeta`
+  seo: {
+    meta: {
+      description:
+        'A modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Vue/Nuxt ecosystem and Octokit APIs',
+      themeColor: [
+        { content: '#111827', media: '(prefers-color-scheme: dark)' },
+        { content: 'white', media: '(prefers-color-scheme: light)' },
+      ],
 
-当你开始阅读 nuxt.com 上的官方文档时，可能会对选择哪个 SEO 方法感到困惑。
+      colorScheme: 'dark light',
+    },
+  },
 
-在这种情况下，你应该使用 `useServerSeoMeta` 组合来配置 SEO 信息，因为此项目没有需要与 SEO meta 共享的动态数据，这意味着元信息不需要是响应式的，因为搜索引擎机器人只会扫描初始加载。因此，此项目中推荐使用 `useServerSeoMeta`，它不会在客户端执行任何操作或返回数据。
+  robots: {
+    // 告知Google.com不要索引/test和/error 页面
+    disallow: ['/test', '/error'],
+  },
+  ogImage: {
+    enabled: false,
+  },
+```
+
+请参阅此[文档](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules)以获取完整指南。
+
+### 各页面的 I18n
+
+一切开箱即用，您可以从 `/src/i18n/seo/` 文件夹中配置各个页面的 SEO 元数据，并根据您的需求进行修改。
 
 ## 贡献者
 
@@ -147,3 +176,7 @@ $ yarn run dev # 运行
 [license-url]: https://github.com/gaomingzhao666/nano-portfolio/blob/main/LICENSE
 [release-shield]: https://img.shields.io/github/v/release/gaomingzhao666/nano-portfolio?style=for-the-badge
 [release-url]: https://github.com/gaomingzhao666/nano-portfolio/releases
+
+```
+
+```

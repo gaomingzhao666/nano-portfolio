@@ -123,13 +123,46 @@ You can use this project to create your own portfolio. It automatically imports 
 
 The `@nuxtjs/seo` module is used to improve SEO performance in this project. You can configure it in the `nuxt.config.ts` file with some information about your site.
 
-See this [documentation](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules) for a complete setup guide.
+Here is an example of SEO configuration code in `nuxt.config.ts`:
 
-### `useHead` vs `useSeoMeta` vs `useServerSeoMeta`
+```ts
+// see https://nuxtseo.com/
+  site: {
+    title: 'Nano Portfolio',
+    url: 'https://nano-portfolio-ruby.vercel.app',
+  },
 
-You probably will be confuse about which SEO composable I should choose when you getting started with the official documentation on nuxt.com.
+  schemaOrg: {
+    identity: 'Person',
+  },
 
-In this case, you should use the `useServerSeoMeta` composable to configure SEO information, because this project have no dynamic data that needs to be share with seo meta information, which means the meta does not need to be reactive as robots will only scan the initial load. So we recommend using `useServerSeoMeta` as a performance-focused utility that will not do anything (or return a head object) on the client.
+  seo: {
+    meta: {
+      description:
+        'A modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Vue/Nuxt ecosystem and Octokit APIs',
+      themeColor: [
+        { content: '#111827', media: '(prefers-color-scheme: dark)' },
+        { content: 'white', media: '(prefers-color-scheme: light)' },
+      ],
+
+      colorScheme: 'dark light',
+    },
+  },
+
+  robots: {
+    // tell Google.com do not indexing /test and /error pages
+    disallow: ['/test', '/error'],
+  },
+  ogImage: {
+    enabled: false,
+  },
+```
+
+See this [documentation](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules) if you want to see a complete guide.
+
+### I18n for each pages
+
+Everything is out of box, you can configure the SEO metadata for each pages from the `/src/i18n/seo/` folder, and modify depends on your demand.
 
 ## Contributor
 
