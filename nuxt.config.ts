@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   ssr: true,
 
   typescript: {
@@ -104,5 +104,5 @@ export default defineNuxtConfig({
     enabled: false,
   },
 
-  compatibilityDate: '2025-01-12',
+  compatibilityDate: '2025-01-20',
 })
