@@ -18,20 +18,6 @@ useSeoMeta({
   description: computed(() => t('app.description')),
 })
 
-// see https://i18n.nuxtjs.org/docs/guide/seo#feature-details
-// const i18nHead = useLocaleHead({
-//   seo: {
-//     canonicalQueries: ['foo'],
-//   },
-// })
-// useHead(() => ({
-//   htmlAttrs: {
-//     lang: i18nHead.value.htmlAttrs!.lang,
-//   },
-//   link: [...(i18nHead.value.link || [])],
-//   meta: [...(i18nHead.value.meta || [])],
-// }))
-
 useLoadingIndicator({
   duration: 2000,
   throttle: 200,
