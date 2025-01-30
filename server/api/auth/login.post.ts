@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 import accountInfo from '@/server/models/accountInfo'
-import { hashPassword, comparePassword } from '@/server/utils/hashPassword'
+import { comparePassword } from '@/server/utils/hashPassword'
 
 interface bodyType {
   username: string
@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // Generate a JWT token
-  const token: string | void = jwt.sign(
+  const token: string = jwt.sign(
     {
       id: user.userId,
     },
