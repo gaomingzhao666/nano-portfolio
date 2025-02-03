@@ -97,12 +97,12 @@ export default defineNuxtConfig({
   },
 
   robots: {
-    // tell Google.com do not indexing /test and /error pages
-    disallow: ['/test', '/error'],
+    // tell Google.com do not indexing /error pages
+    disallow: ['/error'],
   },
   ogImage: {
     enabled: false,
   },
 
-  compatibilityDate: '2025-01-20',
+  compatibilityDate: '2025-02-03',
 })
