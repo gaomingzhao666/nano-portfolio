@@ -18,12 +18,6 @@ export default <RouterConfig>{
       component: () => import('@/pages/index.vue').then((r) => r.default || r),
       children: index,
     },
-    {
-      name: 'test',
-      path: '/test',
-      component: () =>
-        import('@/pages/test/test.vue').then((r) => r.default || r),
-    },
     ...error,
   ],
 }
