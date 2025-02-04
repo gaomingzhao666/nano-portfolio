@@ -1,7 +1,7 @@
 interface comment {
-	username: string
-	comment: string
-	device: string
-	like: number
-	addTime: Date
+  username: string
+  comment: string
+  device: string
+  like: number
+  addTime: Date
 }

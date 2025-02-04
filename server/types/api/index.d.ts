@@ -1,3 +1,3 @@
 declare interface index {
-	status: boolean
+  status: boolean
 }

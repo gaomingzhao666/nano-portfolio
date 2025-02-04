@@ -1,3 +1,3 @@
 declare interface repoSearchByTopicsGet extends index {
-	data: any
+  data: any
 }
