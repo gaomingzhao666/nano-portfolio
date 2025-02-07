@@ -1,3 +1,3 @@
 declare interface repoLanguagesGet extends index {
-  data: any
+  data: unknown
 }
