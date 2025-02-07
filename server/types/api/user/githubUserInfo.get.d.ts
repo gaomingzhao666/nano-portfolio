@@ -1,3 +1,3 @@
 declare interface githubUserInfoGet extends index {
-  data: unknown
+  data: any
 }

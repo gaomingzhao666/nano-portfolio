@@ -1,5 +1,5 @@
 declare interface errorType extends index {
   data: {
-    message: string
+    message: string | any
   }
 }
