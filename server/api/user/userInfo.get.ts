@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
   // validate the token
   const decode: any = verifyToken(token)
 
-  const userInfo: userInfo | null = await accountInfo.findOne({
+  const userInfo: accountInfo | null = await accountInfo.findOne({
     userId: decode.id,
   })
   return <userInfoGet>{
