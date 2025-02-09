@@ -43,7 +43,7 @@
     <img src="/SCREENSHOT/new-about-mockup.png">
 </p>
 
-> ここに表示されている画像は中等サイズのホームページです。詳細なスクリーンショットは[こちら](https://github.com/gaomingzhao666/nano-portfolio/tree/main/SCREENSHOT)をクリックしてください。
+> ここに表示されている画像は中等サイズのホームページです。詳細なスクリーンショットは[こちら](https://github.com/gaomingzhao666/nano-portfolio/tree/main/public/SCREENSHOT)をクリックしてください。
 
 Nano-portfolio は、Github Octokit と Nuxt3 エコシステムを統合した開発者作品集ウェブアプリケーションで、`Nuxt-UI`、`Nuxt-Mongoose`、`Pinia`、`i18n`などを含まれています。すべてのモジュールは Nuxt3 と公式に互換性があり、このプロジェクト内のすべてのコードはコンポジション API と ESM を使用しています。
 
