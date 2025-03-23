@@ -39,8 +39,8 @@
 ## プロジェクトの紹介
 
 <p align="center">
-    <img src="/SCREENSHOT/index-mockup.png">
-    <img src="/SCREENSHOT/new-about-mockup.png">
+    <img src="/public/SCREENSHOT/index-mockup.png">
+    <img src="/public/SCREENSHOT/new-about-mockup.png">
 </p>
 
 > ここに表示されている画像は中等サイズのホームページです。詳細なスクリーンショットは[こちら](https://github.com/gaomingzhao666/nano-portfolio/tree/main/public/SCREENSHOT)をクリックしてください。

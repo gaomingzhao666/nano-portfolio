@@ -39,8 +39,8 @@
 ## Introduction of Project
 
 <p align="center">
-    <img src="/SCREENSHOT/index-mockup.png">
-    <img src="/SCREENSHOT/new-about-mockup.png">
+    <img src="/public/SCREENSHOT/index-mockup.png">
+    <img src="/public/SCREENSHOT/new-about-mockup.png">
 </p>
 
 > The image shown here is a home page for md-size, [click here](https://github.com/gaomingzhao666/nano-portfolio/tree/main/public/SCREENSHOT) to see more detailed screenshot for this application.

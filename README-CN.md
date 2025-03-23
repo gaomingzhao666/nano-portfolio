@@ -39,8 +39,8 @@
 ## 项目介绍
 
 <p align="center">
-    <img src="/SCREENSHOT/index-mockup.png">
-    <img src="/SCREENSHOT/new-about-mockup.png">
+    <img src="/public/SCREENSHOT/index-mockup.png">
+    <img src="/public/SCREENSHOT/new-about-mockup.png">
 </p>
 
 > 上方是中等大小的主页截图, [点击此处](https://github.com/gaomingzhao666/nano-portfolio/tree/main/public/SCREENSHOT) 可查看更多详细截图。
