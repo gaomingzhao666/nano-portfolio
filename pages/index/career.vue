@@ -13,7 +13,11 @@
 
 		<!-- career contents -->
 		<section class="mt-5 space-y-5">
-			<CareerCard v-for="(item, index) in []" :key="index" :data="item" />
+			<CareerCard
+				v-for="(item, index) in carrerContent"
+				:key="index"
+				:data="item"
+			/>
 		</section>
 	</UContainer>
 </template>
@@ -22,7 +26,7 @@
 import carrerContentEN from '@/i18n/content/career/en'
 import carrerContentJP from '@/i18n/content/career/jp'
 
-const { t, getBrowserLocale } = useI18n()
+const { t, locale } = useI18n()
 
 useSeoMeta({
 	title: computed(() => t('career.title')),
@@ -40,10 +44,9 @@ interface CareerContent {
 }
 // make carrerContent reactive in order to switch localization reactively
 let carrerContent: CareerContent[] = reactive(carrerContentEN)
-const browserLocale = ref(getBrowserLocale())
 
 watch(
-	() => browserLocale.value,
+	() => locale.value,
 	(newValue) => {
 		switch (newValue) {
 			case 'en':
@@ -56,6 +59,7 @@ watch(
 				carrerContent = carrerContentEN
 				break
 		}
+		console.log(newValue)
 	}
 )
 </script>
