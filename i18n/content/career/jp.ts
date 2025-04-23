@@ -1,44 +1,30 @@
 export default [
 	{
-		startDate: '2022.01',
-		endDate: '2022.12',
-		employType: 'Full-time',
-		position: 'Software Engineer',
-		company: 'Xiaomi',
-		site: 'New york, US',
-		positionRoles: [
-			// role 1
-			'test',
-			// role 2
-			'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		],
-	},
-	{
 		startDate: '2020.01',
 		endDate: '2021.12',
 		employType: 'Full-time',
 		position: 'Software Engineer',
-		company: 'Xiaomi',
-		site: 'New york, US',
+		company: 'セブンイレブン',
+		site: '福岡県 北九州市 小倉北区 鍛冶1丁目店',
 		positionRoles: [
 			// role 1
-			'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+			'接客やレジ、袋詰め、商品陳列(品出し)',
 			// role 2
-			'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+			'店内の清掃などのコンビニ店内作業',
 		],
 	},
 	{
-		startDate: '2018.01',
-		endDate: '2020.01',
-		employType: 'Full-time',
+		startDate: '2025.04',
+		endDate: '現在',
+		employType: 'アルバイト',
 		position: 'Software Engineer',
-		company: 'Xiaomi',
-		site: 'New york, US',
+		company: '株式会社LinQ',
+		site: '福岡県 北九州市 小倉北区 浅野',
 		positionRoles: [
 			// role 1
-			'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+			'ホテル内での客室内のお掃除です。',
 			// role 2
-			'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+			'ベットメイクやバス・洗面などの水回りの清掃やタオル交換やシャンプー補充などのお仕事です。',
 		],
 	},
 ]
