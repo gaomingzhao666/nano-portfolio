@@ -25,6 +25,7 @@
 <script lang="ts" setup>
 import carrerContentEN from '@/i18n/content/career/en'
 import carrerContentJP from '@/i18n/content/career/jp'
+import carrerContentCN from '@/i18n/content/career/cn'
 
 const { t, locale } = useI18n()
 
@@ -55,11 +56,13 @@ watch(
 			case 'jp':
 				carrerContent = carrerContentJP
 				break
+			case 'cn':
+				carrerContent = carrerContentCN
+				break
 			default:
 				carrerContent = carrerContentEN
 				break
 		}
-		console.log(newValue)
 	}
 )
 </script>
