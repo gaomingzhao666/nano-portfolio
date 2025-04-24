@@ -14,7 +14,7 @@
 		<!-- career contents -->
 		<section class="mt-5 space-y-5">
 			<CareerCard
-				v-for="(item, index) in carrerContent"
+				v-for="(item, index) in careerContent"
 				:key="index"
 				:data="item"
 			/>
@@ -23,9 +23,9 @@
 </template>
 
 <script lang="ts" setup>
-import carrerContentEN from '@/i18n/content/career/en'
-import carrerContentJP from '@/i18n/content/career/jp'
-import carrerContentCN from '@/i18n/content/career/cn'
+import careerContentEN from '@/i18n/content/career/en'
+import careerContentJP from '@/i18n/content/career/jp'
+import careerContentCN from '@/i18n/content/career/cn'
 
 const { t, locale } = useI18n()
 
@@ -44,23 +44,23 @@ interface CareerContent {
 	positionRoles: string[]
 }
 // make carrerContent reactive in order to switch localization reactively
-let carrerContent: CareerContent[] = reactive(carrerContentEN)
+let careerContent: CareerContent[] = reactive(careerContentEN)
 
 watch(
 	() => locale.value,
 	(newValue) => {
 		switch (newValue) {
 			case 'en':
-				carrerContent = carrerContentEN
+				careerContent = careerContentEN
 				break
 			case 'jp':
-				carrerContent = carrerContentJP
+				careerContent = careerContentJP
 				break
 			case 'cn':
-				carrerContent = carrerContentCN
+				careerContent = careerContentCN
 				break
 			default:
-				carrerContent = carrerContentEN
+				careerContent = careerContentEN
 				break
 		}
 	}
