@@ -1,9 +1,9 @@
 export default [
 	{
-		startDate: '2020.01',
-		endDate: '2021.12',
-		employType: 'Full-time',
-		position: 'Software Engineer',
+		startDate: '2025.04',
+		endDate: '現在',
+		employType: 'アルバイト',
+		position: 'セブンイレブン店員',
 		company: 'セブンイレブン',
 		site: '福岡県 北九州市 小倉北区 鍛冶1丁目店',
 		positionRoles: [
@@ -15,7 +15,7 @@ export default [
 		startDate: '2025.04',
 		endDate: '現在',
 		employType: 'アルバイト',
-		position: 'Software Engineer',
+		position: 'ホテル清掃員',
 		company: '株式会社LinQ',
 		site: '福岡県 北九州市 小倉北区 浅野',
 		positionRoles: [

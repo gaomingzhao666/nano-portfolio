@@ -3,7 +3,7 @@ export default [
 		startDate: '2025.04',
 		endDate: '现在',
 		employType: '兼职',
-		position: '收银员',
+		position: '7-11收银员',
 		company: '7-11便利店',
 		site: '日本福冈北九州市小仓鍛冶1丁目店',
 		positionRoles: [
