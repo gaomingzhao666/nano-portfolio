@@ -12,7 +12,7 @@
 		"lint:fix": "eslint . --fix"
 	},
 	"dependencies": {
-		"@nuxt/ui": "^2.21.1",
+		"@nuxt/ui": "^2.22.0",
 		"@nuxtjs/seo": "^3.0.3",
 		"@octokit/core": "^6.1.5",
 		"@pinia/nuxt": "^0.10.1",
@@ -45,6 +45,6 @@
 		"playwright-core": "^1.52.0",
 		"typescript": "^5.8.3",
 		"vitest": "^3.1.2",
-		"vue-tsc": "^2.2.8"
+		"vue-tsc": "^2.2.10"
 	}
 }
