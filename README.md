@@ -117,6 +117,8 @@ You can use this project to create your own portfolio. It automatically imports 
 - Update the data on the `About` and `Contact` pages with appropriate information
 - Have fun and enjoy customizing your portfolio
 
+> In step 2, use env variable instead of put plain token on `.ts` file that can be push to public repository to avoid dangers.
+
 ## SEO Solution
 
 ### Custom Configuration
