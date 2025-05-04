@@ -24,11 +24,17 @@
 		<UCard class="rounded-3xl my-6">
 			<div class="flex justify-center items-center space-x-3">
 				<NuxtLink to="https://github.com/gaomingzhao666" target="_blank">
-					<ico-github class="text-3xl rounded-full" />
+					<ico-github
+						class="text-3xl rounded-full"
+						aria-label="Go to Nano's Github Profile"
+					/>
 				</NuxtLink>
 
 				<NuxtLink to="https://space.bilibili.com/57143509" target="_blank">
-					<ico-bilibili class="text-3xl rounded-full" />
+					<ico-bilibili
+						class="text-3xl rounded-full"
+						aria-label="Go to Nano's Bilibili Profile"
+					/>
 				</NuxtLink>
 			</div>
 		</UCard>
