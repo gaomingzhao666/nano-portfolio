@@ -4,7 +4,6 @@
 			:to="props.deployedUrl"
 			class="hover:border-b-2 hover:border-b-sky-200"
 			target="_blank"
-			@click.prevent
 		>
 			{{ $t('clickToWebsite') }}
 		</NuxtLink>
