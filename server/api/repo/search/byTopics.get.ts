@@ -25,12 +25,12 @@ export default defineEventHandler(async (event) => {
 			(topic: string) => topic === repoTopics.toLocaleLowerCase()
 		)
 	)
-	if (filteredRepos.length > 0) {
+	if (filteredRepos.length > 0)
 		return <repoSearchByTopicsGet>{
 			status: true,
 			data: filteredRepos,
 		}
-	} else
+	else
 		return <errorType>{
 			status: false,
 			data: {

@@ -23,12 +23,12 @@ export default defineEventHandler(async (event) => {
 	const filteredRepos = allRepos.filter((item: any) =>
 		item.name.toLocaleLowerCase().includes(repoName.toLocaleLowerCase())
 	)
-	if (filteredRepos.length > 0) {
+	if (filteredRepos.length > 0)
 		return <repoSearchByNameGet>{
 			status: true,
 			data: filteredRepos,
 		}
-	} else
+	else
 		return <errorType>{
 			status: false,
 			data: {
