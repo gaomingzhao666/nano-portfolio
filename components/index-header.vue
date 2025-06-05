@@ -45,7 +45,7 @@
 		</UInput>
 
 		<section class="flex items-center">
-			<UDropdown
+			<UDropdownMenu
 				:items="languages"
 				:popper="{ placement: 'bottom-start' }"
 				:ui="{
@@ -59,7 +59,7 @@
 					variant="ghost"
 					aria-label="Language Switch"
 				/>
-			</UDropdown>
+			</UDropdownMenu>
 
 			<UButton
 				:icon="
@@ -82,7 +82,7 @@
 					{{ $t('login') }}
 				</UButton>
 			</NuxtLink>
-			<UDropdown
+			<UDropdownMenu
 				v-else
 				v-model:open="isUserOpen"
 				:ui="{
@@ -94,14 +94,14 @@
 						{
 							label: $t('logout'),
 							icon: 'i-heroicons:arrow-down-circle',
-							click: logout,
+							onclick: logout,
 						},
 					],
 				]"
 				:popper="{ placement: 'bottom-start' }"
 			>
 				<UButton color="primary" variant="ghost">{{ username }}</UButton>
-			</UDropdown>
+			</UDropdownMenu>
 
 			<UButton
 				icon="i-heroicons:ellipsis-horizontal"
@@ -115,7 +115,7 @@
 	</header>
 
 	<!-- modal for mobile devices-->
-	<UModal v-model="isModalOpen" fullscreen>
+	<UModal v-model:open="isModalOpen" :default-open="false" fullscreen>
 		<UCard
 			:ui="{
 				base: 'h-full flex flex-col',
@@ -188,6 +188,8 @@
 </template>
 
 <script lang="ts" setup>
+import { UDropdownMenu } from '#components'
+
 const { setLocale } = useI18n()
 const toast = useToast()
 // control modal of NavBar
@@ -202,7 +204,7 @@ const languages = [
 		{
 			label: 'English',
 			icon: 'i-fluent-emoji-flat:flushed-face',
-			click: () => {
+			onClick: () => {
 				setLocale('en')
 			},
 		},
@@ -211,7 +213,7 @@ const languages = [
 		{
 			label: '简体中文',
 			icon: 'i-fluent-emoji-flat:flushed-face',
-			click: () => {
+			onClick: () => {
 				setLocale('cn')
 			},
 		},
@@ -220,7 +222,7 @@ const languages = [
 		{
 			label: '日本語',
 			icon: 'i-fluent-emoji-flat:flushed-face',
-			click: () => {
+			onClick: () => {
 				setLocale('jp')
 			},
 		},
