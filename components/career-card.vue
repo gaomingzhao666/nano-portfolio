@@ -10,14 +10,14 @@
 
 			<section class="flex gap-x-2">
 				<UBadge
-					color="lime"
+					color="success"
 					variant="soft"
 					size="md"
 					class="hidden group-first:block"
 					>{{ $t('recent') }}</UBadge
 				>
 
-				<UBadge color="amber" size="md" variant="soft">{{
+				<UBadge color="info" size="md" variant="soft">{{
 					props.data.employType
 				}}</UBadge>
 			</section>
