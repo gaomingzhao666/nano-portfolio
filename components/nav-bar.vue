@@ -28,10 +28,6 @@
 					to: '/comments',
 				},
 			]"
-			:ui="{
-				padding: 'p-6',
-				rounded: 'rounded-lg',
-			}"
 			orientation="vertical"
 		/>
 	</nav>
