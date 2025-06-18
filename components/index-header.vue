@@ -20,11 +20,10 @@
 			icon="i-mingcute:search-line"
 			size="lg"
 			name="searchReposName"
-			color="white"
+			color="primary"
 			trailing
 			:placeholder="$t('placeholder')"
 			class="w-1/3 hidden md:block"
-			:ui="{ icon: { trailing: { pointer: '' } } }"
 		>
 			<template #trailing>
 				<UKbd v-show="searchReposKeywords === ''" size="md">Q</UKbd>
@@ -45,17 +44,10 @@
 		</UInput>
 
 		<section class="flex items-center">
-			<UDropdownMenu
-				:items="languages"
-				:popper="{ placement: 'bottom-start' }"
-				:ui="{
-					rounded: 'rounded-xl',
-					item: { padding: 'p-3', rounded: 'rounded-xl' },
-				}"
-			>
+			<UDropdownMenu :items="languages" class="rounded-xl">
 				<UButton
 					icon="i-heroicons:language"
-					color="gray"
+					color="neutral"
 					variant="ghost"
 					aria-label="Language Switch"
 				/>
@@ -65,7 +57,7 @@
 				:icon="
 					isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
 				"
-				color="gray"
+				color="neutral"
 				variant="ghost"
 				aria-label="Theme"
 				class="mx-3"
@@ -75,7 +67,7 @@
 			<NuxtLink v-if="!isLogin" to="/login">
 				<UButton
 					icon="i-heroicons:arrow-up-circle"
-					color="white"
+					color="neutral"
 					variant="solid"
 					size="lg"
 				>
@@ -85,10 +77,7 @@
 			<UDropdownMenu
 				v-else
 				v-model:open="isUserOpen"
-				:ui="{
-					rounded: 'rounded-xl',
-					item: { padding: 'p-3', rounded: 'rounded-xl' },
-				}"
+				class="rounded-xl"
 				:items="[
 					[
 						{
@@ -105,7 +94,7 @@
 
 			<UButton
 				icon="i-heroicons:ellipsis-horizontal"
-				color="white"
+				color="neutral"
 				variant="solid"
 				size="lg"
 				class="md:hidden ml-3"
@@ -116,16 +105,7 @@
 
 	<!-- modal for mobile devices-->
 	<UModal v-model:open="isModalOpen" :default-open="false" fullscreen>
-		<UCard
-			:ui="{
-				base: 'h-full flex flex-col',
-				rounded: '',
-				sectionide: 'sectionide-y sectionide-gray-200 dark:sectionide-gray-800',
-				body: {
-					base: 'grow',
-				},
-			}"
-		>
+		<UCard variant="subtle">
 			<template #header>
 				<section class="flex items-center justify-between">
 					<h3
@@ -140,7 +120,7 @@
 									? 'i-heroicons-moon-20-solid'
 									: 'i-heroicons-sun-20-solid'
 							"
-							color="gray"
+							color="neutral"
 							variant="ghost"
 							aria-label="Theme"
 							class="mx-3"
@@ -148,7 +128,7 @@
 						/>
 
 						<UButton
-							color="gray"
+							color="neutral"
 							variant="ghost"
 							icon="i-heroicons-x-mark-20-solid"
 							@click="isModalOpen = false"
@@ -163,11 +143,10 @@
 				icon="i-mingcute:search-line"
 				size="xl"
 				name="searchReposName"
-				color="white"
+				color="neutral"
 				trailing
 				:placeholder="$t('placeholder')"
 				class="w-full block text-center"
-				:ui="{ icon: { trailing: { pointer: '' } } }"
 			>
 				<template #trailing>
 					<UKbd v-show="searchReposKeywords === ''" size="md">Q</UKbd>
