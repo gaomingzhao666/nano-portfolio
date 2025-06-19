@@ -104,9 +104,9 @@
 	</header>
 
 	<!-- modal for mobile devices-->
-	<UModal v-model:open="isModalOpen" :default-open="false" fullscreen>
+	<UModal v-model:open="isModalOpen" fullscreen>
 		<UCard variant="subtle">
-			<template #header>
+			<template #body>
 				<section class="flex items-center justify-between">
 					<h3
 						class="text-base font-semibold leading-6 text-gray-900 dark:text-white"
