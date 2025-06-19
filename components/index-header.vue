@@ -105,8 +105,8 @@
 
 	<!-- modal for mobile devices-->
 	<UModal v-model:open="isModalOpen" fullscreen>
-		<UCard variant="subtle">
-			<template #body>
+		<template #body>
+			<UCard variant="subtle">
 				<section class="flex items-center justify-between">
 					<h3
 						class="text-base font-semibold leading-6 text-gray-900 dark:text-white"
@@ -135,34 +135,34 @@
 						/>
 					</section>
 				</section>
-			</template>
 
-			<UInput
-				id="searchRepoInput"
-				v-model="searchReposKeywords"
-				icon="i-mingcute:search-line"
-				size="xl"
-				name="searchReposName"
-				color="neutral"
-				trailing
-				:placeholder="$t('placeholder')"
-				class="w-full block text-center"
-			>
-				<template #trailing>
-					<UKbd v-show="searchReposKeywords === ''" size="md">Q</UKbd>
-					<UButton
-						v-show="searchReposKeywords !== ''"
-						size="sm"
-						variant="solid"
-						class="font-normal"
-						@click="searchRepo"
-						>{{ $t('search') }}</UButton
-					>
-				</template>
-			</UInput>
+				<UInput
+					id="searchRepoInput"
+					v-model="searchReposKeywords"
+					icon="i-mingcute:search-line"
+					size="xl"
+					name="searchReposName"
+					color="neutral"
+					trailing
+					:placeholder="$t('placeholder')"
+					class="w-full block text-center"
+				>
+					<template #trailing>
+						<UKbd v-show="searchReposKeywords === ''" size="md">Q</UKbd>
+						<UButton
+							v-show="searchReposKeywords !== ''"
+							size="sm"
+							variant="solid"
+							class="font-normal"
+							@click="searchRepo"
+							>{{ $t('search') }}</UButton
+						>
+					</template>
+				</UInput>
 
-			<NavBar @click="isModalOpen = false" />
-		</UCard>
+				<NavBar @click="isModalOpen = false" />
+			</UCard>
+		</template>
 	</UModal>
 </template>
 
