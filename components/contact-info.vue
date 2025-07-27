@@ -7,7 +7,7 @@
 		<UCard class="rounded-3xl my-6">
 			<section class="flex items-center m-5">
 				<ico-phone class="text-3xl mr-3" />
-				<p>+86 13244687353</p>
+				<p>+81 07091481053</p>
 			</section>
 
 			<section class="flex items-center m-5">
@@ -17,7 +17,7 @@
 
 			<section class="flex items-center m-5">
 				<ico-address class="text-3xl mr-3" />
-				<p>福岡</p>
+				<p>石川県 金沢市</p>
 			</section>
 		</UCard>
 
