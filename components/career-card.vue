@@ -3,7 +3,9 @@
 	<UCard
 		class="w-full rounded-3xl space-x-2 first:ring-2 first:ring-green-400 group"
 	>
-		<section class="flex border-b-[1px] pb-4 justify-between items-center">
+		<section
+			class="flex border-b-[1px] border-gray-200 dark:border-gray-600 pb-4 justify-between items-center"
+		>
 			<h2 class="font-semibold">
 				{{ props.data.startDate }} - {{ props.data.endDate }}
 			</h2>
