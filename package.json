@@ -21,7 +21,7 @@
 		"nuxt-mongoose": "^1.0.6",
 		"octokit": "^5.0.3",
 		"pinia": "^3.0.3",
-		"resend": "6.0.1",
+		"resend": "^4.8.0",
 		"vue": "^3.5.18",
 		"vue-router": "^4.5.1"
 	},
@@ -30,7 +30,7 @@
 		"@iconify-json/grommet-icons": "^1.2.1",
 		"@iconify-json/heroicons": "^1.2.2",
 		"@iconify-json/logos": "^1.2.5",
-		"@iconify-json/simple-icons": "^1.2.46",
+		"@iconify-json/simple-icons": "^1.2.47",
 		"@iconify-json/skill-icons": "^1.2.0",
 		"@nuxt/eslint": "^1.8.0",
 		"@nuxt/test-utils": "^3.19.2",
