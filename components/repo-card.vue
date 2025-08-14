@@ -1,7 +1,7 @@
 <template>
 	<NuxtLink :to="props.data.clone_url">
 		<UCard
-			class="rounded-3xl m-3 h-[350px] transition-all cursor-pointer hover:ring-2 hover:ring-green-400"
+			class="rounded-3xl m-2 h-[350px] transition-all group cursor-pointer hover:ring"
 			:ui="{ body: { padding: '' } }"
 		>
 			<section
@@ -28,7 +28,9 @@
 
 			<section class="px-3 pb-3">
 				<section class="flex justify-between m-3">
-					<p class="font-semibold">{{ props.data.name }}</p>
+					<p class="font-semibold group-hover:underline">
+						{{ props.data.name }}
+					</p>
 					<UBadge variant="soft" :label="props.data.language" />
 				</section>
 
