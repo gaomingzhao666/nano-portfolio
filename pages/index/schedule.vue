@@ -24,8 +24,8 @@ import scheduleContentCN from '@/i18n/content/schedule/cn'
 const { t, locale } = useI18n()
 
 useSeoMeta({
-	title: computed(() => t('career.title')),
-	description: computed(() => t('career.description')),
+	title: computed(() => t('schedule.title')),
+	description: computed(() => t('schedule.description')),
 })
 
 interface ScheduleContent {
