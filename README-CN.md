@@ -62,7 +62,7 @@ Nano-portfolio 是一个与 Github Octokit 和 Nuxt3 生态结合的开发者个
 
 ## 运行时版本
 
-- NodeJS LTS 20 以上版本
+- NodeJS LTS 22 以上版本
 
 ## 安装
 
