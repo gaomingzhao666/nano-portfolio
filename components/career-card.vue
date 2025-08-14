@@ -1,6 +1,6 @@
 <template>
 	<!-- make the most recent activity highlight -->
-	<UCard class="w-full rounded-3xl space-x-2 group">
+	<UCard class="w-full rounded-3xl space-x-2 group p-3">
 		<section
 			class="flex border-b-[1px] border-gray-200 dark:border-gray-600 pb-4 justify-between items-center"
 		>
@@ -24,7 +24,7 @@
 		</section>
 
 		<section
-			class="flex flex-wrap md:flex-nowrap space-x-2 justify-between mt-4"
+			class="flex flex-wrap md:flex-nowrap space-x-2 space-y-2 md:space-y-0 justify-between mt-4"
 		>
 			<section class="w-full w-3xl">
 				<h1 class="font-semibold text-xl mb-2 text-start">
