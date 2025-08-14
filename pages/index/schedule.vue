@@ -39,7 +39,13 @@ interface ScheduleContent {
 	}[]
 }
 // make scheduleContent reactive in order to switch localization reactively
-let scheduleContent: ScheduleContent[] = reactive(scheduleContentEN)
+let scheduleContent: ScheduleContent[] = reactive(
+	locale.value === 'en'
+		? scheduleContentEN
+		: locale.value === 'cn'
+		? scheduleContentCN
+		: scheduleContentJP
+)
 
 watch(
 	() => locale.value,

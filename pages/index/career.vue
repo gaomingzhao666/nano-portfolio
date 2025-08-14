@@ -44,7 +44,13 @@ interface CareerContent {
 	positionRoles: string[]
 }
 // make carrerContent reactive in order to switch localization reactively
-let careerContent: CareerContent[] = reactive(careerContentEN)
+let careerContent: CareerContent[] = reactive(
+	locale.value === 'en'
+		? careerContentEN
+		: locale.value === 'cn'
+		? careerContentCN
+		: careerContentJP
+)
 
 watch(
 	() => locale.value,
