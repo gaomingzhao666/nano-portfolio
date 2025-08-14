@@ -2,12 +2,13 @@
 export default defineNuxtConfig({
 	devtools: { enabled: false },
 	ssr: true,
-	routeRules: {
-		'/': { prerender: true },
-	},
-
 	typescript: {
 		typeCheck: true,
+	},
+
+	routeRules: {
+		'/': { prerender: true },
+		'/index': { prerender: true },
 	},
 
 	app: {
@@ -16,6 +17,7 @@ export default defineNuxtConfig({
 				separator: '·',
 			},
 		},
+		pageTransition: { name: 'page' },
 	},
 
 	alias: {
