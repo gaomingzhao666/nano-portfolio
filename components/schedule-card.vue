@@ -30,7 +30,7 @@
 				class="flex flex-wrap md:flex-nowrap space-x-2 space-y-2 md:space-y-0 justify-between mt-4"
 			>
 				<section class="w-full flex flex-col items-start justify-between">
-					<h1 class="text-sm text-gray-600 mb-2 text-start w-3xl">
+					<h1 class="text-sm text-gray-600 mb-2 text-start md:w-3xl">
 						{{ props.data.description }}
 					</h1>
 				</section>
