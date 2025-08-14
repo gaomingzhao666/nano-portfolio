@@ -20,6 +20,15 @@ importers:
       '@pinia/nuxt':
         specifier: ^0.11.2
         version: 0.11.2(magicast@0.3.5)(pinia@3.0.3(typescript@5.9.2)(vue@3.5.18(typescript@5.9.2)))
+      '@schedule-x/calendar':
+        specifier: ^2.36.0
+        version: 2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0)
+      '@schedule-x/theme-default':
+        specifier: ^2.36.0
+        version: 2.36.0
+      '@schedule-x/vue':
+        specifier: ^2.34.0
+        version: 2.34.0(@schedule-x/calendar@2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0))(@schedule-x/date-picker@2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0))(vue@3.5.18(typescript@5.9.2))
       jsonwebtoken:
         specifier: ^9.0.2
         version: 9.0.2
@@ -1778,6 +1787,14 @@ packages:
   '@poppinss/exception@1.2.2':
     resolution: {integrity: sha512-m7bpKCD4QMlFCjA/nKTs23fuvoVFoA83brRKmObCUNmi/9tVu8Ve3w4YQAnJu4q3Tjf5fr685HYIC/IA2zHRSg==}
 
+  '@preact/signals-core@1.11.0':
+    resolution: {integrity: sha512-jglbibeWHuFRzEWVFY/TT7wB1PppJxmcSfUHcK+2J9vBRtiooMfw6tAPttojNYrrpdGViqAYCbPpmWYlMm+eMQ==}
+
+  '@preact/signals@2.2.1':
+    resolution: {integrity: sha512-cX3mijdjHbbz3dBoJ6z687CGYEOp9ifj3uFnm4UKW+DxXKPMvE2y/VSdm0PXhXmHnr6F0iSnDJ+dLwmV7CYT5A==}
+    peerDependencies:
+      preact: '>= 10.25.0'
+
   '@react-email/render@1.1.2':
     resolution: {integrity: sha512-RnRehYN3v9gVlNMehHPHhyp2RQo7+pSkHDtXPvg3s0GbzM9SQMW4Qrf8GRNvtpLC4gsI+Wt0VatNRUFqjvevbw==}
     engines: {node: '>=18.0.0'}
@@ -2051,6 +2068,28 @@ packages:
     resolution: {integrity: sha512-CvUo2ixeIQGtF6WvuB87XWqPQkoFAFqW+HUo/WzHwuHDvIwZCtjdWXoYCcr06iKGydiqTclC4jU/TNObC/xKZg==}
     cpu: [x64]
     os: [win32]
+
+  '@schedule-x/calendar@2.36.0':
+    resolution: {integrity: sha512-UqPMoxjok3SFNvgx1+PY5Whmoig+gU7sjy80z68A9QQ1FjIt1Q3ODPZKdA3G0spDss9lDtKilpO393vWpXJyfg==}
+    peerDependencies:
+      '@preact/signals': ^2.0.2
+      preact: ^10.19.2
+
+  '@schedule-x/date-picker@2.36.0':
+    resolution: {integrity: sha512-F95EaYmD/w+c82lS1PMa9Q+Wd9glCqrQodjgBq0yfwB9eHp00WnGJbqPaQN9xIQRUfSEPvqvVNB+yd/qD14g/w==}
+    peerDependencies:
+      '@preact/signals': ^2.0.2
+      preact: ^10.19.2
+
+  '@schedule-x/theme-default@2.36.0':
+    resolution: {integrity: sha512-jkN9/srYS54dO2h12iCvNMMrLEiod6BAoUc47KbOgGE66zyUU+kmQwUOYQ3A2LrKyIWjwtCp3Ewdd4h/HHvG9A==}
+
+  '@schedule-x/vue@2.34.0':
+    resolution: {integrity: sha512-E+imTtvDQsOld8jcyGH0rndCzMECuafb8v0DU+zXftlxEaGdFtFDuN84uAJs/PcEB1lIj/FXCm7Kqd8euEswSg==}
+    peerDependencies:
+      '@schedule-x/calendar': 2.36.0
+      '@schedule-x/date-picker': 2.36.0
+      vue: ^3
 
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
@@ -5560,6 +5599,9 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
+  preact@10.27.0:
+    resolution: {integrity: sha512-/DTYoB6mwwgPytiqQTh/7SFRL98ZdiD8Sk8zIUVOxtwq4oWcwrcd1uno9fE/zZmUaUrFNYzbH14CPebOz9tZQw==}
+
   precinct@12.2.0:
     resolution: {integrity: sha512-NFBMuwIfaJ4SocE9YXPU/n4AcNSoFMVFjP72nvl3cx69j/ke61/hPOWFREVxLkFhhEGnA8ZuVfTqJBa+PK3b5w==}
     engines: {node: '>=18'}
@@ -8812,6 +8854,13 @@ snapshots:
 
   '@poppinss/exception@1.2.2': {}
 
+  '@preact/signals-core@1.11.0': {}
+
+  '@preact/signals@2.2.1(preact@10.27.0)':
+    dependencies:
+      '@preact/signals-core': 1.11.0
+      preact: 10.27.0
+
   '@react-email/render@1.1.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       html-to-text: 9.0.5
@@ -9007,6 +9056,24 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.46.2':
     optional: true
+
+  '@schedule-x/calendar@2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0)':
+    dependencies:
+      '@preact/signals': 2.2.1(preact@10.27.0)
+      preact: 10.27.0
+
+  '@schedule-x/date-picker@2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0)':
+    dependencies:
+      '@preact/signals': 2.2.1(preact@10.27.0)
+      preact: 10.27.0
+
+  '@schedule-x/theme-default@2.36.0': {}
+
+  '@schedule-x/vue@2.34.0(@schedule-x/calendar@2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0))(@schedule-x/date-picker@2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0))(vue@3.5.18(typescript@5.9.2))':
+    dependencies:
+      '@schedule-x/calendar': 2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0)
+      '@schedule-x/date-picker': 2.36.0(@preact/signals@2.2.1(preact@10.27.0))(preact@10.27.0)
+      vue: 3.5.18(typescript@5.9.2)
 
   '@sec-ant/readable-stream@0.4.1': {}
 
@@ -13120,6 +13187,8 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  preact@10.27.0: {}
 
   precinct@12.2.0:
     dependencies:
