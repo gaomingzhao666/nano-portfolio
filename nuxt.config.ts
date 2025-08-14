@@ -17,7 +17,6 @@ export default defineNuxtConfig({
 				separator: '·',
 			},
 		},
-		pageTransition: { name: 'page' },
 	},
 
 	alias: {
@@ -108,5 +107,5 @@ export default defineNuxtConfig({
 		enabled: false,
 	},
 
-	compatibilityDate: '2025-02-09',
+	compatibilityDate: '2025-08-14',
 })
