@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
 	devtools: { enabled: false },
 	ssr: true,
+	routeRules: {
+		'/': { prerender: true },
+	},
 
 	typescript: {
 		typeCheck: true,
