@@ -8,7 +8,6 @@ export default defineNuxtConfig({
 
 	routeRules: {
 		'/': { prerender: true },
-		'/index': { prerender: true },
 	},
 
 	app: {
