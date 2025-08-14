@@ -50,7 +50,10 @@
 				:popper="{ placement: 'bottom-start' }"
 				:ui="{
 					rounded: 'rounded-xl',
-					item: { padding: 'p-3', rounded: 'rounded-xl' },
+					item: {
+						padding: 'p-3',
+						rounded: 'rounded-xl',
+					},
 				}"
 			>
 				<UButton
@@ -201,7 +204,6 @@ const languages = [
 	[
 		{
 			label: 'English',
-			icon: 'i-fluent-emoji-flat:flushed-face',
 			click: () => {
 				setLocale('en')
 			},
@@ -210,7 +212,6 @@ const languages = [
 	[
 		{
 			label: '简体中文',
-			icon: 'i-fluent-emoji-flat:flushed-face',
 			click: () => {
 				setLocale('cn')
 			},
@@ -219,7 +220,6 @@ const languages = [
 	[
 		{
 			label: '日本語',
-			icon: 'i-fluent-emoji-flat:flushed-face',
 			click: () => {
 				setLocale('jp')
 			},
