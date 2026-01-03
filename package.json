@@ -13,38 +13,38 @@
 	},
 	"dependencies": {
 		"@nuxt/ui": "^2.22.3",
-		"@nuxtjs/seo": "^3.2.2",
+		"@nuxtjs/seo": "^3.3.0",
 		"@octokit/core": "^7.0.6",
 		"@pinia/nuxt": "^0.11.3",
 		"jsonwebtoken": "^9.0.3",
-		"nuxt": "^3.20.1",
+		"nuxt": "^3.20.2",
 		"nuxt-mongoose": "^1.0.6",
 		"octokit": "^5.0.5",
 		"pinia": "^3.0.4",
 		"resend": "^4.8.0",
-		"vue": "^3.5.25",
-		"vue-router": "^4.6.3"
+		"vue": "^3.5.26",
+		"vue-router": "^4.6.4"
 	},
 	"devDependencies": {
 		"@iconify-json/fluent-emoji-flat": "^1.2.5",
 		"@iconify-json/grommet-icons": "^1.2.4",
 		"@iconify-json/heroicons": "^1.2.3",
 		"@iconify-json/logos": "^1.2.10",
-		"@iconify-json/simple-icons": "^1.2.61",
+		"@iconify-json/simple-icons": "^1.2.64",
 		"@iconify-json/skill-icons": "^1.2.3",
-		"@nuxt/eslint": "^1.11.0",
+		"@nuxt/eslint": "^1.12.1",
 		"@nuxt/test-utils": "^3.21.0",
 		"@nuxtjs/i18n": "^10.2.1",
 		"@octokit/types": "^13.10.0",
 		"@types/jsonwebtoken": "^9.0.10",
-		"@types/node": "^22.19.1",
+		"@types/node": "^22.19.3",
 		"@vue/test-utils": "^2.4.6",
-		"eslint": "^9.39.1",
+		"eslint": "^9.39.2",
 		"happy-dom": "^17.6.3",
 		"nuxt-svgo": "^4.2.6",
 		"playwright-core": "^1.57.0",
 		"typescript": "^5.9.3",
 		"vitest": "^3.2.4",
-		"vue-tsc": "^3.1.6"
+		"vue-tsc": "^3.2.1"
 	}
 }
