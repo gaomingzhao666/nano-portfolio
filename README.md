@@ -62,7 +62,7 @@ Nano-portfolio is a developer introduction web application integrated with Githu
 
 ## Runtime Requirement
 
-- NodeJS LTS 22+
+- NodeJS LTS 24 or above
 
 ## Installation
 

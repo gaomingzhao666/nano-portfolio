@@ -62,7 +62,7 @@ Nano-portfolio は、Github Octokit と Nuxt3 エコシステムを統合した�
 
 ## 環境要件
 
-- NodeJS LTS 22 以上のバージョン
+- NodeJS LTS 24 または以上のバージョン
 
 ## インストール
 
