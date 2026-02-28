@@ -1,31 +1,31 @@
 {
-	"app.title": "Nano Portfoliio",
-	"app.description": "Nano portfolio is a modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Vue/Nuxt ecosystem, Octokit APIs and other modern web technologies.",
+  "app.title": "Nano Portfolio",
+  "app.description": "Nano Portfolio is a modern, open-source portfolio template for developers. It can automatically import GitHub profile and repository information, and is built with the Vue/Nuxt ecosystem, Octokit APIs, and other modern web technologies.",
 
-	"index.title": "Index",
-	"index.description": "Discover a showcase of frontend, backend and full-stack projects built with Vue, Nuxt, Svelte, Astro, Vite, TailwindCSS, Less, Sass, Resend, MongoDB, Node and Nuxt's official libraries, etc. Explore the works of passionate developers and find inspiration for your next portfolio project.",
+  "index.title": "Index",
+  "index.description": "Discover a showcase of frontend, backend, and full-stack projects built with Vue, Nuxt, Svelte, Astro, Vite, TailwindCSS, Less, Sass, Resend, MongoDB, Node, and Nuxt's official libraries. Explore the work of passionate developers and find inspiration for your next portfolio project.",
 
-	"login.title": "Login to Nano Portfolio",
-	"login.description": "Login to nano portfolio to get permission for comment panel.",
+  "login.title": "Login to Nano Portfolio",
+  "login.description": "Log in to Nano Portfolio to get access to the comment panel.",
 
-	"register.title": "Register an Account",
-	"register.description": "Register an account to nano portfolio.",
+  "register.title": "Register an Account",
+  "register.description": "Register an account for Nano Portfolio.",
 
-	"home.title": "Home",
-	"home.description": "Home page for nano portfolio, here you can explore my passionate projects that built with Vue, Nuxt, Svelte, Astro, Vite, TailwindCSS, Less, Sass Resend, MongoDB, Node and other modern web technologies, and access my github repository or online demo to get detailed project information.",
+  "home.title": "Home",
+  "home.description": "The home page of Nano Portfolio. Here you can explore my projects built with Vue, Nuxt, Svelte, Astro, Vite, TailwindCSS, Less, Sass, Resend, MongoDB, Node, and other modern web technologies, and access the GitHub repository or online demo for detailed project information.",
 
-	"about.title": "About Nano",
-	"about.description": "About page for nano portfolio, here you can get detailed information such as skills and fields of study about nano, who is a passionate frontend developer",
+  "about.title": "About Nano",
+  "about.description": "The about page of Nano Portfolio. Here you can find detailed information about Nano, a passionate front-end developer, including skills and fields of study.",
 
-	"career.title": "Nano's Career",
-	"career.description": "Career page for nano portfolio, here you can get detailed information about nano's career and work experience, such as which company did nano worked for, what role did nano played in that company, when and where did nano joined that company, and what works or projects did nano worked on, etc.",
+  "career.title": "Nano's Career",
+  "career.description": "The career page of Nano Portfolio. Here you can view detailed information about Nano's work experience, including companies, roles, joining dates and locations, and related projects.",
 
-	"schedule.title": "Nano's Schedule",
-	"schedule.description": "Schedule page for nano portfolio, here you can get detailed information about nano's schedule and career plan of annual year, you can also learn the detailed content by click the schedule card to jump to Nano Blog.",
+  "schedule.title": "Nano's Schedule",
+  "schedule.description": "The schedule page of Nano Portfolio. Here you can view Nano's annual plans and career roadmap, and click a schedule card to read more details on Nano Blog.",
 
-	"comments.title": "Comments",
-	"comments.description": "Comments page for nano portfolio, here you can view all the comments from visitors, and you can also login to nano portfolio to leave your comments or suggestions to this project.",
+  "comments.title": "Comments",
+  "comments.description": "The comments page of Nano Portfolio. Here you can read visitor comments, and you can also log in to leave your own comments or suggestions for this project.",
 
-	"contact.title": "Contact with Nano",
-	"contact.description": "Contact page for nano portfolio, here you can get detailed contact information about nano, such as email, phone number, address, etc. You can also fill the contact form to send message to nano, and nano will get back to you across the email address you left as soon as possible."
+  "contact.title": "Contact with Nano",
+  "contact.description": "The contact page of Nano Portfolio. Here you can find Nano's contact details, such as email, phone number, and address. You can also submit the contact form to send a message, and Nano will reply to the email address you provide as soon as possible."
 }
