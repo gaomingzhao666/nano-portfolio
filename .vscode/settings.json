@@ -15,5 +15,7 @@
   "eslint.useESLintClass": true,
   "eslint.lintTask.enable": true,
   "cSpell.words": ["unlogined"],
-  "eslint.useFlatConfig": true
+  "eslint.useFlatConfig": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true
 }
