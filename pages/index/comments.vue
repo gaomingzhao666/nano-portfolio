@@ -1,7 +1,7 @@
 <template>
   <main class="w-full">
     <h1 class="text-center font-bold text-3xl my-3">
-      {{ $t('comments') }}
+      {{ $t("comments") }}
     </h1>
 
     <!-- comments -->
@@ -9,7 +9,7 @@
       class="p-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5"
     >
       <CommentsCard
-        v-for="(item, index) in data?.data.comments || []"
+        v-for="(item, index) in data?.data.comments"
         v-if="status === 'success'"
         :key="index"
         :data="{ ...item, addTime: item.addTime.toString() }"
@@ -30,7 +30,7 @@
       size="xl"
       class="fixed bottom-5 right-5 p-3"
       @click="isOpen = true"
-      >{{ $t('postComment') }}</UButton
+      >{{ $t("postComment") }}</UButton
     >
 
     <!-- modal component for fill the contents of comment -->
@@ -43,7 +43,7 @@
         class="p-3"
       >
         <template #header>
-          <h1 class="font-semibold text-lg">{{ $t('postComment') }}</h1>
+          <h1 class="font-semibold text-lg">{{ $t("postComment") }}</h1>
         </template>
 
         <section class="text-end">
@@ -54,7 +54,7 @@
             class="w-full"
           />
           <UButton class="text-lg mt-5" block @click="addComment">
-            {{ $t('post') }}
+            {{ $t("post") }}
           </UButton>
         </section>
       </UCard>
@@ -66,51 +66,50 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: computed(() => t('comments.title')),
-  description: computed(() => t('comments.description')),
+  title: computed(() => t("comments.title")),
+  description: computed(() => t("comments.description")),
 })
 
-const isOpen: Ref<boolean> = ref(false)
+const isOpen = ref(false)
 
-const skeletonItems: string[] = []
-for (let i = 0; i < 10; i++) skeletonItems[i] = ''
+const skeletonItems = Array.from({ length: 10 }, () => "")
 
 const { data, error, status } = useFetch<getCommentGet>(
-  '/api/comment/getComment',
+  "/api/comment/getComment",
   {
-    method: 'GET',
+    method: "GET",
     server: false,
-  }
+  },
 )
 
 const router = useRouter()
-if (error.value) router.push({ name: 'error' })
+if (error.value) router.push({ name: "error" })
 
-const comment: Ref<string> = ref('')
+const comment: Ref<string> = ref("")
 const addComment = async () => {
   const toast = useToast()
 
   // validate the comment and user login condition
   if (!comment.value) {
-    toast.add({ title: 'Please fill in all fields' })
+    toast.add({ title: "Please fill in all fields" })
     return
   }
   if (comment.value.length > 300) {
-    toast.add({ title: 'Comment too much characters' })
+    toast.add({ title: "Comment too much characters" })
     return
   }
-  const token: string | null | undefined = useCookie('token').value
-  const username: string | null | undefined = useCookie('username').value
+  const token: string | null | undefined = useCookie("token").value
+  const username: string | null | undefined = useCookie("username").value
   if (!token || !username) {
-    toast.add({ title: 'You must login to post a comment' })
-    router.push({ name: 'login' })
+    toast.add({ title: "You must login to post a comment" })
+    router.push({ name: "login" })
     return
   }
 
   // clean all of the break in a string
-  const cleanedComment = comment.value.replace(/[\r\n]+/g, ' ').trim()
-  const res = await $fetch<addCommentPost>('/api/comment/addComment', {
-    method: 'POST',
+  const cleanedComment = comment.value.replace(/[\r\n]+/g, " ").trim()
+  const res = await $fetch<addCommentPost>("/api/comment/addComment", {
+    method: "POST",
     body: {
       username: username,
       comment: cleanedComment,
