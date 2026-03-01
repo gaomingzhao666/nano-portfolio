@@ -11,7 +11,7 @@
   <h3 align="center">Nano Portfolio</h3>
 
   <p align="center">
-    ❤️ A modern and open-source developers portfolio template that can automatically import Github profile and repository information, made by Nuxt ecosystem ❤️
+    ❤️ A modern, open-source portfolio template for developers that can automatically import GitHub profile and repository information, built with the Nuxt ecosystem ❤️
     <br />
     <br />
     <a href="https://github.com/gaomingzhao666/nano-portfolio/blob/master/README.md">English</a>
@@ -25,29 +25,29 @@
 <details open>
   <summary>Directory</summary>
   <ul>
-    <li><a href="#introduction-of-project">Introduction of Project</a> </li>
-    <li><a href="#build-with">Build with</a></li>
-    <li><a href="#runtime-requirement">Runtime Requirement</a></li>
+    <li><a href="#project-introduction">Project Introduction</a> </li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#runtime-requirements">Runtime Requirements</a></li>
     <li><a href="#installation">Installation</a></li>
-    <li><a href="#how-to-use-this-project-for-your-case">How to use this project for your case</a></li>
+    <li><a href="#how-to-use-this-project-for-your-own-case">How to Use This Project for Your Own Case</a></li>
     <li><a href="#seo-solution">SEO Solution</a></li>
     <li><a href="#contributor">Contributor</a></li>
-    <li><a href="#license">LICENSE</a></li>
+    <li><a href="#license">License</a></li>
   </ul>
 </details>
 
-## Introduction of Project
+## Project Introduction
 
 <p align="center">
     <img src="/public/SCREENSHOT/index-mockup.png">
     <img src="/public/SCREENSHOT/new-about-mockup.png">
 </p>
 
-> The image shown here is a home page for md-size, [click here](https://github.com/gaomingzhao666/nano-portfolio/tree/main/public/SCREENSHOT) to see more detailed screenshot for this application.
+> The images above show the home page at medium size. [Click here](https://github.com/gaomingzhao666/nano-portfolio/tree/main/public/SCREENSHOT) to view more screenshots.
 
-Nano-portfolio is a developer introduction web application integrated with Github Octokit and Nuxt3 ecosystem that includes `Nuxt-UI` `Nuxt-Mongoose` `Pinia` `i18n` etc. All of the modules are officially compatible with Nuxt3, and all of the code inside of this project uses composition API and ESM.
+Nano Portfolio is a developer portfolio web application integrated with GitHub Octokit and the Nuxt 3 ecosystem. It includes modules such as `Nuxt-UI`, `Nuxt-Mongoose`, `Pinia`, and `i18n`. All modules are officially compatible with Nuxt 3, and all code in this project uses the Composition API and ESM.
 
-## Build With
+## Built With
 
 - Nuxt3 with composition API
 - Pinia
@@ -55,12 +55,12 @@ Nano-portfolio is a developer introduction web application integrated with Githu
 - TailwindCSS
 - Nuxt-UI
 - MongoDB with Mongoose
-- Localize with i18n
-- Email connection with Resend
-- Typescript with ES6+ syntax
+- Localization with i18n
+- Email integration with Resend
+- TypeScript with ES6+ syntax
 - Dockerfile
 
-## Runtime Requirement
+## Runtime Requirements
 
 - NodeJS LTS 24 or above
 
@@ -68,14 +68,14 @@ Nano-portfolio is a developer introduction web application integrated with Githu
 
 ### Clone and Run - recommend
 
-Clone this repository and transit to the project folder
+Clone this repository and move to the project folder.
 
 ```sh
 $ git clone https://github.com/gaomingzhao666/nano-portfolio.git # clone
 $ cd nano-portfolio
 ```
 
-Install dependencies and run this project depends on your package manager
+Install dependencies and run the project with your preferred package manager.
 
 ```sh
 # pnpm - recommend
@@ -86,7 +86,7 @@ $ pnpm dev # run
 ```sh
 # npm - Node default package manager
 $ npm install # install dependencies
-$ pnpm run dev # run
+$ npm run dev # run
 ```
 
 ```sh
@@ -117,7 +117,7 @@ You can use this project to create your own portfolio. It automatically imports 
 - Update the data on the `About` and `Contact` pages with appropriate information
 - Have fun and enjoy customizing your portfolio
 
-> In step 2, use env variable instead of put plain token on `.ts` file that can be push to public repository to avoid dangers.
+> For security, use an environment variable instead of placing a plain token in a `.ts` file that might be pushed to a public repository.
 
 ## SEO Solution
 
@@ -152,7 +152,7 @@ Here is an example of SEO configuration code in `nuxt.config.ts`:
   },
 
   robots: {
-    // tell Google.com do not indexing /test and /error pages
+    // Tell Google not to index /test and /error pages
     disallow: ['/test', '/error'],
   },
   ogImage: {
@@ -162,13 +162,13 @@ Here is an example of SEO configuration code in `nuxt.config.ts`:
 
 See this [documentation](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules) if you want to see a complete guide.
 
-### I18n for each pages
+### I18n for Each Page
 
-Everything is out of box, you can configure the SEO metadata for each pages from the `/src/i18n/seo/` folder, and modify depends on your demand.
+Everything is ready out of the box. You can configure SEO metadata for each page in the `/src/i18n/seo/` folder and modify it based on your needs.
 
 ## Contributor
 
-The project developed by gaomingzhao666@Nano
+This project is developed by gaomingzhao666@Nano.
 
 ## LICENSE
 
