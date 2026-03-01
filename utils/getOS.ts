@@ -1,19 +1,19 @@
-export default (): string => {
-  const { userAgent } = navigator
-  const platform = (navigator as any).userAgentData?.platform
+const OS_PATTERNS: [RegExp, string][] = [
+  [/Mac|Macintosh|MacIntel|MacPPC|Mac68K/i, 'Mac OS'],
+  [/iPhone|iPad|iPod/i, 'iOS'],
+  [/Win|Win32|Win64|Windows|WinCE/i, 'Windows'],
+  [/Android/i, 'Android'],
+  [/Linux/i, 'Linux'],
+]
 
-  switch (true) {
-    case ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'].includes(platform):
-      return 'Mac OS'
-    case ['iPhone', 'iPad', 'iPod'].includes(platform):
-      return 'iOS'
-    case ['Win32', 'Win64', 'Windows', 'WinCE'].includes(platform):
-      return 'Windows'
-    case /Android/.test(userAgent):
-      return 'Android'
-    case /Linux/.test(platform):
-      return 'Linux'
-    default:
-      return 'Unknown OS'
+export default (): string => {
+  const ua = navigator.userAgent
+  const platform =
+    (navigator as any).userAgentData?.platform ?? navigator.platform ?? ''
+
+  for (const [pattern, os] of OS_PATTERNS) {
+    if (pattern.test(platform) || pattern.test(ua)) return os
   }
+
+  return 'Unknown OS'
 }
