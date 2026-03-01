@@ -1,22 +1,9 @@
-const date = new Date()
+const formatDate = (date: Date): string => date.toISOString().slice(0, 10)
 
-const formattedDateNow = (date: Date): string => {
-	const year = date.getFullYear()
-	const month = (date.getMonth() + 1).toString().padStart(2, '0') // Months are 0-indexed
-	const day = date.getDate().toString().padStart(2, '0')
+export const getFormattedDateNow = (): string => formatDate(new Date())
 
-	// Format the date as YYYY-MM-DD
-	return `${year}-${month}-${day}`
+export const getFormattedDateNowPlusYears = (years: number): string => {
+  const date = new Date()
+  date.setFullYear(date.getFullYear() + years)
+  return formatDate(date)
 }
-const formattedDateNowPlusYears = (date: Date, years: number): string => {
-	const year = date.getFullYear() + years
-	const month = (date.getMonth() + 1).toString().padStart(2, '0') // Months are 0-indexed
-	const day = date.getDate().toString().padStart(2, '0')
-
-	// Format the date as YYYY-MM-DD
-	return `${year}-${month}-${day}`
-}
-
-export const getFormattedDateNow = (): string => formattedDateNow(date)
-export const getFormattedDateNowPlusYears = (years: number): string =>
-	formattedDateNowPlusYears(date, years)
