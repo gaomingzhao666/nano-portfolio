@@ -10,7 +10,7 @@
         size="lg"
         :description="$t('contactFormSubjectDesc')"
         required
-        class="m-5 w-[320px]"
+        class="m-5 min-w-[220px] md:w-[380px] lg:w-[480px]"
       >
         <UInput
           v-model="formData.title"
@@ -25,7 +25,7 @@
         :label="$t('contactEmail')"
         :hint="$t('contactEmailOptional')"
         :description="$t('contactEmailDesc')"
-        class="m-5 w-[320px]"
+        class="m-5 min-w-[220px] md:w-[380px] lg:w-[480px]"
       >
         <UInput
           v-model="formData.email"
@@ -35,7 +35,12 @@
         />
       </UFormGroup>
 
-      <UFormGroup size="lg" label="Content" required class="m-5 w-[320px]">
+      <UFormGroup
+        size="lg"
+        label="Content"
+        required
+        class="m-5 min-w-[220px] md:w-[380px] lg:w-[480px]"
+      >
         <UTextarea
           v-model="formData.contents"
           :placeholder="$t('contactFormContent')"
