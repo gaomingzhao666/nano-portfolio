@@ -49,7 +49,7 @@ export default defineNuxtConfig({
 	mongoose: {
 		// Read MongoDB connection string from environment for security and flexibility.
 		// Set `MONGODB_URI` in your environment or in a local `.env` file (see `.env.example`).
-		uri: process.env.MONGODB_URI || '',
+		uri: import.meta.env.MONGODB_URI || '',
 		options: {},
 	},
 
