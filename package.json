@@ -43,5 +43,6 @@
 		"nuxt-svgo": "^4.2.6",
 		"typescript": "^5.9.3",
 		"vue-tsc": "^3.2.7"
-	}
+	},
+	"packageManager": "pnpm@11.0.1"
 }
