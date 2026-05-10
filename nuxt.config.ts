@@ -47,7 +47,9 @@ export default defineNuxtConfig({
   },
 
   mongoose: {
-    uri: 'mongodb+srv://vercel-admin-user:AUK7HEtudWfWbJt3@gaomingzhao.skelvi3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    // Read MongoDB connection string from environment for security and flexibility.
+    // Set `MONGODB_URI` in your environment or in a local `.env` file (see `.env.example`).
+    uri: import.meta.env.MONGODB_URI || '',
     options: {},
   },
 
@@ -107,4 +109,4 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-08-14',
-})
+});
