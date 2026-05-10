@@ -17,5 +17,6 @@
   "cSpell.words": ["unlogined"],
   "eslint.useFlatConfig": true,
   "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "prettier.semi": false
 }
