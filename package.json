@@ -33,7 +33,7 @@
 		"@iconify-json/simple-icons": "^1.2.81",
 		"@iconify-json/skill-icons": "^1.2.4",
 		"@nuxt/eslint": "^1.15.2",
-		"@nuxtjs/i18n": "^10.3.0",
+		"@nuxtjs/i18n": "^10.2.4",
 		"@octokit/types": "^13.10.0",
 		"@types/jsonwebtoken": "^9.0.10",
 		"@types/node": "^22.19.18",
